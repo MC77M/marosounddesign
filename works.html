@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Works — MaroSoundDesign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Noto+Sans+JP:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden}
+::selection{background:#e879f9;color:#fff}
+
+:root{
+  --grad: linear-gradient(120deg,#f472b6 0%,#c084fc 40%,#818cf8 80%,#67e8f9 100%);
+  --grad2:linear-gradient(120deg,#c084fc 0%,#818cf8 50%,#67e8f9 100%);
+  --line: rgba(0,0,0,.08);
+}
+
+/* subtle bg texture */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 40% at 0% 0%,  rgba(244,114,182,.07) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 0%, rgba(129,140,248,.07) 0%,transparent 55%),
+    radial-gradient(ellipse 45% 35% at 100% 100%,rgba(192,132,252,.05) 0%,transparent 50%),
+    radial-gradient(ellipse 40% 30% at 0% 100%,rgba(103,232,249,.05) 0%,transparent 50%);
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity:.015;mix-blend-mode:multiply;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 2.5rem;
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid rgba(0,0,0,.07);
+}
+.nav-logo{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#111}
+.nav-logo span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-back{
+  font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  color:#999;text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.4rem;
+}
+.nav-back:hover{color:#111}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  position:relative;z-index:1;
+  padding:8rem 2.5rem 3rem;
+  background:#fff;
+}
+.inner{max-width:1080px;margin:0 auto}
+
+.eyebrow{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.7rem}
+.eyebrow-line{display:block;width:24px;height:1px;background:var(--grad)}
+.eyebrow-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.page-title{font-family:'Inter',sans-serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:900;letter-spacing:-.04em;color:#111;margin-bottom:2rem}
+.page-title em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── FILTER BAR ── */
+.fbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:0;padding-bottom:2rem}
+.fbtn{
+  padding:.33rem 1rem;border-radius:100px;
+  font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  border:1.5px solid rgba(0,0,0,.12);background:transparent;color:#aaa;
+  cursor:pointer;transition:all .25s;
+}
+.fbtn:hover{border-color:rgba(192,132,252,.5);color:#666}
+.fbtn.active{background:var(--grad);border-color:transparent;color:#fff}
+
+/* ── YEAR NAV ── */
+.ybar{display:flex;gap:.4rem;flex-wrap:wrap;padding-bottom:2rem}
+.ybtn{
+  padding:.28rem .8rem;border-radius:100px;
+  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;
+  border:1.5px solid rgba(0,0,0,.1);background:transparent;color:#bbb;
+  cursor:pointer;transition:all .22s;text-decoration:none;display:inline-block;
+}
+.ybtn:hover{border-color:rgba(192,132,252,.5);color:#888}
+.top-btn{
+  display:block;text-align:center;margin:1.5rem auto 0;
+  padding:.3rem 1.2rem;border-radius:100px;
+  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;
+  border:1.5px solid rgba(0,0,0,.1);background:transparent;color:#bbb;
+  text-decoration:none;transition:all .22s;width:fit-content;
+}
+.top-btn:hover{border-color:rgba(192,132,252,.5);color:#888}
+
+/* ── WORKS BODY ── */
+.works-body{position:relative;z-index:1;background:#fff;padding:0 2.5rem 6rem}
+
+.yr-block{margin-bottom:1rem}
+.yr-head{
+  font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.3em;color:#ccc;
+  text-transform:uppercase;padding:.5rem 0 1rem;
+  border-bottom:1px solid rgba(0,0,0,.07);margin-bottom:1.4rem;
+}
+
+.works-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+
+.wcard{display:flex;flex-direction:column;gap:.6rem;cursor:pointer}
+.wcard-img{
+  border-radius:10px;overflow:hidden;
+  background:linear-gradient(135deg,rgba(244,114,182,.08),rgba(192,132,252,.1),rgba(103,232,249,.06));
+  border:1px solid rgba(192,132,252,.12);
+  position:relative;transition:transform .25s,box-shadow .25s;
+}
+.wcard:hover .wcard-img{transform:translateY(-3px);box-shadow:0 10px 28px rgba(192,132,252,.18)}
+.wcard-img img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.wcard-ph{
+  aspect-ratio:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.3rem;font-family:'DM Mono',monospace;font-size:.48rem;letter-spacing:.08em;color:#ccc;
+}
+.wcard-ph span{font-size:1.2rem;opacity:.3}
+.wcard-badge{
+  position:absolute;top:.45rem;right:.45rem;
+  padding:.12rem .48rem;border-radius:100px;
+  font-family:'DM Mono',monospace;font-size:.46rem;letter-spacing:.06em;border:1px solid;
+}
+.ba{background:rgba(192,132,252,.12);color:#9333ea;border-color:rgba(192,132,252,.32)}
+.bg{background:rgba(99,102,241,.1);color:#4f46e5;border-color:rgba(99,102,241,.28)}
+.bj{background:rgba(244,114,182,.1);color:#db2777;border-color:rgba(244,114,182,.28)}
+
+.wcard-title{font-size:.78rem;color:#111;font-weight:400;line-height:1.3;margin-bottom:.15rem}
+.wcard-role{
+  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.04em;
+  background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.wcard-client{font-size:.7rem;color:#bbb}
+
+/* ── MODAL ── */
+.modal-overlay{
+  position:fixed;inset:0;z-index:900;
+  background:rgba(0,0,0,0);
+  backdrop-filter:blur(0px);-webkit-backdrop-filter:blur(0px);
+  display:flex;align-items:flex-end;justify-content:center;
+  pointer-events:none;
+  transition:background .35s,backdrop-filter .35s;
+}
+.modal-overlay.open{
+  background:rgba(0,0,0,.3);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  pointer-events:all;
+}
+.modal{
+  background:#fff;border-radius:20px 20px 0 0;
+  width:100%;max-width:640px;max-height:88svh;
+  overflow-y:auto;padding:0;
+  transform:translateY(100%);
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+  position:relative;
+}
+.modal-overlay.open .modal{transform:translateY(0)}
+.modal-handle{width:36px;height:4px;border-radius:2px;background:#e0e0e0;margin:14px auto 0}
+.modal-inner{padding:1.5rem 1.8rem 2.5rem}
+.modal-top{display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:1.8rem}
+.modal-jacket{
+  width:88px;height:88px;border-radius:10px;overflow:hidden;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(244,114,182,.12),rgba(192,132,252,.18));
+  border:1px solid rgba(192,132,252,.15);
+  display:flex;align-items:center;justify-content:center;font-size:1.8rem;
+}
+.modal-jacket img{width:100%;height:100%;object-fit:cover}
+.modal-meta{flex:1;min-width:0}
+.modal-badge{display:inline-block;padding:.15rem .6rem;border-radius:100px;font-family:'DM Mono',monospace;font-size:.52rem;letter-spacing:.08em;border:1px solid;margin-bottom:.5rem}
+.modal-track{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:800;color:#111;line-height:1.3;margin-bottom:.25rem}
+.modal-artist{font-size:.82rem;color:#666;margin-bottom:.18rem}
+.modal-date{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:#bbb}
+.modal-sep{width:100%;height:1px;background:rgba(0,0,0,.07);margin:1.2rem 0}
+.modal-section-title{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#bbb;margin-bottom:.8rem}
+.credit-list{display:flex;flex-direction:column;gap:.5rem}
+.credit-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.credit-role{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.06em;color:#aaa;flex-shrink:0}
+.credit-name{font-size:.82rem;color:#111;font-weight:400;text-align:right}
+.modal-note{font-size:.8rem;color:#999;line-height:1.8;margin-top:1.2rem;padding:.8rem 1rem;background:#f9f9fb;border-radius:8px}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(30px) scaleY(0.95);transition:opacity .4s cubic-bezier(.12,1,.4,1),transform .4s cubic-bezier(.12,1,.4,1)}
+.reveal.on{opacity:1;transform:translateY(0) scaleY(1)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media(max-width:600px){
+  nav{padding:1rem 1.2rem}
+  .page-header,.works-body{padding-left:1.2rem;padding-right:1.2rem}
+  .works-grid{gap:.5rem}
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="portfolio.html" class="nav-logo">Maro<span>Sound</span>Design</a>
+  <a href="portfolio.html" class="nav-back">← Back</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="inner">
+    <p class="eyebrow reveal">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">All Works</span>
+    </p>
+    <h1 class="page-title reveal"><em>Works</em></h1>
+    <div class="fbar reveal">
+      <button class="fbtn active" onclick="fw('all',this)">All</button>
+      <button class="fbtn" onclick="fw('anime',this)">Anime</button>
+      <button class="fbtn" onclick="fw('game',this)">Game</button>
+      <button class="fbtn" onclick="fw('jpop',this)">J-POP</button>
+    </div>
+    <div class="ybar reveal">
+      <a class="ybtn" href="#yr2026">2026</a>
+      <a class="ybtn" href="#yr2025">2025</a>
+      <a class="ybtn" href="#yr2024">2024</a>
+      <a class="ybtn" href="#yr2023">2023</a>
+      <a class="ybtn" href="#yr2022">2022</a>
+      <a class="ybtn" href="#yr2021">2021</a>
+      <a class="ybtn" href="#yr2020">2020</a>
+    </div>
+  </div>
+</div>
+
+<!-- WORKS BODY -->
+<div class="works-body">
+  <div class="inner" id="works-container">
+
+
+    <div class="yr-block reveal" id="yr2026">
+      <p class="yr-head">2026</p>
+      <div class="works-grid">
+
+        <div class="wcard" data-cat="jpop" onclick="openModal(155)">
+          <div class="wcard-img"><img src="images/_hash_新穂姉妹_ツナグミライ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">新穂姉妹</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ツナグミライ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(154)">
+          <div class="wcard-img"><img src="images/_hash_恋音契约_雪色ファンタジー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">恋音契约</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">雪色ファンタジー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(153)">
+          <div class="wcard-img"><img src="images/_hash_なみだ色の消しごむ_イーアルカンフー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">なみだ色の消しごむ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">イーアルカンフー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(152)">
+          <div class="wcard-img"><img src="images/_hash_なみだ色の消しごむ_お揃いの未来.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">なみだ色の消しごむ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">お揃いの未来</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(151)">
+          <div class="wcard-img"><img src="images/_hash_Dragonfly_Poppin‘ Love.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Dragonfly</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">Poppin‘ Love</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(150)">
+          <div class="wcard-img"><img src="images/_hash_Dragonfly_MIRACLE DIP！.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Dragonfly</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">MIRACLE DIP！</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(149)">
+          <div class="wcard-img"><img src="images/_hash_Dragonfly_DRAGONFLY.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Dragonfly</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">DRAGONFLY</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(148)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_あなたと私.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">あなたと私</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(147)">
+          <div class="wcard-img"><img src="images/_hash_あの日見たラッキースター_嘘つきマフラー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あの日見たラッキースター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">嘘つきマフラー</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(146)">
+          <div class="wcard-img"><img src="images/_hash_環野 揺_Code10 -L.I.N.K.-.webp" alt="jacket" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">環野 揺（CV. 寺島 惇太）</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">Code:10 -L.I.N.K.-</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(145)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_僕らが僕らであるために.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">Mix</p><p class="wcard-client">僕らが僕らであるために</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(144)">
+          <div class="wcard-img"><img src="images/_hash_メリーパレード_がむしゃらエキストラ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">メリーパレード</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">がむしゃらエキストラ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(143)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_青春Restart.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">青春Restart</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(142)">
+          <div class="wcard-img"><img src="images/_hash_あの日見たラッキースター_YOKUBARIモンスター.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あの日見たラッキースター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">YOKUBARIモンスター</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(141)">
+          <div class="wcard-img"><img src="images/_hash_なみだ色の消しごむ_お揃いの未来.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">なみだ色の消しごむ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">お揃いの未来</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2026 -->
+
+    <div class="yr-block reveal" id="yr2025">
+      <p class="yr-head">2025</p>
+      <div class="works-grid">
+
+        <div class="wcard" data-cat="jpop" onclick="openModal(140)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_We are IDOL.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">We are IDOL</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(139)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_キミトライブ!!.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">キミトライブ!!</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(138)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_キミトミライ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">キミトミライ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(137)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_ブルーテイル.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">Mix</p><p class="wcard-client">ブルーテイル</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(136)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_ピースサイン.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">Mix</p><p class="wcard-client">ピースサイン</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(135)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_キミノツバサ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">Mix</p><p class="wcard-client">キミノツバサ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(134)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_白いパズル.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">Mix</p><p class="wcard-client">白いパズル</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(133)">
+          <div class="wcard-img"><img src="images/_hash_キミトサクハナ_キミと咲く花.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミトサクハナ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">キミと咲く花</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(132)">
+          <div class="wcard-img"><img src="images/_hash_ワガママなラストノート_ワガママインド.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ワガママなラストノート</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ワガママインド</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(131)">
+          <div class="wcard-img"><img src="images/_hash_ワガママなラストノート_チュッパラ！.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ワガママなラストノート</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">チュッパラ！</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(130)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_初恋スノードーム.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">初恋スノードーム</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(129)">
+          <div class="wcard-img"><img src="images/_hash_むーぷり_Twinning promise.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">むーぷり</p><p class="wcard-role">編曲</p><p class="wcard-client">Twinning promise</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(128)">
+          <div class="wcard-img"><img src="images/_hash_Cheriecla_キミバズ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Cheriecla</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">キミバズ♡</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(127)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_セツナイロ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">セツナイロ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(126)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_絶望歌.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">絶望歌</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(125)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_セツナツ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">セツナツ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(124)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_ハチャめっちゃカーニバル.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ハチャめっちゃカーニバル</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(123)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_ミライソウ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ミライソウ</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(122)">
+          <div class="wcard-img"><img src="images/_hash_PM6_inf__らびゅ&ピース伝説.webp" alt="jacket" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">PM6:∞;あんさんぶるスターズ！！</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">らびゅ&ピース伝説</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(121)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_ダイナマイトポップコーンエレクトロ_アプロ_フレーバー_P_BOX.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ダイナマイトポップコーンエレクトロ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(120)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_UPxDATE_アプロ_フレーバー_P_BOX.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">UP✕DATE</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(119)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_透明ヒロイン_アプロ_フレーバー_P_BOX.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">透明ヒロイン</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(118)">
+          <div class="wcard-img"><img src="images/_hash_あの日見たラッキースター_弱虫ソーダ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あの日見たラッキースター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">弱虫ソーダ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(117)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_恋は青空とかき氷。.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">恋は青空とかき氷。</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(116)">
+          <div class="wcard-img"><img src="images/_hash_メリーパレード_サマパ！！.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">メリーパレード</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">サマパ！！</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(115)">
+          <div class="wcard-img"><img src="images/_hash_ハイシーユース_好き以上、キミが好き.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハイシーユース</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">好き以上、キミが好き</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(114)">
+          <div class="wcard-img"><img src="images/_hash_前橋ウィッチーズ_MAKASETENE.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">前橋ウィッチーズ</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">MAKASETENE</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(113)">
+          <div class="wcard-img"><img src="images/_hash_ポラライト_切恋花火.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ポラライト</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">切恋花火</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(112)">
+          <div class="wcard-img"><img src="images/_hash_ハイシーユース_圧倒的ガチ恋CHU→.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハイシーユース</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">圧倒的ガチ恋CHU→♡</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(111)">
+          <div class="wcard-img"><img src="images/_hash_ハイシーユース_めちゃかわフルコース.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハイシーユース</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">めちゃかわ♡フルコース</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(110)">
+          <div class="wcard-img"><img src="images/_hash_lollipop_chu_甘い恋は、コロンとキミと。.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">lollipop_chu</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">甘い恋♡は、コロンとキミと。</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(109)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_トキメキ☆UPローチ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">トキメキ☆UPローチ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(108)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_おすすめのアイコトバ - UPローチ Ver..webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">おすすめのアイコトバ - UPローチ Ver.</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(107)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_キミ依存シンドローム.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">キミ依存♡シンドローム</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(106)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_テノナルホウヘ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">テノナルホウヘ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(105)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_お疲れSUMMERDAY.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">お疲れSUMMERDAY</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(104)">
+          <div class="wcard-img"><img src="images/_hash_UPローチ_ドキドキLOVE.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ドキドキLOVE</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(103)">
+          <div class="wcard-img"><img src="images/_hash_オカシリゾート_チョコっと告白できたら.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">オカシリゾート</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">チョコっと告白できたら</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(102)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_刹那リフレイン.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">刹那リフレイン</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(101)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_未完成エピローグ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">未完成エピローグ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(100)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_アオハルスニーカー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">アオハルスニーカー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(99)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_空が笑う.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">空が笑う</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(98)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_制服ドリーマー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">制服ドリーマー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(97)">
+          <div class="wcard-img"><img src="images/_hash_セツナソウ_これが、青春。.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">セツナソウ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">これが、青春。</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(96)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_きみの好きを否定なんかしない.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">きみの好きを否定なんかしない</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(95)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_僕は気付いてた.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">僕は気付いてた</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(94)">
+          <div class="wcard-img"><img src="images/_hash_ROOKEYROOKEYS_超本能_bidir_ファイター.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ROOKEY♡ROOKEYS</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">超本能⇔ファイター</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(93)">
+          <div class="wcard-img"><img src="images/_hash_ROOKEYROOKEYS_革命的_tri_無敵ツヨカワ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ROOKEY♡ROOKEYS</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">革命的△無敵ツヨカワ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(92)">
+          <div class="wcard-img"><img src="images/_hash_木苺FRUCTOSE_告白シンフォニー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">木苺FRUCTOSE</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">告白シンフォニー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(91)">
+          <div class="wcard-img"><img src="images/_hash_lol-エルオーエル-_POP UP!.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">lol-エルオーエル-</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">POP UP!</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(90)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_ハートメインディッシュ (2024ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ハートメインディッシュ (2024ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(89)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_ついてきて (2024ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ついてきて (2024ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(88)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_もっとぎゅっと、キミと (2024ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">もっとぎゅっと、キミと (2024ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(87)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_拗らせチョコレート.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">拗らせ♡チョコレート</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(86)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_わがままパルフェ (2024ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">わがままパルフェ (2024ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(85)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_エンドレスロールケーキ (2024ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">エンドレスロールケーキ (2024ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(84)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_我爱_x_にーじゅー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">我爱×にーじゅー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(83)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_初めての気持ち (2024ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">初めての気持ち (2024ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(82)">
+          <div class="wcard-img"><img src="images/_hash_Lienel_じれったいKISS.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Lienel</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">じれったいKISS</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(81)">
+          <div class="wcard-img"><img src="images/_hash_Lienel_No Limit, No Rules.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Lienel</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">No Limit, No Rules</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(80)">
+          <div class="wcard-img"><img src="images/_hash_あの日見たラッキースター_完璧シンデレラ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あの日見たラッキースター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">完璧シンデレラ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(79)">
+          <div class="wcard-img"><img src="images/_hash_あの日見たラッキースター_無限大_inf_ミライ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あの日見たラッキースター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">無限大∞ミライ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(78)">
+          <div class="wcard-img"><img src="images/_hash_あの日見たラッキースター_恋愛至上しゅき.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あの日見たラッキースター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">恋愛至上しゅき♡</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(77)">
+          <div class="wcard-img"><img src="images/_hash_キミと永遠に_好きのナイフを押し付けないで.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミと永遠に</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">好きのナイフを押し付けないで</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(76)">
+          <div class="wcard-img"><img src="images/_hash_きみとぴあ！_夢ざんまい！.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">きみとぴあ！</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">夢ざんまい！</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2025 -->
+
+    <div class="yr-block reveal" id="yr2024">
+      <p class="yr-head">2024</p>
+      <div class="works-grid">
+
+        <div class="wcard" data-cat="jpop" onclick="openModal(75)">
+          <div class="wcard-img"><img src="images/_hash_Loulouchouchou_冬恋ダイアリー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Loulouchouchou</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">冬恋ダイアリー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(74)">
+          <div class="wcard-img"><img src="images/_hash_ROOKEYROOKEYS_ルキ_x_ルキ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ROOKEY♡ROOKEYS</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ルキ×ルキ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(73)">
+          <div class="wcard-img"><img src="images/_hash_ROOKEYROOKEYS_むーむーおむむ オムライス.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ROOKEY♡ROOKEYS</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">むーむーおむむ オムライス</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(72)">
+          <div class="wcard-img"><img src="images/_hash_なみだ色の消しごむ_星空はなみだ色.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">なみだ色の消しごむ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">星空はなみだ色</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(71)">
+          <div class="wcard-img"><img src="images/_hash_なみだ色の消しごむ_青春イマージュ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">なみだ色の消しごむ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">青春イマージュ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(70)">
+          <div class="wcard-img"><img src="images/_hash_ラナキュラ_勧善懲悪シンセサイザー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ラナキュラ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">勧善懲悪シンセサイザー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(69)">
+          <div class="wcard-img"><img src="images/_hash_木苺FRUCTOSE_最上級の好きあげちゃう.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">木苺FRUCTOSE</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">最上級の好きあげちゃう</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(68)">
+          <div class="wcard-img"><img src="images/_hash_ポラライト_NEO STORY.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ポラライト</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">NEO STORY</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(67)">
+          <div class="wcard-img"><img src="images/_hash_オカシリゾート_無限の青に.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">オカシリゾート</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">無限の青に</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(66)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_いつかの僕らの声に応えて.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">いつかの僕らの声に応えて</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(65)">
+          <div class="wcard-img"><img src="images/_hash_テンシメシ_エンドレスロールケーキ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ໒꒱</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">エンドレスロールケーキ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(64)">
+          <div class="wcard-img"><img src="images/_hash_なみだ色の消しごむ_青春イマージュ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">なみだ色の消しごむ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">青春イマージュ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(63)">
+          <div class="wcard-img"><img src="images/_hash_lollipop_chu_らぶGAMEちゅ〜どく.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">lollipop_chu</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">らぶGAME♡ちゅ〜どく</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(62)">
+          <div class="wcard-img"><img src="images/_hash_新名 有_青に染まる.webp" alt="jacket" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">新名 有（CV. 坂田 将吾）</p><p class="wcard-role">編曲Mix</p><p class="wcard-client">青に染まる</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(61)">
+          <div class="wcard-img"><img src="images/_hash_神家_Dazzling Dancer.webp" alt="jacket" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">神家（CV. 仲村 宗悟）</p><p class="wcard-role">編曲Mix</p><p class="wcard-client">Dazzling Dancer</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(60)">
+          <div class="wcard-img"><img src="images/_hash_新開 戦_Sword of Truth.webp" alt="jacket" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">新開 戦（CV. 小林 親弘）</p><p class="wcard-role">編曲Mix</p><p class="wcard-client">Sword of Truth</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(59)">
+          <div class="wcard-img"><img src="images/_hash_ハニースパイスRe._Me My ハピネス.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハニースパイスRe.</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">Me My ハピネス</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(58)">
+          <div class="wcard-img"><img src="images/_hash_aiai_crazykiss.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ai*ai</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">crazy＜kiss</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(57)">
+          <div class="wcard-img"><img src="images/_hash_Lucky2_こくご・さんすう・りか・恋愛！.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Lucky2</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">こくご・さんすう・りか・恋愛！</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(56)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_大人の青春.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">大人の青春</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(55)">
+          <div class="wcard-img"><img src="images/_hash_むーぷり_推しホーダイ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">むーぷり</p><p class="wcard-role">編曲</p><p class="wcard-client">推しホーダイ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(54)">
+          <div class="wcard-img"><img src="images/_hash_キミと永遠に_可愛いだけの私じゃないの。.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミと永遠に</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">可愛いだけの私じゃないの。</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(53)">
+          <div class="wcard-img"><img src="images/_hash_キミと永遠に_ちょーぜつLOVE.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミと永遠に</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ちょーぜつ♡LOVE</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(52)">
+          <div class="wcard-img"><img src="images/_hash_すぱどり_シンデレラストーリー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">すぱどり</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">シンデレラストーリー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(51)">
+          <div class="wcard-img"><img src="images/_hash_ハープスター_Star Memories.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハープスター</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">Star Memories</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(50)">
+          <div class="wcard-img"><img src="images/_hash_LEVEL7_ギルティラブ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">LEVEL7</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ギルティラブ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(49)">
+          <div class="wcard-img"><img src="images/_hash_LEVEL7_明日へのFanfare 2024.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">LEVEL7</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">明日へのFanfare 2024</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(48)">
+          <div class="wcard-img"><img src="images/_hash_LEVEL7_Wild Fractal.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">LEVEL7</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">Wild Fractal</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(47)">
+          <div class="wcard-img"><img src="images/_hash_LEVEL7_BREAK SHOUT 2024.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">LEVEL7</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">BREAK SHOUT 2024</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(46)">
+          <div class="wcard-img"><img src="images/_hash_LEVEL7_気まぐれロジック.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">LEVEL7</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">気まぐれロジック</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(45)">
+          <div class="wcard-img"><img src="images/_hash_メリーパレード_大逆転_x_パンデミック.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">メリーパレード</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">大逆転×パンデミック</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(44)">
+          <div class="wcard-img"><img src="images/_hash_ヒトノユメ_約束の場所.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ヒトノユメ</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">約束の場所</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(43)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_Braver!.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">Braver!</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(42)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_特別アドラブル.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">特別アドラブル</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(41)">
+          <div class="wcard-img"><img src="images/_hash_キミと永遠に_キミトライブ!!.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミと永遠に</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">キミトライブ!!</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(40)">
+          <div class="wcard-img"><img src="images/_hash_AsIs_ありのままの姿.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">AsIs</p><p class="wcard-role">編曲</p><p class="wcard-client">ありのままの姿</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(39)">
+          <div class="wcard-img"><img src="images/_hash__ne_ME_秘密インシデント.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">≠ME</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">秘密インシデント</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(38)">
+          <div class="wcard-img"><img src="images/_hash_オカシリゾート_ミルフィーユ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">オカシリゾート</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ミルフィーユ</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2024 -->
+    <!-- ══ 2023 ══════════════════════════════ -->
+    <div class="yr-block reveal" id="yr2023">
+      <p class="yr-head">2023</p>
+      <div class="works-grid">
+        <div class="wcard" data-cat="jpop" onclick="openModal(0)">
+          <div class="wcard-img"><img src="images/_hash_works_001.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ミュージカル刀剣乱舞</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Hangover</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(1)">
+          <div class="wcard-img"><img src="images/_hash_works_002.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">BMK</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">恋花華</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(2)">
+          <div class="wcard-img"><img src="images/_hash_さとみ_Never End.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">さとみ(すとぷり)</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Never End</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(3)">
+          <div class="wcard-img"><img src="images/_hash_麻倉もも_嫌いになれない。.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">麻倉もも</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">嫌いになれない。</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(4)">
+          <div class="wcard-img"><img src="images/_hash_works_005.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">りじぇね？</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">ありったけのせいいっぱいで</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(5)">
+          <div class="wcard-img"><img src="images/_hash_works_006.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">サンリオピューロランド</p><p class="wcard-role">編曲</p><p class="wcard-client">ピューロ学園校歌 (スイーツバージョン)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(6)">
+          <div class="wcard-img"><img src="images/_hash_works_007.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Re:Genesis Kingdom Project</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Welcome to our Kingdom</p></div>
+        </div>
+
+        <div class="wcard" data-cat="jpop" onclick="openModal(156)">
+          <div class="wcard-img"><img src="images/_hash_UNBS_YNBK.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UNBS</p><p class="wcard-role">編曲Mix</p><p class="wcard-client">YNBK</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(157)">
+          <div class="wcard-img"><img src="images/_hash_UNBS_mu-these.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UNBS</p><p class="wcard-role">編曲Mix</p><p class="wcard-client">mu-these</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(158)">
+          <div class="wcard-img"><img src="images/_hash_UNBS_lovegram.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UNBS</p><p class="wcard-role">編曲Mix</p><p class="wcard-client">lovegram</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(159)">
+          <div class="wcard-img"><img src="images/_hash_aiai_SHOOTING STAR.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ai*ai</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">SHOOTING STAR</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(160)">
+          <div class="wcard-img"><img src="images/_hash_メリーパレード_スキスキCHU意報.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">メリーパレード</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">スキスキ♡CHU意報</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(161)">
+          <div class="wcard-img"><img src="images/_hash_elsy_はぴちゅ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">elsy</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">#はぴちゅ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(162)">
+          <div class="wcard-img"><img src="images/_hash_RESELA_新世界パラドックス.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">RESELA</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">新世界パラドックス</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(163)">
+          <div class="wcard-img"><img src="images/_hash_RESELA_Death or Change.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">RESELA</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">Death or Change</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(164)">
+          <div class="wcard-img"><img src="images/_hash_RESELA_古今東西.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">RESELA</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">古今東西</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(165)">
+          <div class="wcard-img"><img src="images/_hash_RESELA_コイのピリオド.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">RESELA</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">コイのピリオド</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(166)">
+          <div class="wcard-img"><img src="images/_hash_MASK OF GODDESS_優しい嘘なら.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">MASK OF GODDESS</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">優しい嘘なら</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(167)">
+          <div class="wcard-img"><img src="images/_hash_LEVEL7_ギルティラブ.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">LEVEL7</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">ギルティラブ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(168)">
+          <div class="wcard-img"><img src="images/_hash_ラナキュラ_勧善懲悪シンセサイザー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ラナキュラ</p><p class="wcard-role">作曲編曲</p><p class="wcard-client">勧善懲悪シンセサイザー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(169)">
+          <div class="wcard-img"><img src="images/_hash_ハニースパイスRe._スキ≒ペア.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハニースパイスRe.</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">スキ≒ペア</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(170)">
+          <div class="wcard-img"><img src="images/_hash_ハニースパイスRe._Popping Lolipop (2023ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハニースパイスRe.</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">Popping Lolipop (2023ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(171)">
+          <div class="wcard-img"><img src="images/_hash_ハニースパイスRe._真夏のDiary (2023ver.).webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハニースパイスRe.</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">真夏のDiary (2023ver.)</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(172)">
+          <div class="wcard-img"><img src="images/_hash_キミと永遠に_反論ジェネラリー.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キミと永遠に</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">反論ジェネラリー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(173)">
+          <div class="wcard-img"><img src="images/_hash_メリーパレード_この夏、ボクは恋を知った。.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">メリーパレード</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">この夏、ボクは恋を知った。</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(174)">
+          <div class="wcard-img"><img src="images/_hash_メリーパレード_欲しがりハッピーエンド.webp" alt="jacket" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">メリーパレード</p><p class="wcard-role">作曲編曲Mix</p><p class="wcard-client">欲しがりハッピーエンド</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2023 -->
+
+    <!-- ══ 2022 ══════════════════════════════ -->
+    <div class="yr-block reveal d1" id="yr2022">
+      <p class="yr-head">2022</p>
+      <div class="works-grid">
+        <div class="wcard" data-cat="jpop" onclick="openModal(7)">
+          <div class="wcard-img"><img src="images/_hash_works_008.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">テンシメシ</p><p class="wcard-role">作曲・編曲・Mix</p><p class="wcard-client">わがままパルフェ 他</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(8)">
+          <div class="wcard-img"><img src="images/_hash_works_009.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">Knight A - 騎士A -</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Attention Lies / I</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(9)">
+          <div class="wcard-img"><img src="images/_hash_works_010.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ハニースパイスRe.</p><p class="wcard-role">作曲・編曲・Mix</p><p class="wcard-client">LOVE HOLIC / Popping Lolipop</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(10)">
+          <div class="wcard-img"><img src="images/_hash_works_011.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">UPローチ</p><p class="wcard-role">作曲・編曲・Mix</p><p class="wcard-client">ドキドキLOVE 他</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2022 -->
+
+    <!-- ══ 2021 ══════════════════════════════ -->
+    <div class="yr-block reveal d2" id="yr2021">
+      <p class="yr-head">2021</p>
+      <div class="works-grid">
+        <div class="wcard" data-cat="jpop" onclick="openModal(11)">
+          <div class="wcard-img"><img src="images/_hash_works_012.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">イケてるハーツ</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">好きだよSunshine</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(12)">
+          <div class="wcard-img"><img src="images/_hash_works_013.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">あれくん</p><p class="wcard-role">編曲</p><p class="wcard-client">ホワイトノイズ 他</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(13)">
+          <div class="wcard-img"><img src="images/_hash_works_014.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">上月せれな</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">DAN!GAN!ドリーマー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(14)">
+          <div class="wcard-img"><img src="images/_hash_works_015.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">≠ME</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">秘密インシデント</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(15)">
+          <div class="wcard-img"><img src="images/_hash_works_016.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">祭nine.</p><p class="wcard-role">作曲</p><p class="wcard-client">やったれ我が人生</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(16)">
+          <div class="wcard-img"><img src="images/_hash_works_017.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">ころん(すとぷり)</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">××テクニック / きゅんですきゅんです</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(17)">
+          <div class="wcard-img"><img src="images/_hash_works_018.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">BOYS AND MEN</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Do Dah Dah</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(18)">
+          <div class="wcard-img"><img src="images/_hash_works_019.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">光永亮太</p><p class="wcard-role">編曲・Mix</p><p class="wcard-client">風の街</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(19)">
+          <div class="wcard-img"><img src="images/_hash_works_020.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">三澤紗千香</p><p class="wcard-role">作曲・編曲・Mix</p><p class="wcard-client">With You / あと一歩 / あなただけ</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2021 -->
+
+    <!-- ══ 2020 ══════════════════════════════ -->
+    <div class="yr-block reveal d3" id="yr2020">
+      <p class="yr-head">2020</p>
+      <div class="works-grid">
+        <div class="wcard" data-cat="jpop" onclick="openModal(20)">
+          <div class="wcard-img"><img src="images/_hash_works_021.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">エラバレシ</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Here we go! / 囚われのMirage</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(21)">
+          <div class="wcard-img"><img src="images/_hash_works_022.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">祭nine.</p><p class="wcard-role">作曲</p><p class="wcard-client">轟け獅子太鼓</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(22)">
+          <div class="wcard-img"><img src="images/_hash_works_023.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">祭nine.</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">恋してアビラゼ!</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(23)">
+          <div class="wcard-img"><img src="images/_hash_works_024.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">三澤紗千香</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">with you</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(24)">
+          <div class="wcard-img"><img src="images/_hash_works_025.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">雨宮天</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">君を通して</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(25)">
+          <div class="wcard-img"><img src="images/_hash_works_026.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">祭nine.</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">SHOW BY コンジョー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(26)">
+          <div class="wcard-img"><img src="images/_hash_works_027.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">キラキラ選抜隊(ボイメンエリア研究生)</p><p class="wcard-role">作曲</p><p class="wcard-client">Shall We Kiss? / ワンダフルスライダー</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(27)">
+          <div class="wcard-img"><img src="images/_hash_works_028.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">MORISAKI WIN</p><p class="wcard-role">編曲</p><p class="wcard-client">Blind Mind</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(28)">
+          <div class="wcard-img"><img src="images/_hash_works_029.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">祭nine.</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">HEYHEYBONBON</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(29)">
+          <div class="wcard-img"><img src="images/_hash_works_030.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">祭nine.</p><p class="wcard-role">作曲</p><p class="wcard-client">シャニムニ・フロンティア</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(30)">
+          <div class="wcard-img"><img src="images/_hash_works_031.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">三澤紗千香</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">あと一歩</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(31)">
+          <div class="wcard-img"><img src="images/_hash_works_032.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">麻倉もも</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">トキメキ・シンパシー</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(32)">
+          <div class="wcard-img"><img src="images/_hash_works_033.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">新テニスの王子様 千石清純</p><p class="wcard-role">作曲</p><p class="wcard-client">虹を探そう</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(33)">
+          <div class="wcard-img"><img src="images/_hash_works_034.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">新テニスの王子様 遠野篤京</p><p class="wcard-role">作曲</p><p class="wcard-client">Bloody Dance</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(34)">
+          <div class="wcard-img"><img src="images/_hash_works_035.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">金色のコルダ４</p><p class="wcard-role">編曲・Mix</p><p class="wcard-client">ヴォーカル集 VOICEFUL</p></div>
+        </div>
+        <div class="wcard" data-cat="anime" onclick="openModal(35)">
+          <div class="wcard-img"><img src="images/_hash_works_036.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge ba">Anime</span></div>
+          <div><p class="wcard-title">金色のコルダ４</p><p class="wcard-role">編曲・Mix</p><p class="wcard-client">ヴォーカル集 SONGFUL</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(36)">
+          <div class="wcard-img"><img src="images/_hash_works_037.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">もえのあずき</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">バイバイチョコレイツ</p></div>
+        </div>
+        <div class="wcard" data-cat="jpop" onclick="openModal(37)">
+          <div class="wcard-img"><img src="images/_hash_works_038.webp" alt="jacket" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"><span class="wcard-badge bj">J-POP</span></div>
+          <div><p class="wcard-title">七海とろろ</p><p class="wcard-role">作曲・編曲</p><p class="wcard-client">Colors</p></div>
+        </div>
+      </div>
+      <a class="top-btn" href="#">↑ Top</a>
+    </div><!-- /2020 -->
+
+
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-inner">
+      <div class="modal-top">
+        <div class="modal-jacket" id="modalJacket">🎵</div>
+        <div class="modal-meta">
+          <span class="modal-badge ba" id="modalBadge">Anime</span>
+          <p class="modal-track" id="modalTrack">楽曲タイトル</p>
+          <p class="modal-artist" id="modalArtist">アーティスト名</p>
+          <p class="modal-date" id="modalDate">2025.00.00</p>
+        </div>
+      </div>
+      <div class="modal-sep"></div>
+      <p class="modal-section-title">Credits</p>
+      <div class="credit-list" id="modalCredits"></div>
+      <p class="modal-note" id="modalNote" style="display:none"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══ WORKS DATA ════════════════════════════════════════
+// ▼▼▼ ここを編集するだけで全カードの詳細が更新されます ▼▼▼
+const WORKS = [
+  // ── 2023 ──
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_001.webp',track:'Hangover',artist:'ミュージカル『刀剣乱舞』千子村正 蜻蛉切 双騎出陣 ～万の華うつす鏡～',date:'2023',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:''},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_002.webp',track:'恋花華',artist:'BMK「NANAKORO! (B盤)」',date:'2023.09.20',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / VICL-37704'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_さとみ_Never End.webp',track:'Never End',artist:'さとみ(すとぷり)',date:'2023.09.13',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-1 / QARF-60151'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_麻倉もも_嫌いになれない。.webp',track:'嫌いになれない。',artist:'麻倉もも「シュワワ！」',date:'2023.08.16',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / SMCL-826'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_005.webp',track:'ありったけのせいいっぱいで',artist:'りじぇね？「ハリパリッ!(TYPE-N)」',date:'2023.06.06',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / RGKP-11'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_006.webp',track:'ピューロ学園校歌 (スイーツバージョン)',artist:'サンリオピューロランド公式 Sweets Puroland フレフレ★ピューロ学園',date:'2023.01.28',credits:[{role:'編曲',name:'宮川麿'}],note:'ショー楽曲「We Are ピューロ学園★応援Dan・ce部」M-2'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_007.webp',track:'Welcome to our Kingdom',artist:'Re:Genesis Kingdom Project「雪の王子さま -Wish Upon a Snow-」',date:'2023.01.18',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'通常盤Type-B M-2 / RGKP-008'},
+  // ── 2022 ──
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_008.webp',track:'わがままパルフェ 他',artist:'テンシメシ「わがままパルフェ」',date:'2022.10.25',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'},{role:'Mix',name:'宮川麿'}],note:'TypeABC M-1「わがままパルフェ」作曲・編曲・Mix / TypeA M-3「恋心サンドイッチ」編曲 / TypeB M-3「ついてきて」作曲・編曲 / QARF-60151'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_009.webp',track:'Attention Lies / I',artist:'Knight A - 騎士A -',date:'2022.08.03',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-5「Attention Lies」/ M-12「I」/ STPR-1014'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_010.webp',track:'LOVE HOLIC / Popping Lolipop',artist:'ハニースパイスRe.「真夏のDiary」',date:'2022.08.03',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'},{role:'Mix',name:'宮川麿'}],note:'TypeABC M-2「LOVE HOLIC」/ TypeB M-3「Popping Lolipop」/ POCS-5034'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_011.webp',track:'ドキドキLOVE 他',artist:'UPローチ「アオゾラ紙飛行機」',date:'2022.04.26',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'},{role:'Mix',name:'宮川麿'}],note:'TypeA M-3 / TypeB M-2 / TypeC M-2・M-3 / QARF-60098'},
+  // ── 2021 ──
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_012.webp',track:'好きだよSunshine',artist:'イケてるハーツ「SING・LA・BANG・SHOW!」',date:'2021.11.29',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / USSW-0322'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_013.webp',track:'ホワイトノイズ 他',artist:'あれくん「呼吸」',date:'2021.09.29',credits:[{role:'編曲',name:'宮川麿'}],note:'M-2・M-4・M-5・M-6・M-10 編曲 / UICZ-9188/9'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_014.webp',track:'DAN!GAN!ドリーマー',artist:'上月せれな「NEVER END」',date:'2021.06.28',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / 『爆丸アーマードアライアンス』第4クールED / YOSO-0019'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_015.webp',track:'秘密インシデント',artist:'≠ME「超特急 ≠ME行き」',date:'2021.04.07',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-8 / NKCD-6947'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_016.webp',track:'やったれ我が人生',artist:'祭nine.',date:'2021.03.17',credits:[{role:'作曲',name:'宮川麿'}],note:'M-1 / フジテレビ系『最高のオバハン 中島ハルコ』主題歌 / UICZ-5154'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_017.webp',track:'××テクニック / きゅんですきゅんです',artist:'ころん(すとぷり)「アスター」',date:'2021.01.27',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-6・M-7 / STPR-9017'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_018.webp',track:'Do Dah Dah',artist:'BOYS AND MEN「ニューチャレンジャー」',date:'2021.07.28',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-3 / UICZ-5162'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_019.webp',track:'風の街',artist:'光永亮太',date:'2021.07.28',credits:[{role:'編曲',name:'宮川麿'},{role:'Mix',name:'宮川麿'}],note:''},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_020.webp',track:'With You / あと一歩 / あなただけ',artist:'三澤紗千香「IAM ME」',date:'2020.12.23',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'},{role:'Mix',name:'宮川麿'}],note:'M-4「With You」編曲 / M-5「あと一歩」作曲・編曲 / M-6「あなただけ」作曲・編曲・Mix / UICZ-4488'},
+  // ── 2020 ──
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_021.webp',track:'Here we go! / 囚われのMirage',artist:'エラバレシ「リップスティックミュージカル」',date:'2020.12.23',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'Disk.1 M-10「Here we go!」/ Disk.2 M-8「囚われのMirage」/ FPBD-0602'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_022.webp',track:'轟け獅子太鼓',artist:'祭nine.「轟け獅子太鼓」パターンA',date:'2020.11.25',credits:[{role:'作曲',name:'宮川麿'}],note:'M-1 / 日本テレビ系「スッキリ」11月テーマソング / 「バズリズム02」11月OPテーマ / UICZ-5144'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_023.webp',track:'恋してアビラゼ!',artist:'祭nine.「轟け獅子太鼓」パターンD',date:'2020.11.25',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / UICZ-5147'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_024.webp',track:'with you',artist:"三澤紗千香「I'm here/With You」",date:'2020.09.30',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / UICZ-9160'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_025.webp',track:'君を通して',artist:'雨宮天',date:'2020.09.27',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-1'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_026.webp',track:'SHOW BY コンジョー',artist:'祭nine.「祭花 -MATSURIBANA-」',date:'2020.09.06',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_027.webp',track:'Shall We Kiss? / ワンダフルスライダー',artist:'キラキラ選抜隊(ボイメンエリア研究生)',date:'2020.07.18',credits:[{role:'作曲',name:'宮川麿'}],note:'M-1「Shall We Kiss?」/ M-3「ワンダフルスライダー」'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_028.webp',track:'Blind Mind',artist:'MORISAKI WIN「Parade」',date:'2020.08.19',credits:[{role:'編曲',name:'宮川麿'}],note:'M-4 共編曲 / COCB-54305'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_029.webp',track:'HEYHEYBONBON',artist:'祭nine.「ビビビTANGO」パターンB',date:'2020.06.10',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / TECI-738'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_030.webp',track:'シャニムニ・フロンティア',artist:'祭nine.「ビビビTANGO」パターンC',date:'2020.06.10',credits:[{role:'作曲',name:'宮川麿'}],note:'M-2 / TECI-739'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_031.webp',track:'あと一歩',artist:'三澤紗千香「この手は」',date:'2020.04.29',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-2 / TBS「王様のブランチ」4月度EDテーマ / UICZ-9149'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_032.webp',track:'トキメキ・シンパシー',artist:'麻倉もも「Agapanthus」',date:'2020.04.08',credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-3 / SMCL-655'},
+  {cat:'anime',icon:'🎵',jacket:'images/_hash_works_033.webp',
+    track:'虹を探そう',artist:'新テニスの王子様 千石清純',date:'2020.08',
+    credits:[{role:'作曲',name:'宮川麿'}],note:'「新テニスの王子様 オン・ザ・レイディオ」2020年8月度エンディングテーマ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_034.webp',
+    track:'Bloody Dance',artist:'新テニスの王子様 遠野篤京',date:'2020.05',
+    credits:[{role:'作曲',name:'宮川麿'}],note:'「新テニスの王子様 オン・ザ・レイディオ」2020年5月度エンディングテーマ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_works_035.webp',
+    track:'ヴォーカル集 VOICEFUL',artist:'金色のコルダ４',date:'2020.03.25',
+    credits:[{role:'編曲・Mix',name:'宮川麿'}],note:'M-1「春景色」編曲,Mix / M-2「恋人宣言!」編曲,Mix / KECH-1950'},
+  {cat:'anime',icon:'🎵',jacket:'images/_hash_works_036.webp',
+    track:'ヴォーカル集 SONGFUL',artist:'金色のコルダ４',date:'2020.03.25',
+    credits:[{role:'編曲・Mix',name:'宮川麿'}],note:'M-3「Fatalitat」編曲,Mix / KECH-1952'},
+  {cat:'anime',icon:'🎵',jacket:'images/_hash_works_037.webp',
+    track:'バイバイチョコレイツ',artist:'もえのあずき',date:'2020.02.04',
+    credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-3「もえきゅんっ♡(2020ver.)」作曲・編曲 / POCS-1844'},
+  {cat:'anime',icon:'🎵',jacket:'images/_hash_works_038.webp',
+    track:'Colors',artist:'七海とろろ',date:'2020.01.22',
+    credits:[{role:'作曲',name:'宮川麿'},{role:'編曲',name:'宮川麿'}],note:'M-1「Colors」作曲・編曲 / BSPC-0052'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_オカシリゾート_ミルフィーユ.webp',
+    track:'ミルフィーユ',artist:'オカシリゾート',date:'2024-02',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'オカシな世界へ飛び込め!!'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash__ne_ME_秘密インシデント.webp',
+    track:'秘密インシデント',artist:'≠ME',date:'2024-03',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'Springtime In You'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_ありのままの姿.webp',
+    track:'ありのままの姿',artist:'AsIs',date:'2024-03',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'ありのままの姿'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミと永遠に_キミトライブ!!.webp',
+    track:'キミトライブ!!',artist:'キミと永遠に',date:'2024-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'キミトライブ!!'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_特別アドラブル.webp',
+    track:'特別アドラブル',artist:'AsIs',date:'2024-04',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'特別アドラブル'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_Braver!.webp',
+    track:'Braver!',artist:'AsIs',date:'2024-04',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'Braver!'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ヒトノユメ_約束の場所.webp',
+    track:'約束の場所',artist:'ヒトノユメ',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'約束の場所'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_メリーパレード_大逆転_x_パンデミック.webp',
+    track:'大逆転×パンデミック',artist:'メリーパレード',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'大逆転×パンデミック'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_LEVEL7_気まぐれロジック.webp',
+    track:'気まぐれロジック',artist:'LEVEL7',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'シリウス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_LEVEL7_BREAK SHOUT 2024.webp',
+    track:'BREAK SHOUT 2024',artist:'LEVEL7',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'シリウス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_LEVEL7_Wild Fractal.webp',
+    track:'Wild Fractal',artist:'LEVEL7',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'シリウス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_LEVEL7_明日へのFanfare 2024.webp',
+    track:'明日へのFanfare 2024',artist:'LEVEL7',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'シリウス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_LEVEL7_ギルティラブ.webp',
+    track:'ギルティラブ',artist:'LEVEL7',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'シリウス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハープスター_Star Memories.webp',
+    track:'Star Memories',artist:'ハープスター',date:'2024-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Star Memories'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_すぱどり_シンデレラストーリー.webp',
+    track:'シンデレラストーリー',artist:'すぱどり',date:'2024-06',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'シンデレラストーリー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミと永遠に_ちょーぜつLOVE.webp',
+    track:'ちょーぜつ♡LOVE',artist:'キミと永遠に',date:'2024-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ちょーぜつ♡LOVE／可愛いだけの私じゃないの。'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミと永遠に_可愛いだけの私じゃないの。.webp',
+    track:'可愛いだけの私じゃないの。',artist:'キミと永遠に',date:'2024-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ちょーぜつ♡LOVE／可愛いだけの私じゃないの。'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_むーぷり_推しホーダイ.webp',
+    track:'推しホーダイ',artist:'むーぷり',date:'2024-06',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'コールセッション！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_大人の青春.webp',
+    track:'大人の青春',artist:'AsIs',date:'2024-06',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'大人の青春'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Lucky2_こくご・さんすう・りか・恋愛！.webp',
+    track:'こくご・さんすう・りか・恋愛！',artist:'Lucky2',date:'2024-07',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'こくご・さんすう・りか・恋愛！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_aiai_crazykiss.webp',
+    track:'crazy＜kiss',artist:'ai*ai',date:'2024-07',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'crazy＜kiss'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハニースパイスRe._Me My ハピネス.webp',
+    track:'Me My ハピネス',artist:'ハニースパイスRe.',date:'2024-07',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Re:Step'},
+  {cat:'anime',icon:'🎤',jacket:'images/_hash_新開 戦_Sword of Truth.webp',
+    track:'Sword of Truth',artist:'新開 戦（CV. 小林 親弘）',date:'2024-08',
+    credits:[{role:'編曲Mix',name:'宮川麿'}],note:'ブレイクマイケース パーソナルソング・コンピレーション (Vol.1)'},
+  {cat:'anime',icon:'🎤',jacket:'images/_hash_神家_Dazzling Dancer.webp',
+    track:'Dazzling Dancer',artist:'神家（CV. 仲村 宗悟）',date:'2024-08',
+    credits:[{role:'編曲Mix',name:'宮川麿'}],note:'ブレイクマイケース パーソナルソング・コンピレーション (Vol.1)'},
+  {cat:'anime',icon:'🎤',jacket:'images/_hash_新名 有_青に染まる.webp',
+    track:'青に染まる',artist:'新名 有（CV. 坂田 将吾）',date:'2024-08',
+    credits:[{role:'編曲Mix',name:'宮川麿'}],note:'ブレイクマイケース パーソナルソング・コンピレーション (Vol.2)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_lollipop_chu_らぶGAMEちゅ〜どく.webp',
+    track:'らぶGAME♡ちゅ〜どく',artist:'lollipop_chu',date:'2024-09',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'らぶGAME♡ちゅ〜どく'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_なみだ色の消しごむ_青春イマージュ.webp',
+    track:'青春イマージュ',artist:'なみだ色の消しごむ',date:'2024-09',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'青春イマージュ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_エンドレスロールケーキ.webp',
+    track:'エンドレスロールケーキ',artist:'テンシメシ໒꒱',date:'2024-09',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'エンドレスロールケーキ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_いつかの僕らの声に応えて.webp',
+    track:'いつかの僕らの声に応えて',artist:'AsIs',date:'2024-09',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'いつかの僕らの声に応えて'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_オカシリゾート_無限の青に.webp',
+    track:'無限の青に',artist:'オカシリゾート',date:'2024-10',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'楽曲派っぽいオカシ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ポラライト_NEO STORY.webp',
+    track:'NEO STORY',artist:'ポラライト',date:'2024-10',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'NEO STORY'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_木苺FRUCTOSE_最上級の好きあげちゃう.webp',
+    track:'最上級の好きあげちゃう',artist:'木苺FRUCTOSE',date:'2024-11',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'最上級の好きあげちゃう'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ラナキュラ_勧善懲悪シンセサイザー.webp',
+    track:'勧善懲悪シンセサイザー',artist:'ラナキュラ',date:'2024-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ラナコレ1'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_なみだ色の消しごむ_青春イマージュ.webp',
+    track:'青春イマージュ',artist:'なみだ色の消しごむ',date:'2024-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'なみだ色ってどんな色？'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_なみだ色の消しごむ_星空はなみだ色.webp',
+    track:'星空はなみだ色',artist:'なみだ色の消しごむ',date:'2024-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'なみだ色ってどんな色？'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ROOKEYROOKEYS_むーむーおむむ オムライス.webp',
+    track:'むーむーおむむ オムライス',artist:'ROOKEY♡ROOKEYS',date:'2024-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ROOKEY♡ROOKEYS'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ROOKEYROOKEYS_ルキ_x_ルキ.webp',
+    track:'ルキ×ルキ',artist:'ROOKEY♡ROOKEYS',date:'2024-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ROOKEY♡ROOKEYS'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Loulouchouchou_冬恋ダイアリー.webp',
+    track:'冬恋ダイアリー',artist:'Loulouchouchou',date:'2024-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'冬恋ダイアリー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_きみとぴあ！_夢ざんまい！.webp',
+    track:'夢ざんまい！',artist:'きみとぴあ！',date:'2025-01',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'夢ざんまい！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミと永遠に_好きのナイフを押し付けないで.webp',
+    track:'好きのナイフを押し付けないで',artist:'キミと永遠に',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'好きのナイフを押し付けないで'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_あの日見たラッキースター_恋愛至上しゅき.webp',
+    track:'恋愛至上しゅき♡',artist:'あの日見たラッキースター',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'恋愛至上しゅき♡'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_あの日見たラッキースター_無限大_inf_ミライ.webp',
+    track:'無限大∞ミライ',artist:'あの日見たラッキースター',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'無限大∞ミライ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_あの日見たラッキースター_完璧シンデレラ.webp',
+    track:'完璧シンデレラ',artist:'あの日見たラッキースター',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'完璧シンデレラ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Lienel_No Limit, No Rules.webp',
+    track:'No Limit, No Rules',artist:'Lienel',date:'2025-01',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'Go Around The World (Special Edition)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Lienel_じれったいKISS.webp',
+    track:'じれったいKISS',artist:'Lienel',date:'2025-01',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'Go Around The World (Special Edition)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_初めての気持ち (2024ver.).webp',
+    track:'初めての気持ち (2024ver.)',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Bitter-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_我爱_x_にーじゅー.webp',
+    track:'我爱×にーじゅー',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Bitter-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_エンドレスロールケーキ (2024ver.).webp',
+    track:'エンドレスロールケーキ (2024ver.)',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Bitter-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_わがままパルフェ (2024ver.).webp',
+    track:'わがままパルフェ (2024ver.)',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Sweet-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_拗らせチョコレート.webp',
+    track:'拗らせ♡チョコレート',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Sweet-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_もっとぎゅっと、キミと (2024ver.).webp',
+    track:'もっとぎゅっと、キミと (2024ver.)',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Sweet-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_ついてきて (2024ver.).webp',
+    track:'ついてきて (2024ver.)',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Sweet-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_ハートメインディッシュ (2024ver.).webp',
+    track:'ハートメインディッシュ (2024ver.)',artist:'テンシメシ໒꒱',date:'2025-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'テンシメシ໒꒱アソート-Sweet-'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_lol-エルオーエル-_POP UP!.webp',
+    track:'POP UP!',artist:'lol-エルオーエル-',date:'2025-01',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'POP UP!'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_木苺FRUCTOSE_告白シンフォニー.webp',
+    track:'告白シンフォニー',artist:'木苺FRUCTOSE',date:'2025-02',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'告白シンフォニー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ROOKEYROOKEYS_革命的_tri_無敵ツヨカワ.webp',
+    track:'革命的△無敵ツヨカワ',artist:'ROOKEY♡ROOKEYS',date:'2025-02',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'革命的△無敵ツヨカワ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ROOKEYROOKEYS_超本能_bidir_ファイター.webp',
+    track:'超本能⇔ファイター',artist:'ROOKEY♡ROOKEYS',date:'2025-02',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'超本能⇔ファイター'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_僕は気付いてた.webp',
+    track:'僕は気付いてた',artist:'AsIs',date:'2025-03',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'僕は気付いてた'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_きみの好きを否定なんかしない.webp',
+    track:'きみの好きを否定なんかしない',artist:'AsIs',date:'2025-04',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'きみの好きを否定なんかしない'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_これが、青春。.webp',
+    track:'これが、青春。',artist:'セツナソウ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'これが、青春。'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_制服ドリーマー.webp',
+    track:'制服ドリーマー',artist:'セツナソウ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'制服ドリーマー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_空が笑う.webp',
+    track:'空が笑う',artist:'セツナソウ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'空が笑う'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_アオハルスニーカー.webp',
+    track:'アオハルスニーカー',artist:'セツナソウ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アオハルスニーカー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_未完成エピローグ.webp',
+    track:'未完成エピローグ',artist:'セツナソウ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'未完成エピローグ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_刹那リフレイン.webp',
+    track:'刹那リフレイン',artist:'セツナソウ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'刹那リフレイン'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_オカシリゾート_チョコっと告白できたら.webp',
+    track:'チョコっと告白できたら',artist:'オカシリゾート',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'あまあまスイート大作戦!!'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_アプロ_フレーバー_U_BOX.webp',
+    track:'ドキドキLOVE',artist:'UPローチ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー U BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_アプロ_フレーバー_U_BOX.webp',
+    track:'お疲れSUMMERDAY',artist:'UPローチ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー U BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_アプロ_フレーバー_U_BOX.webp',
+    track:'テノナルホウヘ',artist:'UPローチ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー U BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_アプロ_フレーバー_U_BOX.webp',
+    track:'キミ依存♡シンドローム',artist:'UPローチ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー U BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_おすすめのアイコトバ - UPローチ Ver..webp',
+    track:'おすすめのアイコトバ - UPローチ Ver.',artist:'UPローチ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー U BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_トキメキ☆UPローチ.webp',
+    track:'トキメキ☆UPローチ',artist:'UPローチ',date:'2025-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー U BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_lollipop_chu_甘い恋は、コロンとキミと。.webp',
+    track:'甘い恋♡は、コロンとキミと。',artist:'lollipop_chu',date:'2025-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'甘い恋♡は、コロンとキミと。'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハイシーユース_めちゃかわフルコース.webp',
+    track:'めちゃかわ♡フルコース',artist:'ハイシーユース',date:'2025-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'めちゃかわ♡フルコース'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハイシーユース_圧倒的ガチ恋CHU→.webp',
+    track:'圧倒的ガチ恋CHU→♡',artist:'ハイシーユース',date:'2025-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'圧倒的ガチ恋CHU→♡'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ポラライト_切恋花火.webp',
+    track:'切恋花火',artist:'ポラライト',date:'2025-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'切恋花火'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_前橋ウィッチーズ_MAKASETENE.webp',
+    track:'MAKASETENE',artist:'前橋ウィッチーズ',date:'2025-05',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'スゴすぎ前橋ウィッチーズ！ / それぞれのドア【エンディング盤】'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハイシーユース_好き以上、キミが好き.webp',
+    track:'好き以上、キミが好き',artist:'ハイシーユース',date:'2025-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'好き以上、キミが好き'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_メリーパレード_サマパ！！.webp',
+    track:'サマパ！！',artist:'メリーパレード',date:'2025-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'サマパ！！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_テンシメシ_恋は青空とかき氷。.webp',
+    track:'恋は青空とかき氷。',artist:'テンシメシ໒꒱',date:'2025-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'恋は青空とかき氷。'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_あの日見たラッキースター_弱虫ソーダ.webp',
+    track:'弱虫ソーダ',artist:'あの日見たラッキースター',date:'2025-07',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'弱虫ソーダ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_透明ヒロイン_アプロ_フレーバー_P_BOX.webp',
+    track:'透明ヒロイン',artist:'UPローチ',date:'2025-07',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー P BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_UPxDATE_アプロ_フレーバー_P_BOX.webp',
+    track:'UP✕DATE',artist:'UPローチ',date:'2025-07',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー P BOX'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_ダイナマイトポップコーンエレクトロ_アプロ_フレーバー_P_BOX.webp',
+    track:'ダイナマイトポップコーンエレクトロ',artist:'UPローチ',date:'2025-07',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'アプロ♡フレーバー P BOX'},
+  {cat:'anime',icon:'🎤',jacket:'images/_hash_PM6_inf__らびゅ&ピース伝説.webp',
+    track:'らびゅ&ピース伝説',artist:'PM6:∞;あんさんぶるスターズ！！',date:'2025-08',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'PM6:∞「らびゅ&ピース伝説」あんさんぶるスターズ！！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_ミライソウ.webp',
+    track:'ミライソウ',artist:'セツナソウ',date:'2025-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ミライソウ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UPローチ_ハチャめっちゃカーニバル.webp',
+    track:'ハチャめっちゃカーニバル',artist:'UPローチ',date:'2025-09',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ハチャめっちゃカーニバル'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_セツナツ.webp',
+    track:'セツナツ',artist:'セツナソウ',date:'2025-09',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'セツナツ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_絶望歌.webp',
+    track:'絶望歌',artist:'AsIs',date:'2025-10',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'絶望歌'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_セツナイロ.webp',
+    track:'セツナイロ',artist:'セツナソウ',date:'2025-10',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'セツナイロ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Cheriecla_キミバズ.webp',
+    track:'キミバズ♡',artist:'Cheriecla',date:'2025-11',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Cheriecla'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_むーぷり_Twinning promise.webp',
+    track:'Twinning promise',artist:'むーぷり',date:'2025-11',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'Twinning promise'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_セツナソウ_初恋スノードーム.webp',
+    track:'初恋スノードーム',artist:'セツナソウ',date:'2025-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'初恋スノードーム'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ワガママなラストノート_チュッパラ！.webp',
+    track:'チュッパラ！',artist:'ワガママなラストノート',date:'2025-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'チュッパラ！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ワガママなラストノート_ワガママインド.webp',
+    track:'ワガママインド',artist:'ワガママなラストノート',date:'2025-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ワガママインド'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_キミと咲く花.webp',
+    track:'キミと咲く花',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_白いパズル.webp',
+    track:'白いパズル',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_キミノツバサ.webp',
+    track:'キミノツバサ',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_ピースサイン.webp',
+    track:'ピースサイン',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_ブルーテイル.webp',
+    track:'ブルーテイル',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_キミトミライ.webp',
+    track:'キミトミライ',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_キミトライブ!!.webp',
+    track:'キミトライブ!!',artist:'キミトサクハナ',date:'2025-12',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'キミハナハジメ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_AsIs_We are IDOL.webp',
+    track:'We are IDOL',artist:'AsIs',date:'2025-12',
+    credits:[{role:'編曲',name:'宮川麿'}],note:'We are IDOL'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_なみだ色の消しごむ_お揃いの未来.webp',
+    track:'お揃いの未来',artist:'なみだ色の消しごむ',date:'2026-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'お揃いの未来'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_あの日見たラッキースター_YOKUBARIモンスター.webp',
+    track:'YOKUBARIモンスター',artist:'あの日見たラッキースター',date:'2026-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'YOKUBARIモンスター'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_青春Restart.webp',
+    track:'青春Restart',artist:'キミトサクハナ',date:'2026-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'青春Restart'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_メリーパレード_がむしゃらエキストラ.webp',
+    track:'がむしゃらエキストラ',artist:'メリーパレード',date:'2026-01',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'『～Merry Re:Code～』'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_僕らが僕らであるために.webp',
+    track:'僕らが僕らであるために',artist:'キミトサクハナ',date:'2026-02',
+    credits:[{role:'Mix',name:'宮川麿'}],note:'僕らが僕らであるために'},
+  {cat:'anime',icon:'🎤',jacket:'images/_hash_環野 揺_Code10 -L.I.N.K.-.webp',
+    track:'Code:10 -L.I.N.K.-',artist:'環野 揺（CV. 寺島 惇太）',date:'2026-02',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'ブレイクマイケース パーソナルソング・コンピレーション (Vol.6)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_あの日見たラッキースター_嘘つきマフラー.webp',
+    track:'嘘つきマフラー',artist:'あの日見たラッキースター',date:'2026-02',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'嘘つきマフラー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミトサクハナ_あなたと私.webp',
+    track:'あなたと私',artist:'キミトサクハナ',date:'2026-03',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'あなたと私'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Dragonfly_DRAGONFLY.webp',
+    track:'DRAGONFLY',artist:'Dragonfly',date:'2026-03',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'DRAGONFLY'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Dragonfly_MIRACLE DIP！.webp',
+    track:'MIRACLE DIP！',artist:'Dragonfly',date:'2026-03',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'MIRACLE DIP！'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_Dragonfly_Poppin‘ Love.webp',
+    track:'Poppin‘ Love',artist:'Dragonfly',date:'2026-03',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Poppin‘ Love'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_なみだ色の消しごむ_お揃いの未来.webp',
+    track:'お揃いの未来',artist:'なみだ色の消しごむ',date:'2026-03',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'エラーコード：7394'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_なみだ色の消しごむ_イーアルカンフー.webp',
+    track:'イーアルカンフー',artist:'なみだ色の消しごむ',date:'2026-03',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'エラーコード：7394'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_恋音契约_雪色ファンタジー.webp',
+    track:'雪色ファンタジー',artist:'恋音契约',date:'2026-03',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'雪色ファンタジー'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_新穂姉妹_ツナグミライ.webp',
+    track:'ツナグミライ',artist:'新穂姉妹',date:'2026-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ツナグミライ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UNBS_YNBK.webp',
+    track:'YNBK',artist:'UNBS',date:'2023-02',
+    credits:[{role:'編曲Mix',name:'宮川麿'}],note:'灼熱ECSTASY (TYPE A)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UNBS_mu-these.webp',
+    track:'mu-these',artist:'UNBS',date:'2023-02',
+    credits:[{role:'編曲Mix',name:'宮川麿'}],note:'灼熱ECSTASY (TYPE A)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_UNBS_lovegram.webp',
+    track:'lovegram',artist:'UNBS',date:'2023-02',
+    credits:[{role:'編曲Mix',name:'宮川麿'}],note:'灼熱ECSTASY (TYPE B)'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_aiai_SHOOTING STAR.webp',
+    track:'SHOOTING STAR',artist:'ai*ai',date:'2023-04',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'SHOOTING STAR'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_メリーパレード_スキスキCHU意報.webp',
+    track:'スキスキ♡CHU意報',artist:'メリーパレード',date:'2023-05',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'メリーパレード'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_elsy_はぴちゅ.webp',
+    track:'#はぴちゅ',artist:'elsy',date:'2023-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'#はぴちゅ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_RESELA_新世界パラドックス.webp',
+    track:'新世界パラドックス',artist:'RESELA',date:'2023-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'新世界パラドックス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_RESELA_Death or Change.webp',
+    track:'Death or Change',artist:'RESELA',date:'2023-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'新世界パラドックス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_RESELA_古今東西.webp',
+    track:'古今東西',artist:'RESELA',date:'2023-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'新世界パラドックス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_RESELA_コイのピリオド.webp',
+    track:'コイのピリオド',artist:'RESELA',date:'2023-06',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'新世界パラドックス'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_MASK OF GODDESS_優しい嘘なら.webp',
+    track:'優しい嘘なら',artist:'MASK OF GODDESS',date:'2023-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'優しい嘘なら'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_LEVEL7_ギルティラブ.webp',
+    track:'ギルティラブ',artist:'LEVEL7',date:'2023-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'ギルティラブ'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ラナキュラ_勧善懲悪シンセサイザー.webp',
+    track:'勧善懲悪シンセサイザー',artist:'ラナキュラ',date:'2023-08',
+    credits:[{role:'作曲編曲',name:'宮川麿'}],note:'WORLD ADVENTURE'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハニースパイスRe._スキ≒ペア.webp',
+    track:'スキ≒ペア',artist:'ハニースパイスRe.',date:'2023-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Re:MIND'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハニースパイスRe._Popping Lolipop (2023ver.).webp',
+    track:'Popping Lolipop (2023ver.)',artist:'ハニースパイスRe.',date:'2023-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Re:MIND'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_ハニースパイスRe._真夏のDiary (2023ver.).webp',
+    track:'真夏のDiary (2023ver.)',artist:'ハニースパイスRe.',date:'2023-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'Re:MIND'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_キミと永遠に_反論ジェネラリー.webp',
+    track:'反論ジェネラリー',artist:'キミと永遠に',date:'2023-08',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'心の奥底に眠る空模様'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_メリーパレード_この夏、ボクは恋を知った。.webp',
+    track:'この夏、ボクは恋を知った。',artist:'メリーパレード',date:'2023-09',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'この夏、ボクは恋を知った。'},
+  {cat:'jpop',icon:'🎤',jacket:'images/_hash_メリーパレード_欲しがりハッピーエンド.webp',
+    track:'欲しがりハッピーエンド',artist:'メリーパレード',date:'2023-11',
+    credits:[{role:'作曲編曲Mix',name:'宮川麿'}],note:'『～MerryParade～』'},
+
+  ];
+// ▲▲▲ データここまで ▲▲▲
+
+const BADGE_CLASS = {anime:'ba',game:'bg',jpop:'bj'};
+const BADGE_LABEL = {anime:'Anime',game:'Game',jpop:'J-POP'};
+
+function openModal(idx){
+  const w = WORKS[idx]; if(!w) return;
+  const jEl = document.getElementById('modalJacket');
+  jEl.innerHTML = w.jacket ? `<img src="${w.jacket}" alt="${w.track}" loading="lazy">` : w.icon;
+  const bEl = document.getElementById('modalBadge');
+  bEl.className = 'modal-badge '+(BADGE_CLASS[w.cat]||'ba');
+  bEl.textContent = BADGE_LABEL[w.cat]||w.cat;
+  document.getElementById('modalTrack').textContent  = w.track;
+  document.getElementById('modalArtist').textContent = w.artist;
+  document.getElementById('modalDate').textContent   = w.date;
+  document.getElementById('modalCredits').innerHTML  = w.credits.map(c =>
+    `<div class="credit-row"><span class="credit-role">${c.role}</span><span class="credit-name">${c.name}</span></div>`
+  ).join('');
+  const nEl = document.getElementById('modalNote');
+  if(w.note){nEl.textContent=w.note;nEl.style.display='block';}
+  else{nEl.style.display='none';}
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(e){
+  if(e && e.target!==document.getElementById('modalOverlay')) return;
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+
+// Filter
+function fw(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.wcard').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  });
+  document.querySelectorAll('.yr-block').forEach(block=>{
+    const vis=[...block.querySelectorAll('.wcard')].some(c=>c.style.display!=='none');
+    block.style.display=vis?'':'none';
+  });
+}
+
+// Scroll reveal
+const io=new IntersectionObserver(
+  es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),
+  {threshold:0.01}
+);
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
