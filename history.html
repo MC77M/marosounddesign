@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019年以前の作品 — MaroSoundDesign</title>
+<link rel="canonical" href="https://marosounddesign.com/history.html">
+<meta property="og:url" content="https://marosounddesign.com/history.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Noto+Sans+JP:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden}
+::selection{background:#e879f9;color:#fff}
+
+:root{
+  --grad:linear-gradient(120deg,#f472b6 0%,#c084fc 40%,#818cf8 80%,#67e8f9 100%);
+  --grad2:linear-gradient(120deg,#c084fc 0%,#818cf8 50%,#67e8f9 100%);
+  --sub:#666;
+  --muted:#aaa;
+  --line:rgba(0,0,0,.08);
+}
+
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 40% at 0% 0%,rgba(244,114,182,.07) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 0%,rgba(129,140,248,.07) 0%,transparent 55%),
+    radial-gradient(ellipse 45% 35% at 100% 100%,rgba(192,132,252,.05) 0%,transparent 50%),
+    radial-gradient(ellipse 40% 30% at 0% 100%,rgba(103,232,249,.05) 0%,transparent 50%);
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity:.015;mix-blend-mode:multiply;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 2.5rem;
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid rgba(0,0,0,.07);
+}
+.nav-logo{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#111;line-height:1.4}
+.nav-logo span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-back{
+  font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  color:#999;text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.4rem;
+}
+.nav-back:hover{color:#111}
+
+.page-header,.history-body{position:relative;z-index:1;background:#fff}
+.page-header{padding:8rem 2.5rem 2.2rem}
+.history-body{padding:0 2.5rem 6rem}
+.inner{max-width:1080px;margin:0 auto}
+
+.eyebrow{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.7rem}
+.eyebrow-line{display:block;width:24px;height:1px;background:var(--grad)}
+.eyebrow-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-title{font-family:'Inter',sans-serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:900;letter-spacing:-.04em;color:#111;margin-bottom:1rem}
+.page-title em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-copy{max-width:680px;font-size:.96rem;color:var(--sub)}
+.history-index{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.55rem;
+  margin-top:1.4rem;
+}
+.history-index-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:3.5rem;
+  padding:.5rem .78rem;
+  border-radius:12px 12px 12px 4px;
+  border:1px solid rgba(0,0,0,.07);
+  background:rgba(255,255,255,.92);
+  box-shadow:0 10px 28px rgba(17,17,17,.05);
+  text-decoration:none;
+  font-family:'DM Mono',monospace;
+  font-size:.6rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#666;
+  transition:transform .2s ease, box-shadow .2s ease, color .2s ease;
+}
+.history-index-link:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(17,17,17,.08);
+  color:#111;
+}
+.history-index-link.is-kana{
+  min-width:4rem;
+}
+.history-index-link.is-active{
+  color:#111;
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(246,248,255,.96) 100%);
+}
+
+.history-list{
+  display:grid;
+  gap:1rem;
+}
+.history-box{
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:24px;
+  box-shadow:0 18px 60px rgba(17,17,17,.05);
+  overflow:hidden;
+}
+.history-head,.history-row{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1.2fr);
+  gap:1.5rem;
+}
+.history-head{
+  padding:.72rem 1.4rem;
+  background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(249,249,251,.95) 100%);
+  border-bottom:1px solid var(--line);
+}
+.history-label{
+  font-family:'DM Mono',monospace;
+  font-size:.58rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.history-group{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  padding:1rem 1.4rem .7rem;
+  background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(249,249,251,.95) 100%);
+  border-bottom:1px solid var(--line);
+}
+.history-group-label{
+  font-family:'DM Mono',monospace;
+  font-size:.86rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  background:var(--grad2);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.history-row{
+  padding:.92rem 1.4rem;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.history-row:last-child{border-bottom:none}
+.history-artist{font-size:.86rem;font-weight:400;color:#111;line-height:1.55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.history-track{
+  font-size:.83rem;line-height:1.55;color:#111;font-weight:400;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.history-credit{font-size:.82rem;line-height:1.65;color:var(--sub)}
+.history-main{display:contents}
+.history-mobile-title{display:none}
+.history-credit-label{display:none}
+.history-credit strong{
+  font-family:'DM Mono',monospace;
+  font-size:.72rem;
+  letter-spacing:.06em;
+  color:#111;
+  font-weight:500;
+}
+.history-credit-divider{color:#d0d0d8;padding:0 .5rem}
+.history-foot{
+  padding:1rem 1.4rem 1.2rem;
+  border-top:1px solid var(--line);
+  background:rgba(249,249,251,.8);
+}
+.history-note{
+  font-family:'DM Mono',monospace;
+  font-size:.62rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#aaa;
+}
+.history-top{
+  display:block;
+  width:fit-content;
+  margin:1.4rem auto 0;
+  padding:.3rem 1.2rem;
+  border-radius:100px;
+  border:1.5px solid rgba(0,0,0,.1);
+  text-decoration:none;
+  font-family:'DM Mono',monospace;
+  font-size:.58rem;
+  letter-spacing:.15em;
+  color:#bbb;
+  transition:all .22s;
+}
+.history-top:hover{border-color:rgba(192,132,252,.5);color:#888}
+.loading,.error{padding:2rem 1.4rem;color:#999;font-size:.9rem}
+
+.reveal{opacity:0;transform:translateY(30px) scaleY(0.95);transition:opacity .4s cubic-bezier(.12,1,.4,1),transform .4s cubic-bezier(.12,1,.4,1)}
+.reveal.on{opacity:1;transform:translateY(0) scaleY(1)}
+.d1{transition-delay:.08s}
+.d2{transition-delay:.16s}
+
+@media(max-width:860px){
+  .history-head{display:none}
+  .history-row{grid-template-columns:1fr;gap:.5rem}
+  .history-main{display:none}
+  .history-mobile-title{
+    display:block;
+    font-size:.84rem;
+    line-height:1.55;
+    color:#111;
+    font-weight:400;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .history-credit{
+    display:flex;
+    align-items:baseline;
+    gap:.45rem;
+    line-height:1.5;
+  }
+  .history-credit-label{
+    display:inline;
+    font-family:'DM Mono',monospace;
+    font-size:.58rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#bbb;
+  }
+}
+
+@media(max-width:600px){
+  nav{padding:1rem 1.2rem}
+  .page-header,.history-body{padding-left:1.2rem;padding-right:1.2rem}
+  .history-box{border-radius:18px}
+  .history-group{padding:1rem 1rem .4rem}
+  .history-row{padding:.86rem 1rem}
+  .history-foot,.loading,.error{padding-left:1rem;padding-right:1rem}
+}
+</style>
+</head>
+<body>
+<div id="top"></div>
+<nav>
+  <a href="portfolio.html" class="nav-logo">Maro<span>Sound</span>Design</a>
+  <a href="works.html" class="nav-back">← Works</a>
+</nav>
+
+<div class="page-header">
+  <div class="inner">
+    <p class="eyebrow reveal">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Archive Works</span>
+    </p>
+    <h1 class="page-title reveal"><em>2019年以前のWorks</em></h1>
+    <p class="page-copy reveal d1">アーティスト名順で、2019年以前の作品履歴をテキストベースで掲載しています。</p>
+    <div class="history-index reveal d1" id="historyIndex" aria-label="作品インデックス"></div>
+  </div>
+</div>
+
+<div class="history-body">
+  <div class="inner">
+    <div class="history-list reveal d2" id="historyList">
+      <p class="loading">作品履歴を読み込み中です。</p>
+    </div>
+    <div class="history-foot reveal d2">
+      <p class="history-note">Text-based archive for earlier works</p>
+      <a href="#top" class="history-top">Top</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const CREDIT_ROLE_ORDER = ['作曲', '編曲', 'Mix'];
+const historyList = document.getElementById('historyList');
+const historyIndex = document.getElementById('historyIndex');
+
+function mergeCredits(credits) {
+  const merged = new Map();
+
+  credits.forEach((credit, index) => {
+    const key = `${credit.name}__${index}`;
+    const existingKey = [...merged.keys()].find(k => k.startsWith(`${credit.name}__`));
+    const targetKey = existingKey || key;
+    const entry = merged.get(targetKey) || {name: credit.name, roles: []};
+
+    credit.role.split('・').forEach(role => {
+      if (role && !entry.roles.includes(role)) entry.roles.push(role);
+    });
+
+    merged.set(targetKey, entry);
+  });
+
+  return [...merged.values()].map(entry => {
+    const ordered = [
+      ...CREDIT_ROLE_ORDER.filter(role => entry.roles.includes(role)),
+      ...entry.roles.filter(role => !CREDIT_ROLE_ORDER.includes(role))
+    ];
+    return {name: entry.name, role: ordered.join('・')};
+  });
+}
+
+function formatCredits(credits) {
+  const merged = mergeCredits(credits);
+  const roles = merged.map((credit, index) => `
+    <span><strong>${credit.role}</strong></span>${index < merged.length - 1 ? '<span class="history-credit-divider">/</span>' : ''}
+  `).join('');
+  return `<span class="history-credit-label">Credit /</span>${roles}`;
+}
+
+function sortHistory(items) {
+  return [...items].sort((a, b) => {
+    const groupOrderDiff = groupOrder(a) - groupOrder(b);
+    if (groupOrderDiff !== 0) return groupOrderDiff;
+
+    const primaryKeyA = primarySortKey(a);
+    const primaryKeyB = primarySortKey(b);
+    const artistDiff = primaryKeyA.localeCompare(primaryKeyB, 'ja', {
+      numeric: true,
+      sensitivity: 'base'
+    });
+    if (artistDiff !== 0) return artistDiff;
+    return normalizedTrackKey(trackSortValue(a)).localeCompare(normalizedTrackKey(trackSortValue(b)), 'ja', {
+      numeric: true,
+      sensitivity: 'base'
+    });
+  });
+}
+
+function groupOrder(item) {
+  return item.group === 'キャラクターソング' ? 1 : 0;
+}
+
+function primarySortKey(item) {
+  if (item.group === 'キャラクターソング') {
+    return normalizedTextKey(item.artist);
+  }
+  return normalizedLeadingKey(item);
+}
+
+function normalizedTextKey(value) {
+  const raw = String(value || '').trim();
+  const stripped = raw.replace(/^[^A-Za-zぁ-んァ-ヶ一-龠0-9]+/, '');
+  return stripped || raw;
+}
+
+function normalizedTrackKey(track) {
+  return normalizedTextKey(track);
+}
+
+function trackSortValue(item) {
+  return item.trackSortKey || item.track;
+}
+
+function normalizedLeadingKey(item) {
+  const raw = String(item.sortKey || item.artist || '').trim();
+  const stripped = raw.replace(/^[^A-Za-zぁ-んァ-ヶ一-龠]+/, '');
+  return stripped || raw;
+}
+
+function groupLabel(item) {
+  if (item.group) return item.group;
+  const key = normalizedLeadingKey(item);
+  if (!key) return '#';
+  const first = key[0];
+  if (/^[a-z]/i.test(first)) return first.toUpperCase();
+  if (/^[ぁ-ん]/.test(first)) {
+    if ('あいうえお'.includes(first)) return 'あ行';
+    if ('かきくけこがぎぐげご'.includes(first)) return 'か行';
+    if ('さしすせそざじずぜぞ'.includes(first)) return 'さ行';
+    if ('たちつてとだぢづでど'.includes(first)) return 'た行';
+    if ('なにぬねの'.includes(first)) return 'な行';
+    if ('はひふへほばびぶべぼぱぴぷぺぽ'.includes(first)) return 'は行';
+    if ('まみむめも'.includes(first)) return 'ま行';
+    if ('やゆよ'.includes(first)) return 'や行';
+    if ('らりるれろ'.includes(first)) return 'ら行';
+    if ('わをん'.includes(first)) return 'わ行';
+    return first;
+  }
+  if (/^[ァ-ヶ]/.test(first)) return groupLabel({sortKey: String.fromCharCode(first.charCodeAt(0) - 0x60)});
+  return first;
+}
+
+function groupItems(items) {
+  const groups = [];
+  let currentLabel = '';
+  let currentItems = [];
+
+  items.forEach(item => {
+    const label = groupLabel(item);
+    if (label !== currentLabel) {
+      if (currentItems.length) groups.push({label: currentLabel, items: currentItems});
+      currentLabel = label;
+      currentItems = [item];
+    } else {
+      currentItems.push(item);
+    }
+  });
+
+  if (currentItems.length) groups.push({label: currentLabel, items: currentItems});
+  return groups;
+}
+
+function slugifyGroupLabel(label) {
+  return `group-${label.replace(/[^\wぁ-んァ-ヶ一-龠]+/g, '-')}`;
+}
+
+function renderIndex(groups) {
+  historyIndex.innerHTML = groups.map(group => {
+    const isKana = /行$/.test(group.label);
+    return `<a class="history-index-link${isKana ? ' is-kana' : ''}" href="#${slugifyGroupLabel(group.label)}">${group.label}</a>`;
+  }).join('');
+}
+
+const io = new IntersectionObserver(
+  entries => entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('on');
+  }),
+  {threshold: 0.01}
+);
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+const DATA_VERSION = '20260417-1';
+
+fetch(`history-data.json?v=${DATA_VERSION}`)
+  .then(async response => {
+    if (!response.ok) throw new Error(`Failed to load history data: ${response.status}`);
+    const items = await response.json();
+    const sorted = sortHistory(items);
+
+    if (!sorted.length) {
+      historyList.innerHTML = '<p class="loading">表示できる作品履歴がまだありません。</p>';
+      return;
+    }
+
+    const groups = groupItems(sorted);
+    renderIndex(groups);
+    historyList.innerHTML = groups.map(group => `
+      <section class="history-box" id="${slugifyGroupLabel(group.label)}">
+        <div class="history-group">
+          <p class="history-group-label">${group.label}</p>
+        </div>
+        <div class="history-head">
+          <p class="history-label">${group.label === 'キャラクターソング' ? 'Album' : 'Artist'}</p>
+          <p class="history-label">Track</p>
+          <p class="history-label">Credit</p>
+        </div>
+        ${group.items.map(item => `
+          <div class="history-row">
+            <p class="history-mobile-title">${item.artist} / ${item.track}</p>
+            <div class="history-main">
+              <p class="history-artist">${item.artist}</p>
+              <p class="history-track">${item.track}</p>
+            </div>
+            <p class="history-credit">${formatCredits(item.credits || [])}</p>
+          </div>
+        `).join('')}
+      </section>
+    `).join('');
+  })
+  .catch(error => {
+    console.error(error);
+    historyIndex.innerHTML = '';
+    historyList.innerHTML = '<p class="error">作品履歴の読み込みに失敗しました。</p>';
+  });
+</script>
+</body>
+</html>
