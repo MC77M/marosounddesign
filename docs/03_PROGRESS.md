@@ -110,3 +110,12 @@
 - 初期 DOM: 22件（2026年のみ） / 残り278件は IntersectionObserver でスクロール時に充填
 - 年別ナビ（#yr2026〜#yr2020）・フィルター全種・openModal・コンソールエラーなし 確認済み
 - Status: ✅ 完了（Lighthouse 再測定は別途実施）
+
+## Phase 16: Performance Phase 1E — works.html CSS 非同期化 + CSS キャッシュ
+- **works.html** L23: `<link rel="stylesheet" href="css/style.css">` を `<link rel="preload" ... as="style" onload="...rel='stylesheet'">` + `<noscript>` フォールバックに変更
+  - 22 KB の外部 CSS が render-blocking だった問題を解消（インライン `<style>` がファーストビューをカバー）
+- **netlify.toml**: `*.css` 用ヘッダブロックを追加（`Cache-Control: public, max-age=86400`）
+  - これまで `*.css` は汎用 1h キャッシュにフォールバックしていた → 24h に延長
+- 検証: works.html 初期表示・カード（22→300件）・フィルター（J-POP 281件）・モーダル・Console エラーなし 確認済み
+- 適用範囲: works.html のみ。他ページ（index/portfolio/history）への横展開は別フェーズで判断
+- Status: ✅ 完了
