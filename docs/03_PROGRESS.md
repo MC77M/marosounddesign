@@ -80,3 +80,11 @@
 - `<noscript>` フォールバックを追加
 - 表示崩れなし・Consoleエラーなし確認済み
 - Status: ✅ 完了
+
+## Phase 13: Performance Phase 1B — Google Fonts Inter ウェイト削減
+- **index.html** / **works.html** / **portfolio.html** / **history.html**: Inter のウェイト指定を `300;400;500;700;800;900` → `800;900` に変更
+- 調査の結果 Inter は 800・900 のみ実使用、300〜700 は未使用と確認
+- Noto Sans JP・DM Mono は変更なし（全ウェイト使用中）
+- 11ウェイト → 5ウェイト（フォント CSS ダウンロード量約 55% 削減）
+- 表示崩れなし・Consoleエラーなし確認済み
+- Status: ✅ 完了
