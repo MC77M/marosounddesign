@@ -119,3 +119,12 @@
 - 検証: works.html 初期表示・カード（22→300件）・フィルター（J-POP 281件）・モーダル・Console エラーなし 確認済み
 - 適用範囲: works.html のみ。他ページ（index/portfolio/history）への横展開は別フェーズで判断
 - Status: ✅ 完了
+
+## Phase 17: Performance Phase 1F — works.html Inter 900 font preload
+- **works.html** L21直下: `<link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/...woff2" as="font" type="font/woff2" crossorigin>` を追加
+  - LCP 要素 `<h1 class="page-title">Works</h1>` は Inter 900 のみ使用（38.4px / area 21,774 sq px）
+  - Google Fonts CSS 到着→woff2 URL 発見という連鎖を断ち切り、HTML parse 直後にフォント DL を開始
+  - Latin subset のみ（"Works" は純 Latin）、24 KB / cache 1年
+- ローカル検証: t=16ms で Inter 900 woff2 が preload fetch 開始・表示崩れなし・Console エラーなし 確認済み
+- 本番 PageSpeed 測定後に効果を判断（効果薄ければ revert 候補）
+- Status: ✅ 実装済（PageSpeed 再測定待ち）
