@@ -1,5 +1,12 @@
 # Refactoring Progress
 
+## Hotfix 2026-04-28 (2): Selected Works の Lienel 画像が本番で表示されない
+- 症状: Selected Works の Lienel_じれったいKISS だけ本番で 404 → alt の "jacket" 表示
+- 原因: index.html 296-297 行のファイル名 "じ" が NFD 形式（し+゛, e3 81 97 e3 82 99）。Netlify 上のファイルは NFC（じ, e3 81 98）。リクエスト不一致で SPA フォールバック (text/html) を返却
+- 修正: 該当 2 行のみ NFC 正規化（最小差分）
+- 確認: 該当行が `e3 81 98 e3 82 8c e3 81 a3 e3 81 9f e3 81 84` (NFC じれったい) になったこと、他文字列に変更なし
+- Status: ✅ 完了
+
 ## Hotfix 2026-04-28: index.html スマホ表示崩れ修正
 - 症状: スマホ幅 (≤390px) で About/Profile セクションの本文が右端に細く押し出され縦書き状態
 - 原因: index.html inline `<style>` の `@media(max-width:900px)` が `.about-grid` を 2 カラム固定し、style.css 側 780px 単カラム化ルールを上書き
