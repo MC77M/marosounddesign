@@ -1,5 +1,21 @@
 # Refactoring Progress
 
+## Feature 2026-04-28 (4): スマホモーダル 下スワイプで閉じる（index.html 限定先行導入）
+- 追加: `js/modal-swipe.js`（共有スクリプト、touchstart/move/end 監視・閾値 80px・上方向ドラッグ無視・PC操作非干渉）
+  - `.modal-handle` または `modal.scrollTop===0` のときのみドラッグ開始 → モーダル内スクロールと干渉しない
+  - 下方向ドラッグ中のみ `transform: translateY(dy)` を inline 付与、`transition: none`
+  - 80px 以上で `window.closeModal()`（無ければ overlay の `.open` 解除 + body overflow 復元）
+  - 閾値未満は inline スタイルをクリアして CSS の元位置に戻す
+- 編集: `index.html` 372 行目に `<script src="js/modal-swipe.js?v=20260428" defer></script>` 1 行のみ追加
+- 既存挙動の保全: overlay クリック / close ボタン / Escape / open 時の transform 遷移すべて維持
+- 確認: mobile プレビュー (375x812) で touch 合成イベントによる検証
+  - 120px 下スワイプ → modal 閉じる、inline style 完全クリア、body.overflow 復元 ✅
+  - 30px 下スワイプ → modal は閉じず inline style クリア ✅
+  - 100px 上スワイプ → 何も起きない（transform 付与なし） ✅
+  - Console エラーなし ✅
+- 未対応: portfolio.html / works.html へは未展開（動作確認後に別タスクで横展開予定）
+- Status: ✅ 完了（index.html のみ）
+
 ## Hotfix 2026-04-28 (3): 画像パス NFC チェックスクリプト導入（再発防止）
 - 追加: `tools/check_image_paths.py`
   - 対象: index.html / portfolio.html / works.html / history.html / selected-works-shared.js / works-data.json / history-data.json
