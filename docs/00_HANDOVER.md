@@ -63,9 +63,13 @@
   - Google Fonts を非同期読み込みに変更（全4ページ / rel=preload + onload + noscript）
   - fonts.gstatic.com preconnect 追加済み
   - Inter ウェイトを 300;400;500;700;800;900 → **800;900 のみ**に削減（11→5ウェイト）
-  - モバイル Performance スコア: index 61 / works 64 / portfolio 59 / history 65
+  - works.html カード画像を thumbnail（~20KB）に切替（jacket ~50KB → 推定▲9MB削減）
+  - works.html `.yr-block` に `content-visibility:auto` 追加（ビューポート外レンダリングスキップ）
+  - モバイル Performance スコア: index 61 / **works 66** / portfolio 59 / history 65
   - デスクトップ Performance スコア: index 85 / works 84 / portfolio 91 / history 88
-  - モバイル LCP の根本改善は未完（フォント非同期化の効果が限定的）
+  - works.html モバイル LCP: 12.8秒 → **8.6秒**（▲4.2秒改善）
+  - works.html FCP 3.5秒 / TBT 0ms / CLS 0.001
+  - モバイル LCP のさらなる改善には初期描画件数制限が必要（要別途検討）
 
 ---
 
@@ -95,7 +99,7 @@
 
 | 優先度 | 項目 | 概要 |
 |---|---|---|
-| 🔴 高 | works.html 初期表示件数制限 | 300件全件レンダリングによりモバイル LCP 12.8秒。初期30件のみ描画し残りをスクロール時追加 |
+| 🔴 高 | works.html 初期表示件数制限 | LCP 8.6秒が残課題。FCP→LCP の 5.1秒ギャップは 300件 DOM 構築が原因。初期30件のみ描画し「もっと見る」で追加する方式。フィルター・年別ナビ・openModal への影響が大きいため慎重に設計すること |
 | 🟠 中 | sameAs 追記 | Wikipedia・Uta-net の実URLが確定したら index.html / portfolio.html の JSON-LD に追加 |
 | 🟡 低 | Noto Sans JP 700 / DM Mono 600 バグ確認 | 宣言あるが未ロード。現状ブラウザが代替表示中。目視で問題なければ対応不要 |
 | 🟡 低 | LCP 要素への preload 追加 | index.html のヒーローセクション向け |
