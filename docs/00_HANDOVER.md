@@ -57,6 +57,16 @@
 - Selected Works の Lienel 画像 404 修正: index.html 296-297 行の "じ" が NFD 形式（し+゛）。NFC に正規化（6 バイトのみ）
 - 再発防止: `tools/check_image_paths.py` 追加。push 前に NFD / 実ファイル無し / Git 未追跡 / NFD-NFC 重複を一括検出
 
+### Feature/Hotfix 2026-04-28（追加分・コミット 61b9db7 / 97c6d64 / c8086d7 / 68a0522）
+- **スマホモーダル下スワイプ閉じ機能追加**（3 ページ対応）
+  - 新規 `js/modal-swipe.js`（touchstart/move/end、閾値 80px、上方向無視、`.modal-handle` または `scrollTop===0` 開始限定 → モーダル内スクロール非干渉、`window.closeModal` 呼び出し fallback あり）
+  - 各 HTML に `<script src="js/modal-swipe.js?v=20260428" defer></script>` 1 行追加のみ。CSS / 既存 JS 変更なし
+  - PC 操作非干渉（touch event のみ監視）。overlay クリック / close ボタン / Escape 維持
+- **works.html ヘッダーロゴ表示崩れ修正**
+  - 1 行表示 → `<br>` 抜け追加（index/portfolio と同じ `Maro<br><span>Sound</span>Design`）
+  - スマホ位置ズレ → works.html `<style>` に `@media(max-width:900px){nav{padding:1rem 1.4rem}}` 追加、`@media(max-width:600px)` の `nav{padding:1rem 1.2rem}` 削除（インライン `nav{}` が外部 CSS の ≤900px 規則を読込順で上書きしていたため）
+  - PC (≥901px) の padding `1.2rem 2.5rem` は変更なし。3 ページのロゴ位置が 375/414px で完全一致
+
 ### SEO Phase 1 完了（2026-04-28）
 - meta description / OGP / Twitter Card 追加済み（全4ページ）
 - portfolio.html title 重複解消（"Profile — MaroSoundDesign"）
@@ -127,6 +137,7 @@
 
 | 優先度 | 項目 | 概要 |
 |---|---|---|
+| 🟢 高 | スマホ実機でモーダル下スワイプ動作確認（portfolio / works） | index は確認済み。3 ページ共通の `js/modal-swipe.js` を読み込んでいるので挙動は同一の想定だが要実機確認 |
 | 🟠 中 | sameAs 追記 | Wikipedia・Uta-net の実URLが確定したら index.html / portfolio.html の JSON-LD に追加 |
 | 🟠 中 | index / portfolio / history の CSS 非同期化 | works.html と同様 preload+onload 化（Phase 1E の横展開）。1ページずつ検証 |
 | 🟡 低 | works-data.json キャッシュ緩和 | `max-age=300`（5分）に変更。2回目以降の LCP -200ms 程度。netlify.toml 1行 |
