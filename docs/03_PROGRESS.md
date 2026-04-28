@@ -72,3 +72,11 @@
 - **portfolio.html**: `Person` スキーマを `</head>` 直前に挿入
 - sameAs: `https://x.com/MaroSoundDesign` / `https://marosounddesign.com/portfolio.html`（Wikipedia・Uta-net は URL確認後に追加予定）
 - Status: ✅ 完了（sameAs 追記待ち）
+
+## Phase 12: Performance Phase 1A — Google Fonts 非同期化
+- **index.html** / **works.html** / **portfolio.html** / **history.html**: Google Fonts CSS 読み込みをレンダリングブロッキングから非同期に変更
+- `rel="stylesheet"` → `rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"` に変更
+- `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` を追加
+- `<noscript>` フォールバックを追加
+- 表示崩れなし・Consoleエラーなし確認済み
+- Status: ✅ 完了
