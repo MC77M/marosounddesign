@@ -448,6 +448,16 @@ function preloadJacket(idx){
   img.src = safeAssetSrc(w.jacket);
 }
 
+function preloadInitialYearJackets(){
+  const year = years[0];
+  if (!year) return;
+  const entries = grouped.get(year) || [];
+  const schedule = window.requestIdleCallback || (cb => setTimeout(cb, 800));
+  schedule(() => {
+    entries.forEach(({ index }) => preloadJacket(index));
+  });
+}
+
 function thumbnailSrc(work){
   return work.thumbnail || work.jacket;
 }
@@ -581,6 +591,7 @@ function renderWorks(){
   fillYear(years[0]);
   initFillObserver();
   applyFilter(currentFilter);
+  preloadInitialYearJackets();
 }
 
 async function openModal(idx){

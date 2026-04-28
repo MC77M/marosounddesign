@@ -1,5 +1,18 @@
 # Refactoring Progress
 
+## Perf 2026-04-28 (9): works.html 初期表示年 jacket の idle 先読み
+- 目的: 初期表示中の最新年カードに対し、ブラウザ idle 時間で jacket を低優先 preload しモーダル表示遅延を更に解消
+- 修正: `works.html` のみ
+  - `preloadInitialYearJackets()` を追加（`years[0]` のみ対象、`requestIdleCallback` 優先・未対応時は `setTimeout(800ms)` フォールバック）
+  - `renderWorks()` 末尾に呼び出しを 1 行追加
+- 不変項: thumbnail 表示 / モーダル jacket / フィルター / 年別 lazy fill / CSS / デザイン すべて変更なし
+- 全 300 件は先読みしない（最新年=2026 の 22 件のみ）
+- 確認:
+  - 初期描画後に 22 件の jacket webp が 200 で取得 ✅
+  - 他年の jacket は 0 件（lazy fill 維持） ✅
+  - Console エラーなし / Network 404 なし ✅
+- Status: ✅ 完了
+
 ## Perf 2026-04-28 (8): works.html モーダル jacket 画像の hover/touchstart 先読み
 - 目的: 一覧 thumbnail → モーダル jacket 表示時の遅延を解消
 - 修正: `works.html` のみ
