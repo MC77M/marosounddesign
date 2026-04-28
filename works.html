@@ -555,10 +555,11 @@ function fillYear(year){
   const grid = block.querySelector('.works-grid');
   if (!grid) return;
   const entries = grouped.get(year) || [];
-  grid.innerHTML = entries.map(({ work, index }) => `
+  const isInitialYear = year === years[0];
+  grid.innerHTML = entries.map(({ work, index }, i) => `
     <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})" onmouseenter="preloadJacket(${index})" ontouchstart="preloadJacket(${index})">
       <div class="wcard-img">
-        <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" loading="lazy" decoding="async" onerror="handleCardImageError(this)">
+        <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" width="600" height="600" loading="eager" decoding="async"${isInitialYear && i < 3 ? ' fetchpriority="high"' : ''} onerror="handleCardImageError(this)">
         <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
         <div class="wcard-ph"><span>♪</span><p>No Image</p></div>
       </div>
@@ -591,7 +592,7 @@ function initFillObserver(){
         ioFill.unobserve(entry.target);
       }
     });
-  }, { rootMargin: '600px 0px' });
+  }, { rootMargin: '1200px 0px' });
   years.slice(1).forEach(year => {
     const block = document.getElementById(`yr${year}`);
     if (block) ioFill.observe(block);

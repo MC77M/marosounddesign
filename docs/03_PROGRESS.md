@@ -1,5 +1,20 @@
 # Refactoring Progress
 
+## Perf 2026-04-28 (12): works.html スマホ画像後追い改善 Phase 1
+- 目的: スマホ高速スクロール時のカード画像後追い表示を低リスク調整で改善
+- 修正: `works.html` のみ
+  - `ioFill` の `rootMargin` を `600px 0px` → `1200px 0px`（高速フリック時の DOM 生成余裕を拡大）
+  - card `<img>` に `width="600" height="600"` 属性付与（CLS 抑制 / 早期レイアウト確定）
+  - card `<img>` の `loading="lazy"` → `loading="eager"`（IO 既ゲートのため二段 lazy 解消）
+  - `fillYear` で `isInitialYear = year === years[0]` を判定し、初期表示年の先頭 3 枚のみ `fetchpriority="high"` 付与
+- 不変項: 画像生成なし / `thumbnail` フィールド追加なし / JSON / CSS / モーダル仕様 / Progressive Rendering 構造すべて変更なし
+- 確認:
+  - 375px / 390px / 414px で初期表示 22 枚 (2026) すべて `loading="eager"` `width="600"` `height="600"` ✅
+  - 先頭 3 枚のみ `fetchpriority="high"`、4 枚目以降は付与なし ✅
+  - スクロールで 2025 (77) / 2024 (50) / 2023 (40) が IO 起動で順次 fillYear ✅
+  - Console エラーなし / 404 なし ✅
+- Status: ✅ 完了
+
 ## Fix 2026-04-28 (11): index.html スマホ版フッターの折り返し・文字間崩れ修正
 - 症状: 480px 以下で `© 2025 宮川麿. All rights reserved.` が不自然に折り返され、文字間が広く見える
 - 修正: `index.html` `<style>` 内 `@media(max-width:480px)` のみ
