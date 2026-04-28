@@ -4,5 +4,7 @@
 node_modules/
 .env
 .env.local
-data/work/tmp/
-data/archive/tmp/
+data/raw/
+data/work/
+data/output/tmp/
+data/output/mappings/

@@ -1,5 +1,16 @@
 # Refactoring Progress
 
+## Docs 2026-04-29 (13): README / .gitignore 整理 Phase 1
+- 目的: README を現状構成に合わせ更新、.gitignore に素材ディレクトリを追加
+- 修正: `README.md` / `.gitignore` のみ（HTML/CSS/JS/JSON/画像は変更なし）
+  - `README.md`: `no_cache_server.py` のルート記述を削除、`history.html` / `css/` / `js/` / `assets/` / `docs/` / `tools/` / SEO ファイル群を追記、「HTMLに直接データを持っている」旧メモを削除
+  - `.gitignore`: `data/work/tmp/` / `data/archive/tmp/` を削除し `data/raw/` / `data/work/` / `data/output/tmp/` / `data/output/mappings/` を追加
+- 不変項: HTML / CSS / JS / JSON / 画像 / `_archive/` / `googlea0a2b71118ae6d61.html` はすべて変更なし
+- 確認:
+  - 変更ファイルが `README.md` / `.gitignore` / `docs/03_PROGRESS.md` のみ ✅
+  - `data/raw/OGP_image.png` が untracked から消えた ✅
+- Status: ✅ 完了
+
 ## Perf 2026-04-28 (12): works.html スマホ画像後追い改善 Phase 1
 - 目的: スマホ高速スクロール時のカード画像後追い表示を低リスク調整で改善
 - 修正: `works.html` のみ
