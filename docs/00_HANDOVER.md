@@ -70,6 +70,12 @@
   - works.html モバイル LCP: 12.8秒 → **8.6秒**（▲4.2秒改善）
   - works.html FCP 3.5秒 / TBT 0ms / CLS 0.001
   - モバイル LCP のさらなる改善には初期描画件数制限が必要（要別途検討）
+- **Performance Phase 1D 完了**（2026-04-28）
+  - works.html 300件一括 DOM 生成 → 年別スケルトン先行 + IntersectionObserver 遅延充填に変更
+  - 初期 DOM: 22件（最新年 2026 のみ）、残り 278件はスクロール時に充填
+  - フィルター時は全件 flush してから applyFilter（全カテゴリ正常確認済み）
+  - 年別ナビ・openModal・モーダル・コンソールエラーなし 確認済み
+  - Lighthouse モバイル再測定は別途実施予定
 
 ---
 
@@ -99,7 +105,7 @@
 
 | 優先度 | 項目 | 概要 |
 |---|---|---|
-| 🔴 高 | works.html 初期表示件数制限 | LCP 8.6秒が残課題。FCP→LCP の 5.1秒ギャップは 300件 DOM 構築が原因。初期30件のみ描画し「もっと見る」で追加する方式。フィルター・年別ナビ・openModal への影響が大きいため慎重に設計すること |
+| 🟠 中 | Lighthouse works.html モバイル再測定 | Phase 1D 実装後の LCP 改善値確認。改善前: モバイル 66点 / LCP 8.6秒 |
 | 🟠 中 | sameAs 追記 | Wikipedia・Uta-net の実URLが確定したら index.html / portfolio.html の JSON-LD に追加 |
 | 🟡 低 | Noto Sans JP 700 / DM Mono 600 バグ確認 | 宣言あるが未ロード。現状ブラウザが代替表示中。目視で問題なければ対応不要 |
 | 🟡 低 | LCP 要素への preload 追加 | index.html のヒーローセクション向け |

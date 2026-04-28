@@ -327,6 +327,11 @@ let WORKS = [];
 const ALL_FILTER = 'all';
 let currentFilter = ALL_FILTER;
 const WORKS_LIST = document.getElementById('works-list');
+let grouped   = new Map();
+let years     = [];
+const pendingYears = new Set();
+const filledYears  = new Set();
+let ioFill = null;
 const DATA_VERSION = '20260418-1';
 const WORKS_READY = fetch(`works-data.json?v=${DATA_VERSION}`)
   .then(async response => {
@@ -467,44 +472,27 @@ function applyFilter(cat){
   });
 }
 
-function renderWorks(){
-  if (!WORKS_LIST) return;
-
-  const grouped = new Map();
+function buildGrouped(){
+  grouped = new Map();
   WORKS.forEach((work, index) => {
     const year = yearFromDate(work.date);
     if (!grouped.has(year)) grouped.set(year, []);
     grouped.get(year).push({ work, index });
   });
-
-  const years = [...grouped.keys()].sort((a, b) => Number(b) - Number(a));
+  years = [...grouped.keys()].sort((a, b) => Number(b) - Number(a));
   grouped.forEach(entries => {
     entries.sort((a, b) => {
       const diff = dateSortValue(b.work.date) - dateSortValue(a.work.date);
       return diff !== 0 ? diff : a.index - b.index;
     });
   });
+}
 
+function renderSkeletons(){
   WORKS_LIST.innerHTML = years.map((year, yearIndex) => `
-    <div class="yr-block ${revealClass(yearIndex)}" id="yr${year}">
+    <div class="yr-block ${revealClass(yearIndex)}" id="yr${year}" data-year="${year}">
       <p class="yr-head">${year}</p>
-      <div class="works-grid">
-        ${grouped.get(year).map(({ work, index }) => `
-          <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})">
-            <div class="wcard-img">
-              <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" loading="lazy" decoding="async" onerror="handleCardImageError(this)">
-              <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
-              <div class="wcard-ph"><span>♪</span><p>No Image</p></div>
-            </div>
-            <div>
-              <p class="wcard-title">${cardArtistLabel(work)}</p>
-              <p class="wcard-client">${work.track}</p>
-              <p class="wcard-role">${cardRole(work.credits)}</p>
-              ${renderCardTieup(work)}
-            </div>
-          </div>
-        `).join('')}
-      </div>
+      <div class="works-grid"></div>
       ${year === '2020' ? `
         <div class="archive-callout">
           <p class="archive-copy"><strong>2019年以前のWorks</strong></p>
@@ -514,8 +502,68 @@ function renderWorks(){
       <a class="top-btn" href="#">↑ Top</a>
     </div>
   `).join('');
+  document.querySelectorAll('.yr-block.reveal').forEach(el => io.observe(el));
+  years.slice(1).forEach(y => pendingYears.add(y));
+}
 
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+function fillYear(year){
+  if (filledYears.has(year)) return;
+  filledYears.add(year);
+  pendingYears.delete(year);
+  const block = document.getElementById(`yr${year}`);
+  if (!block) return;
+  const grid = block.querySelector('.works-grid');
+  if (!grid) return;
+  const entries = grouped.get(year) || [];
+  grid.innerHTML = entries.map(({ work, index }) => `
+    <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})">
+      <div class="wcard-img">
+        <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" loading="lazy" decoding="async" onerror="handleCardImageError(this)">
+        <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
+        <div class="wcard-ph"><span>♪</span><p>No Image</p></div>
+      </div>
+      <div>
+        <p class="wcard-title">${cardArtistLabel(work)}</p>
+        <p class="wcard-client">${work.track}</p>
+        <p class="wcard-role">${cardRole(work.credits)}</p>
+        ${renderCardTieup(work)}
+      </div>
+    </div>
+  `).join('');
+  if (currentFilter !== ALL_FILTER) {
+    grid.querySelectorAll('.wcard').forEach(c => {
+      const cats = (c.dataset.cats || '').split(',').filter(Boolean);
+      c.style.display = cats.includes(currentFilter) ? '' : 'none';
+    });
+    const anyVisible = [...grid.querySelectorAll('.wcard')].some(c => c.style.display !== 'none');
+    block.style.display = anyVisible ? '' : 'none';
+  }
+}
+
+function initFillObserver(){
+  if (pendingYears.size === 0) return;
+  ioFill = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const year = entry.target.dataset.year;
+      if (pendingYears.has(year)) {
+        fillYear(year);
+        ioFill.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '600px 0px' });
+  years.slice(1).forEach(year => {
+    const block = document.getElementById(`yr${year}`);
+    if (block) ioFill.observe(block);
+  });
+}
+
+function renderWorks(){
+  if (!WORKS_LIST) return;
+  buildGrouped();
+  renderSkeletons();
+  fillYear(years[0]);
+  initFillObserver();
   applyFilter(currentFilter);
 }
 
@@ -606,6 +654,10 @@ function fw(cat,btn){
   currentFilter = cat;
   document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
+  if (cat !== ALL_FILTER && pendingYears.size > 0) {
+    if (ioFill) { ioFill.disconnect(); ioFill = null; }
+    [...pendingYears].forEach(year => fillYear(year));
+  }
   applyFilter(cat);
 }
 

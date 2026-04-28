@@ -99,3 +99,14 @@
 - フィルター（J-POP: 281件表示 / ALL: 300件）・モーダル正常確認済み
 - Consoleエラーなし・Network 404 なし確認済み
 - Status: ✅ 完了
+
+## Phase 15: Performance Phase 1D — works.html Progressive Rendering
+- **works.html**: 300件一括 DOM 生成を年別スケルトン先行 + IntersectionObserver 遅延充填に変更
+  - `buildGrouped()`: グループ化・ソートをモジュール変数に格納
+  - `renderSkeletons()`: 全年の空 yr-block を先行 innerHTML（ID アンカー確保）
+  - `fillYear(year)`: 1年分のカードを `.works-grid` に挿入、`filledYears` で二重充填防止
+  - `initFillObserver()`: `ioFill`（rootMargin:600px）で残り年を遅延充填
+  - `fw()`: 非 ALL フィルター時に全 pendingYears を同期 flush してから applyFilter
+- 初期 DOM: 22件（2026年のみ） / 残り278件は IntersectionObserver でスクロール時に充填
+- 年別ナビ（#yr2026〜#yr2020）・フィルター全種・openModal・コンソールエラーなし 確認済み
+- Status: ✅ 完了（Lighthouse 再測定は別途実施）
