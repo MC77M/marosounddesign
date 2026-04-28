@@ -1,5 +1,14 @@
 # Refactoring Progress
 
+## Hotfix 2026-04-28 (6): works.html ヘッダーロゴが横一列になる表示崩れを修正
+- 症状: works.html の左上ロゴ `MaroSoundDesign` が 1 行で横長表示、index.html / portfolio.html と不一致
+- 原因: works.html:263 の `.nav-logo` 内に `<br>` が抜けていた
+  - index.html:144 / portfolio.html:100 → `Maro<br><span>Sound</span>Design`
+  - works.html:263 → `Maro<span>Sound</span>Design`
+- 修正: works.html の該当 1 行に `<br>` を 1 つ追加（最小差分）
+- 確認: PC/mobile プレビュー両方で width 103px / height 32px の 2 行表示、Console エラーなし
+- Status: ✅ 完了
+
 ## Feature 2026-04-28 (5): スマホモーダル 下スワイプ閉じを portfolio.html / works.html へ横展開
 - 編集: `portfolio.html` 325 行目直後・`works.html` 324 行目に `<script src="js/modal-swipe.js?v=20260428" defer></script>` を 1 行ずつ追加
 - 既存 JS / CSS / HTML は一切変更なし（script タグ追加のみ）
