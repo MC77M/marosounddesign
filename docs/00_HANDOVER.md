@@ -50,6 +50,12 @@
 - 不要 preload / fetchpriority 削除済み
 - works フィルター軽量化済み
 - 日本語画像パス NFC 正規化済み
+- 画像パス NFC 自動チェック導入済み（`tools/check_image_paths.py`）
+
+### Hotfix 2026-04-28
+- index.html スマホ崩れ修正: inline `@media(max-width:900px)` の `.about-grid` 2 カラム指定が style.css 780px 単カラム化を上書きしていた → 781–900px に限定
+- Selected Works の Lienel 画像 404 修正: index.html 296-297 行の "じ" が NFD 形式（し+゛）。NFC に正規化（6 バイトのみ）
+- 再発防止: `tools/check_image_paths.py` 追加。push 前に NFD / 実ファイル無し / Git 未追跡 / NFD-NFC 重複を一括検出
 
 ### SEO Phase 1 完了（2026-04-28）
 - meta description / OGP / Twitter Card 追加済み（全4ページ）
@@ -97,6 +103,7 @@
 - **日本語ファイル名は NFD/NFC 問題が起きる**
   - macOS は NFD、Netlify は NFC を期待する場合がある
   - 画像パスは必ず NFC 正規化すること
+  - **push 前に `python3 tools/check_image_paths.py` を実行**（OK 表示で通過）
 - **selected-works-shared.js と portfolio.html のパス一致が必須**
   - `onclick` 引数と `img src` が selected-works-shared.js のパスと一致しているか確認
 - **本番確認では Network タブの画像 404 を必ず確認する**
