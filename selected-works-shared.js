@@ -401,7 +401,7 @@ const WORKS = [
     cat: 'jpop', icon: '🎤', jacket: 'images/_hash_FRUITS ZIPPER_Spotlight.webp',
     track: 'Spotlight',
     artist: '櫻井優衣(FRUITS ZIPPER)',
-    date: '2024-09-18',
+    date: '2024.09.18',
     credits: [
       { role: '編曲', name: '宮川麿' },
     ],
@@ -411,7 +411,7 @@ const WORKS = [
     cat: 'jpop', icon: '🎤', jacket: 'images/_hash_Lienel_じれったいKISS.webp',
     track: 'じれったいKISS',
     artist: 'Lienel',
-    date: '2025-01',
+    date: '2025.01',
     credits: [
       { role: '作曲', name: '宮川麿' },
       { role: '編曲', name: '宮川麿' },
