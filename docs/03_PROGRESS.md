@@ -1,5 +1,15 @@
 # Refactoring Progress
 
+## Feature 2026-04-28 (5): スマホモーダル 下スワイプ閉じを portfolio.html / works.html へ横展開
+- 編集: `portfolio.html` 325 行目直後・`works.html` 324 行目に `<script src="js/modal-swipe.js?v=20260428" defer></script>` を 1 行ずつ追加
+- 既存 JS / CSS / HTML は一切変更なし（script タグ追加のみ）
+- 既存挙動の保全: overlay クリック / close ボタン / Escape / open 時 transform 遷移すべて維持
+- 確認: mobile プレビュー (375x812) で両ページの touch 合成イベント検証
+  - portfolio.html: 120px 下スワイプで閉じる ✅ / 30px で閉じず inline クリア ✅
+  - works.html: 120px 下スワイプで閉じる ✅ / 30px で閉じず inline クリア ✅
+  - Console エラーなし ✅
+- Status: ✅ 完了（3 ページすべて対応）
+
 ## Feature 2026-04-28 (4): スマホモーダル 下スワイプで閉じる（index.html 限定先行導入）
 - 追加: `js/modal-swipe.js`（共有スクリプト、touchstart/move/end 監視・閾値 80px・上方向ドラッグ無視・PC操作非干渉）
   - `.modal-handle` または `modal.scrollTop===0` のときのみドラッグ開始 → モーダル内スクロールと干渉しない
