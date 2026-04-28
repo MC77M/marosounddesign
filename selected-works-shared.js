@@ -408,7 +408,7 @@ const WORKS = [
     note: 'NEW KAWAII / フルーツバスケット / KAWAII LAB.',
   },
   {
-    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_Lienel_じれったいKISS.webp',
+    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_Lienel_じれったいKISS.webp',
     track: 'じれったいKISS',
     artist: 'Lienel',
     date: '2025.01',
