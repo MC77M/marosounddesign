@@ -10,6 +10,7 @@
 - [ ] 画像パス存在確認
 - [ ] 日本語パス NFC 確認
 - [ ] 未追跡画像がないか確認（`git ls-files`）
+- [ ] `python3 tools/check_image_paths.py` 実行 → `OK  Image path check passed`
 
 ---
 

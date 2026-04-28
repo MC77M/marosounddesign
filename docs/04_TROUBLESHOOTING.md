@@ -13,15 +13,27 @@
 
 ### 確認手順
 
-1. Network > Img タブで 404 確認
-2. `works-data.json` / `selected-works-shared.js` の `jacket` / `thumbnail` パス確認
-3. 実ファイルの存在確認
-4. `git ls-files | grep <ファイル名>` で追跡確認
-5. Python で NFC 確認:
+1. **まず `python3 tools/check_image_paths.py` を実行**（NFD/未存在/Git未追跡/NFD-NFC重複を一括検出）
+2. Network > Img タブで 404 確認
+3. `works-data.json` / `history-data.json` / `selected-works-shared.js` / `index.html` / `portfolio.html` の `jacket` / `thumbnail` / `img src` / `onclick` パス確認
+4. 実ファイルの存在確認
+5. `git ls-files | grep <ファイル名>` で追跡確認
+6. Python で NFC 確認:
    ```python
    import unicodedata
    print(unicodedata.normalize('NFC', '<ファイル名>'))
    ```
+
+### NFD/NFC 不一致の見分け方
+
+- macOS で日本語ファイル名を Finder からドラッグして HTML/JSON に貼り付けると NFD（し+゛ など）になることがある
+- ローカル開発環境（macOS）では NFD でも 200 を返すが、Netlify では NFC ファイル名と一致せず SPA フォールバック（text/html, ~23KB）が返る
+- 該当行のバイトを確認:
+  ```bash
+  grep "問題のファイル名" index.html | xxd | head
+  ```
+  `e3 81 97 e3 82 99` = し+゛（NFD じ）、`e3 81 98` = じ（NFC）。
+- 全参照元（`index.html` / `portfolio.html` / `works.html` / `history.html` / `selected-works-shared.js` / `works-data.json` / `history-data.json`）を確認すること
 
 ---
 

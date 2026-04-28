@@ -1,5 +1,15 @@
 # Refactoring Progress
 
+## Hotfix 2026-04-28 (3): 画像パス NFC チェックスクリプト導入（再発防止）
+- 追加: `tools/check_image_paths.py`
+  - 対象: index.html / portfolio.html / works.html / history.html / selected-works-shared.js / works-data.json / history-data.json
+  - 検出: NFD 形式パス / 実ファイル無し / Git 未追跡 / NFD-NFC 重複ファイル
+  - エラー 0 件で `OK  Image path check passed` を表示し exit 0
+- 更新: `docs/02_CHECKLIST.md` push 前チェックに `python3 tools/check_image_paths.py` を追加
+- 更新: `docs/04_TROUBLESHOOTING.md` NFD/NFC 不一致の見分け方と全参照元リストを追記
+- 確認: 現状でエラー 0 件、サイト本体（HTML/CSS/JS/JSON）に変更なし
+- Status: ✅ 完了
+
 ## Hotfix 2026-04-28 (2): Selected Works の Lienel 画像が本番で表示されない
 - 症状: Selected Works の Lienel_じれったいKISS だけ本番で 404 → alt の "jacket" 表示
 - 原因: index.html 296-297 行のファイル名 "じ" が NFD 形式（し+゛, e3 81 97 e3 82 99）。Netlify 上のファイルは NFC（じ, e3 81 98）。リクエスト不一致で SPA フォールバック (text/html) を返却
