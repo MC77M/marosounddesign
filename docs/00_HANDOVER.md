@@ -35,13 +35,13 @@
 
 | ファイル | 説明 |
 |---|---|
-| works-data.json | works.html の全楽曲データ |
+| works-data.json | works.html の全楽曲データ（raw 142KB / brotli 13.7KB） |
 | history-data.json | history.html の経歴データ |
 | selected-works-shared.js | portfolio.html のモーダル処理・データ |
 
 ---
 
-## 現在の状態
+## 現在の状態（2026-04-28 時点）
 
 - XSS対策済み（innerHTML 禁止 → DOM API に統一）
 - モーダル閉じ処理統一済み
@@ -50,32 +50,45 @@
 - 不要 preload / fetchpriority 削除済み
 - works フィルター軽量化済み
 - 日本語画像パス NFC 正規化済み
-- **SEO Phase 1 完了**（2026-04-28）
-  - meta description / OGP / Twitter Card 追加済み（全4ページ）
-  - portfolio.html title 重複解消（"Profile — MaroSoundDesign"）
-  - OGP 画像配置済み（assets/ogp.jpg / 1200×630）
-  - sitemap.xml / robots.txt 追加済み
-  - Google Search Console 所有権確認済み・サイトマップ送信済み
-  - JSON-LD 構造化データ追加済み（index.html: Person+WebSite / portfolio.html: Person）
-  - Schema.org Validator: エラーなし・警告なし確認済み
-  - sameAs: X / portfolio.html（Wikipedia・Uta-net は URL確認後に追加予定）
-- **Performance Phase 1 完了**（2026-04-28）
-  - Google Fonts を非同期読み込みに変更（全4ページ / rel=preload + onload + noscript）
-  - fonts.gstatic.com preconnect 追加済み
-  - Inter ウェイトを 300;400;500;700;800;900 → **800;900 のみ**に削減（11→5ウェイト）
-  - works.html カード画像を thumbnail（~20KB）に切替（jacket ~50KB → 推定▲9MB削減）
-  - works.html `.yr-block` に `content-visibility:auto` 追加（ビューポート外レンダリングスキップ）
-  - モバイル Performance スコア: index 61 / **works 66** / portfolio 59 / history 65
-  - デスクトップ Performance スコア: index 85 / works 84 / portfolio 91 / history 88
-  - works.html モバイル LCP: 12.8秒 → **8.6秒**（▲4.2秒改善）
-  - works.html FCP 3.5秒 / TBT 0ms / CLS 0.001
-  - モバイル LCP のさらなる改善には初期描画件数制限が必要（要別途検討）
-- **Performance Phase 1D 完了**（2026-04-28）
-  - works.html 300件一括 DOM 生成 → 年別スケルトン先行 + IntersectionObserver 遅延充填に変更
-  - 初期 DOM: 22件（最新年 2026 のみ）、残り 278件はスクロール時に充填
-  - フィルター時は全件 flush してから applyFilter（全カテゴリ正常確認済み）
-  - 年別ナビ・openModal・モーダル・コンソールエラーなし 確認済み
-  - Lighthouse モバイル再測定は別途実施予定
+
+### SEO Phase 1 完了（2026-04-28）
+- meta description / OGP / Twitter Card 追加済み（全4ページ）
+- portfolio.html title 重複解消（"Profile — MaroSoundDesign"）
+- OGP 画像配置済み（assets/ogp.jpg / 1200×630）
+- sitemap.xml / robots.txt 追加済み
+- Google Search Console 所有権確認済み・サイトマップ送信済み
+- JSON-LD 構造化データ追加済み（index.html: Person+WebSite / portfolio.html: Person）
+- Schema.org Validator: エラーなし・警告なし確認済み
+- sameAs: X / portfolio.html（Wikipedia・Uta-net は URL確認後に追加予定）
+
+### Performance Phase 1 完了（2026-04-28）— works.html 中心
+
+| フェーズ | 内容 | 対象 |
+|---|---|---|
+| 1A | Google Fonts を preload+onload で非同期化 | 全4ページ |
+| 1B | Inter ウェイトを 800;900 のみに削減（11→5ウェイト） | 全4ページ |
+| 1C | カード画像を thumbnail（~20KB）に切替 / `content-visibility:auto` | works.html |
+| 1D | Progressive Rendering — 初期22件 + IntersectionObserver 遅延充填 | works.html |
+| 1E | `css/style.css` を preload+onload 非同期化 / `*.css` max-age=86400 | works.html + netlify.toml |
+| 1F | Inter 900 Latin woff2 を `<link rel="preload">` で先読み | works.html |
+
+#### 最新 PageSpeed Insights（モバイル / 2026-04-28 計測）
+
+| ページ | Performance | FCP | LCP | TBT | CLS |
+|---|---|---|---|---|---|
+| **works.html** | **67** | 3.9s | 7.2s | 0ms | 0.001 |
+| index.html | 61 | — | — | — | — |
+| portfolio.html | 59 | — | — | — | — |
+| history.html | 65 | — | — | — | — |
+
+#### Phase 1G 調査結果（2026-04-28）— works.html FCP/LCP の残課題
+
+- **TTFB**: warm 0.23s / cold 0.68s（初回アクセスは遅い。HTML `max-age=0` だが Netlify CDN がキャッシュ）
+- **works-data.json**: raw 142KB → brotli **13.7KB**（90%圧縮済み）— JSON はボトルネックではない
+- **FCP 3.9s の主因**: cold TTFB + DNS/TLS + CPU 4x + `body::after` SVG feTurbulence ノイズフィルタ描画コスト（推定）
+- **LCP 7.2s の主因**: FCP+3.3s — Moto G Power 823px viewport では先頭カード画像がビューポート内に収まり、cold image fetch が LCP 候補
+- **Noto Sans JP**: CSS 内に 372 woff2 サブセット参照。cold 初回はブラウザが必要サブセットを parallel fetch — これが実質的なフォント遅延要因
+- **これ以上の改善**: Noto JP self-host サブセット化・SSR/Edge functions が必要。ポートフォリオサイトとしては費用対効果が低く、**Phase 1 はここで終了が妥当**
 
 ---
 
@@ -87,6 +100,8 @@
 - **selected-works-shared.js と portfolio.html のパス一致が必須**
   - `onclick` 引数と `img src` が selected-works-shared.js のパスと一致しているか確認
 - **本番確認では Network タブの画像 404 を必ず確認する**
+- **css/style.css の変更後は cache-busting に注意**（max-age=86400 のため、緊急変更時はファイル名を変更）
+- **Google Fonts woff2 URL は v20 系で安定**（Inter 900 Latin preload URL: `...UcCO3FwrK3...AZ9hiJ-Ck-8.woff2`）
 
 ---
 
@@ -105,10 +120,12 @@
 
 | 優先度 | 項目 | 概要 |
 |---|---|---|
-| 🟠 中 | Lighthouse works.html モバイル再測定 | Phase 1D 実装後の LCP 改善値確認。改善前: モバイル 66点 / LCP 8.6秒 |
 | 🟠 中 | sameAs 追記 | Wikipedia・Uta-net の実URLが確定したら index.html / portfolio.html の JSON-LD に追加 |
-| 🟡 低 | Noto Sans JP 700 / DM Mono 600 バグ確認 | 宣言あるが未ロード。現状ブラウザが代替表示中。目視で問題なければ対応不要 |
-| 🟡 低 | LCP 要素への preload 追加 | index.html のヒーローセクション向け |
+| 🟠 中 | index / portfolio / history の CSS 非同期化 | works.html と同様 preload+onload 化（Phase 1E の横展開）。1ページずつ検証 |
+| 🟡 低 | works-data.json キャッシュ緩和 | `max-age=300`（5分）に変更。2回目以降の LCP -200ms 程度。netlify.toml 1行 |
+| 🟡 低 | Noto Sans JP 700 / DM Mono 600 バグ確認 | 宣言あるが未ロード。目視で問題なければ対応不要 |
+| ⬛ 低 | Noto JP self-host サブセット化 | FCP/LCP 改善期待大だが実装コスト高。ビルドパイプライン要 |
+| ⬛ 低 | `body::after` SVG noise 削除 | FCP 改善可能性あるがデザイン変更のため要判断 |
 
 ---
 
