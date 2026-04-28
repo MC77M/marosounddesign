@@ -1,5 +1,18 @@
 # Refactoring Progress
 
+## Hotfix 2026-04-28 (7): スマホ版ヘッダーロゴ位置を index/portfolio に揃える（works.html）
+- 症状: スマホ表示で works.html のロゴが index/portfolio より右下にズレる（375/390/414px で再現）
+- 原因: works.html インライン `<style>` に `nav{padding:1.2rem 2.5rem}` があり、外部 `css/style.css` の `@media(max-width:900px){nav{padding:1rem 1.4rem}}` を CSS 読み込み順で上書き。works.html だけ ≤600px 用の `nav{padding:1rem 1.2rem}` で別値になっていた
+- 修正: works.html の `<style>` 内
+  - 削除: `@media(max-width:600px)` 内の `nav{padding:1rem 1.2rem}`（index/portfolio に存在しない works.html 固有値）
+  - 追加: `@media(max-width:900px){nav{padding:1rem 1.4rem}}`（shared CSS と同値、インライン上書き対策）
+- 確認:
+  - 375px: padding `16px 22.4px` / logoLeft 22.4 → 3 ページ完全一致 ✅
+  - 414px: padding `16px 22.4px` ✅
+  - 1280px: padding `19.2px 40px`（PC は変化なし） ✅
+  - 横スクロールなし、Console エラーなし ✅
+- Status: ✅ 完了
+
 ## Hotfix 2026-04-28 (6): works.html ヘッダーロゴが横一列になる表示崩れを修正
 - 症状: works.html の左上ロゴ `MaroSoundDesign` が 1 行で横長表示、index.html / portfolio.html と不一致
 - 原因: works.html:263 の `.nav-logo` 内に `<br>` が抜けていた
