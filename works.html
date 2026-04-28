@@ -8,6 +8,7 @@
 <meta property="og:url" content="https://marosounddesign.com/works.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Noto+Sans+JP:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -506,7 +507,17 @@ async function openModal(idx){
   const w = WORKS[idx]; if(!w) return;
   const cat = primaryCat(w);
   const jEl = document.getElementById('modalJacket');
-  jEl.innerHTML = w.jacket ? `<img src="${w.jacket}" alt="${w.track}" width="600" height="600" loading="lazy" decoding="async">` : w.icon;
+  jEl.innerHTML = '';
+  if (w.jacket) {
+    const img = document.createElement('img');
+    img.setAttribute('src', w.jacket);
+    img.setAttribute('alt', w.track);
+    img.width = 600; img.height = 600;
+    img.loading = 'lazy'; img.decoding = 'async';
+    jEl.appendChild(img);
+  } else {
+    jEl.textContent = w.icon;
+  }
   const bEl = document.getElementById('modalBadge');
   bEl.className = 'modal-badge '+(BADGE_CLASS[cat]||'ba');
   bEl.textContent = BADGE_LABEL[cat]||cat;
@@ -516,17 +527,40 @@ async function openModal(idx){
   const tEl = document.getElementById('modalTieup');
   const tieup = tieupRows(w);
   if (cat === 'anime_tieup' && tieup.length) {
-    tEl.innerHTML = `<p class="modal-section-title modal-tieup-head">Tie-up</p>${tieup.map(row =>
-      `<div class="modal-tieup-row"><span class="modal-tieup-value">${row.value}</span></div>`
-    ).join('')}`;
+    tEl.innerHTML = '';
+    const head = document.createElement('p');
+    head.className = 'modal-section-title modal-tieup-head';
+    head.textContent = 'Tie-up';
+    tEl.appendChild(head);
+    tieup.forEach(row => {
+      const div = document.createElement('div');
+      div.className = 'modal-tieup-row';
+      const span = document.createElement('span');
+      span.className = 'modal-tieup-value';
+      span.textContent = row.value;
+      div.appendChild(span);
+      tEl.appendChild(div);
+    });
     tEl.style.display = 'block';
   } else {
     tEl.innerHTML = '';
     tEl.style.display = 'none';
   }
-  document.getElementById('modalCredits').innerHTML  = mergeCredits(w.credits).map(c =>
-    `<div class="credit-row"><span class="credit-role">${c.role}</span><span class="credit-name">${c.name}</span></div>`
-  ).join('');
+  const cEl = document.getElementById('modalCredits');
+  cEl.innerHTML = '';
+  mergeCredits(w.credits).forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'credit-row';
+    const roleSpan = document.createElement('span');
+    roleSpan.className = 'credit-role';
+    roleSpan.textContent = c.role;
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'credit-name';
+    nameSpan.textContent = c.name;
+    div.appendChild(roleSpan);
+    div.appendChild(nameSpan);
+    cEl.appendChild(div);
+  });
   const nEl = document.getElementById('modalNote');
   if(w.note){nEl.textContent=w.note;nEl.style.display='block';}
   else{nEl.style.display='none';}
@@ -534,7 +568,7 @@ async function openModal(idx){
   document.body.style.overflow='hidden';
 }
 function closeModal(e){
-  if(e && e.target!==document.getElementById('modalOverlay')) return;
+  if(e && e.target.closest('#modal')) return;
   document.getElementById('modalOverlay').classList.remove('open');
   document.body.style.overflow='';
 }
