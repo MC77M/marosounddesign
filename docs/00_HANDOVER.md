@@ -52,6 +52,24 @@
 - 日本語画像パス NFC 正規化済み
 - 画像パス NFC 自動チェック導入済み（`tools/check_image_paths.py`）
 
+### Fix 2026-04-28（index.html スマホフッター崩れ修正・コミット 11ef71a）
+- 症状: 480px 以下で `© 2025 宮川麿. All rights reserved.` が不自然に折り返され、文字間が広く見えていた
+- 修正: `index.html` `<style>` 内の `@media(max-width:480px)` のみ書き換え
+  - footer を中央寄せ化（`align-items:center;justify-content:center;text-align:center;padding:1.6rem 1rem`）
+  - `.ft-copy` に `letter-spacing:.04em;white-space:nowrap;font-size:.6rem;line-height:1.4` を追加し1行表示
+- 不変項: HTML 構造・文言・PC/タブレット表示・JS は変更なし
+- 検証: 375 / 414px で `.ft-copy` 高さ 13.4px=1行・横スクロールなし・Console エラーなし
+
+### Perf 2026-04-28（works.html スマホ画像後追い改善 Phase 1・コミット 9403a07）
+- **背景**: スマホ高速フリック時、カード画像が後追いで表示される体感（rootMargin 600px が短い・lazy + IO の二段ゲート・width/height 未指定）
+- **対応（works.html のみ、画像生成・JSON・CSS・モーダル仕様すべて変更なし）**:
+  1. `ioFill` の `rootMargin` を `600px 0px` → `1200px 0px`（フリック追い越し対策）
+  2. card `<img>` に `width="600" height="600"` 属性付与（CLS 抑制 / 早期レイアウト確定）
+  3. card `<img>` の `loading="lazy"` → `loading="eager"`（IO 既ゲートのため二段 lazy 解消）
+  4. `fillYear` 内で `isInitialYear = year === years[0]` を判定し、初期表示年の先頭 3 枚のみ `fetchpriority="high"`
+- **状態**: Phase 1 のみ反映。**スマホ実機での体感確認待ち**。Phase 2（thumbnail 240px 生成）は実機確認後に判断
+- **検証済**: 375/390/414px で初期 22 枚すべて期待属性、IO 起動で 2025/2024/2023 順次 fillYear、Console/404 なし
+
 ### Hotfix 2026-04-28
 - index.html スマホ崩れ修正: inline `@media(max-width:900px)` の `.about-grid` 2 カラム指定が style.css 780px 単カラム化を上書きしていた → 781–900px に限定
 - Selected Works の Lienel 画像 404 修正: index.html 296-297 行の "じ" が NFD 形式（し+゛）。NFC に正規化（6 バイトのみ）
@@ -145,6 +163,8 @@
 
 | 優先度 | 項目 | 概要 |
 |---|---|---|
+| 🟢 高 | works.html Phase 1 のスマホ実機体感確認 | 本番反映後、375/390/414px 実機で高速スクロール時の画像後追いが減ったか確認。改善不足なら Phase 2 へ |
+| 🟢 高 | works.html スマホ画像後追い改善 Phase 2（実機確認後） | `images/thumbs/` に 240×240 WebP（5-10KB）を生成 → `selected-works-shared.js` または works-data.json に `thumbnail:` を実体化 → `<img sizes="(max-width:600px) 33vw, 200px" srcset="...">` で配信。LCP 大幅改善見込み |
 | 🟢 高 | スマホ実機でモーダル下スワイプ動作確認（portfolio / works） | index は確認済み。3 ページ共通の `js/modal-swipe.js` を読み込んでいるので挙動は同一の想定だが要実機確認 |
 | 🟠 中 | sameAs 追記 | Wikipedia・Uta-net の実URLが確定したら index.html / portfolio.html の JSON-LD に追加 |
 | 🟠 中 | index / portfolio / history の CSS 非同期化 | works.html と同様 preload+onload 化（Phase 1E の横展開）。1ページずつ検証 |
