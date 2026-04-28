@@ -22,16 +22,16 @@
 - **selected-works-shared.js**: 日付表記を `YYYY.MM.DD` 形式に統一
 - Status: ✅ 完了
 
-## Phase 4B: 不要 preload / fetchpriority 削除
+## Phase 4B: works カウント確認
+- **index.html**: works カウント確認 → 修正不要
+- Status: ✅ 完了（修正なし）
+
+## Phase 4C: 不要 preload / fetchpriority 削除
 - **index.html** / **portfolio.html**: 不要な `fetchpriority="high"` および preload タグを削除
 - Status: ✅ 完了
 
-## Phase 4C: works フィルター軽量化
+## Phase 4D: works フィルター軽量化
 - **works.html**: `applyFilter` 内の重複 `querySelectorAll` を最適化
-- Status: ✅ 完了
-
-## Phase 4D: index.html works カウント修正
-- **index.html**: 表示件数を実データに合わせて修正
 - Status: ✅ 完了
 
 ## Phase 5: 日本語画像パス NFC 正規化
