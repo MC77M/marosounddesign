@@ -1,5 +1,18 @@
 # Refactoring Progress
 
+## Perf 2026-04-28 (10): works.html openModal で jacket 読み込みを最大 250ms 待機
+- 目的: 画像なしモーダルが先に開いて jacket が遅れて表示される体感を改善
+- 修正: `works.html` のみ
+  - `waitForJacket(src, timeoutMs)` を追加（`Image()` の onload/onerror または `setTimeout` 早い方で resolve、`img.complete` で即解決）
+  - `openModal()` 冒頭で `if (w.jacket) await waitForJacket(w.jacket, 250)` を 1 行追加
+- 不変項: thumbnail / モーダル HTML / CSS / フィルター / 年別 lazy fill すべて変更なし、全件 preload なし
+- 確認:
+  - キャッシュ済み jacket: waitForJacket 5ms / openModal 全体 1ms ✅
+  - 250ms 上限が機能（早期 resolve も含めキャップ） ✅
+  - モーダル表示時 `#modalJacket img` に src 反映確認 ✅
+  - Console エラーなし / 404 なし ✅
+- Status: ✅ 完了
+
 ## Perf 2026-04-28 (9): works.html 初期表示年 jacket の idle 先読み
 - 目的: 初期表示中の最新年カードに対し、ブラウザ idle 時間で jacket を低優先 preload しモーダル表示遅延を更に解消
 - 修正: `works.html` のみ

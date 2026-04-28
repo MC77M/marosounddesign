@@ -448,6 +448,20 @@ function preloadJacket(idx){
   img.src = safeAssetSrc(w.jacket);
 }
 
+function waitForJacket(src, timeoutMs){
+  return new Promise(resolve => {
+    const img = new Image();
+    let done = false;
+    const finish = () => { if (!done) { done = true; resolve(); } };
+    img.decoding = 'async';
+    img.onload = finish;
+    img.onerror = finish;
+    img.src = safeAssetSrc(src);
+    if (img.complete) { finish(); return; }
+    setTimeout(finish, timeoutMs);
+  });
+}
+
 function preloadInitialYearJackets(){
   const year = years[0];
   if (!year) return;
@@ -597,6 +611,7 @@ function renderWorks(){
 async function openModal(idx){
   await WORKS_READY;
   const w = WORKS[idx]; if(!w) return;
+  if (w.jacket) await waitForJacket(w.jacket, 250);
   const cat = primaryCat(w);
   const jEl = document.getElementById('modalJacket');
   jEl.innerHTML = '';
