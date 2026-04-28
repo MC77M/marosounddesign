@@ -51,3 +51,9 @@
 - `docs/02_CHECKLIST.md` 作成（確認チェックリスト）
 - `docs/04_TROUBLESHOOTING.md` 作成（トラブル対応）
 - Status: ✅ 完了
+
+## Phase 8: SEO Phase 1A — meta / OGP / Twitter Card 追加
+- **index.html** / **works.html** / **portfolio.html** / **history.html**: `meta description` / `og:type` / `og:site_name` / `og:title` / `og:description` / `twitter:card` / `twitter:title` / `twitter:description` を追加
+- **portfolio.html**: `<title>` を "宮川麿 — MaroSoundDesign" → "Profile — MaroSoundDesign" に変更（index.html との重複解消）
+- og:image / twitter:image は OGP 用画像が存在しないため未追加
+- Status: ✅ 完了
