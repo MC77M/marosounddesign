@@ -56,6 +56,16 @@
   - OGP 画像配置済み（assets/ogp.jpg / 1200×630）
   - sitemap.xml / robots.txt 追加済み
   - Google Search Console 所有権確認済み・サイトマップ送信済み
+  - JSON-LD 構造化データ追加済み（index.html: Person+WebSite / portfolio.html: Person）
+  - Schema.org Validator: エラーなし・警告なし確認済み
+  - sameAs: X / portfolio.html（Wikipedia・Uta-net は URL確認後に追加予定）
+- **Performance Phase 1 完了**（2026-04-28）
+  - Google Fonts を非同期読み込みに変更（全4ページ / rel=preload + onload + noscript）
+  - fonts.gstatic.com preconnect 追加済み
+  - Inter ウェイトを 300;400;500;700;800;900 → **800;900 のみ**に削減（11→5ウェイト）
+  - モバイル Performance スコア: index 61 / works 64 / portfolio 59 / history 65
+  - デスクトップ Performance スコア: index 85 / works 84 / portfolio 91 / history 88
+  - モバイル LCP の根本改善は未完（フォント非同期化の効果が限定的）
 
 ---
 
@@ -78,6 +88,17 @@
 | docs/02_CHECKLIST.md | push前・ローカル・本番の確認手順 |
 | docs/03_PROGRESS.md | リファクタリング進捗ログ |
 | docs/04_TROUBLESHOOTING.md | トラブル対応 |
+
+---
+
+## 次回着手候補（優先度順）
+
+| 優先度 | 項目 | 概要 |
+|---|---|---|
+| 🔴 高 | works.html 初期表示件数制限 | 300件全件レンダリングによりモバイル LCP 12.8秒。初期30件のみ描画し残りをスクロール時追加 |
+| 🟠 中 | sameAs 追記 | Wikipedia・Uta-net の実URLが確定したら index.html / portfolio.html の JSON-LD に追加 |
+| 🟡 低 | Noto Sans JP 700 / DM Mono 600 バグ確認 | 宣言あるが未ロード。現状ブラウザが代替表示中。目視で問題なければ対応不要 |
+| 🟡 低 | LCP 要素への preload 追加 | index.html のヒーローセクション向け |
 
 ---
 
