@@ -1,5 +1,17 @@
 # Refactoring Progress
 
+## Fix 2026-04-28 (11): index.html スマホ版フッターの折り返し・文字間崩れ修正
+- 症状: 480px 以下で `© 2025 宮川麿. All rights reserved.` が不自然に折り返され、文字間が広く見える
+- 修正: `index.html` `<style>` 内 `@media(max-width:480px)` のみ
+  - `footer` を `align-items:center;justify-content:center;text-align:center` に変更（左寄せ→中央寄せ）
+  - `padding:1.6rem 1rem` で横余白を縮小
+  - `.ft-copy` に `letter-spacing:.04em;white-space:nowrap;font-size:.6rem;line-height:1.4` を追加し1行表示
+- 不変項: HTML 構造・文言・PC/タブレット表示・JS は変更なし
+- 確認:
+  - 375px / 414px で `.ft-copy` 高さ 13.4px = 1行・横スクロールなし ✅
+  - Console エラーなし ✅
+- Status: ✅ 完了
+
 ## Perf 2026-04-28 (10): works.html openModal で jacket 読み込みを最大 250ms 待機
 - 目的: 画像なしモーダルが先に開いて jacket が遅れて表示される体感を改善
 - 修正: `works.html` のみ
