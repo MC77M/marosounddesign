@@ -440,13 +440,18 @@ function revealClass(index){
 }
 
 function applyFilter(cat){
+  const blockMap = new Map();
   document.querySelectorAll('.wcard').forEach(c => {
     const cats = (c.dataset.cats || '').split(',').filter(Boolean);
     c.style.display = (cat === ALL_FILTER || cats.includes(cat)) ? '' : 'none';
+    const block = c.closest('.yr-block');
+    if (block) {
+      if (!blockMap.has(block)) blockMap.set(block, []);
+      blockMap.get(block).push(c);
+    }
   });
-  document.querySelectorAll('.yr-block').forEach(block => {
-    const vis = [...block.querySelectorAll('.wcard')].some(c => c.style.display !== 'none');
-    block.style.display = vis ? '' : 'none';
+  blockMap.forEach((cards, block) => {
+    block.style.display = cards.some(c => c.style.display !== 'none') ? '' : 'none';
   });
 }
 
