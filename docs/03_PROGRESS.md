@@ -1,5 +1,26 @@
 # Refactoring Progress
 
+## Chore 2026-04-29 (15): claude.md → CLAUDE.md 正規化・HANDOVER.md参照行追加
+- 目的: git 追跡名を Claude Code の正式ファイル名 `CLAUDE.md` に統一
+- 修正: `AGENTS.md` / `CLAUDE.md`（旧 `claude.md`）のみ（内容変更なし・rename のみ）
+  - `git mv claude.md CLAUDE.md`（macOS case-insensitive 問題を git レベルで解消）
+  - `AGENTS.md` / `CLAUDE.md` 両方に未コミット差分「最初に/docs/00_HANDOVER.mdを確認する」を追加
+- 不変項: HTML / CSS / JS / JSON / 画像 / その他すべて変更なし
+- 確認:
+  - `git ls-files | grep -i claude` → `CLAUDE.md` のみ（`claude.md` 消滅） ✅
+  - diff が HANDOVER.md参照行のみ（rename 92%） ✅
+- Status: ✅ 完了（commit be00daa / push 済み）
+
+## Chore 2026-04-29 (14): _archive/2026-04-19_netlify_upload を削除
+- 目的: 本番から参照されていない旧スナップショットを削除してリポジトリを軽量化
+- 事前確認: index.html / works.html / portfolio.html / history.html / works-data.json / history-data.json / selected-works-shared.js / css/ / js/ すべてで `_archive` 参照 0 件確認済み
+- 修正: `git rm -r _archive/2026-04-19_netlify_upload/`（579 ファイル削除・12,444 行削減）
+- 不変項: 本番ファイル・画像・設定すべて変更なし
+- 確認:
+  - `git diff --cached --name-status` で `_archive/` 外の削除 0 件 ✅
+  - `git ls-tree -r HEAD _archive` が空 ✅
+- Status: ✅ 完了（commit 9fbed2d / push 済み）
+
 ## Docs 2026-04-29 (13): README / .gitignore 整理 Phase 1
 - 目的: README を現状構成に合わせ更新、.gitignore に素材ディレクトリを追加
 - 修正: `README.md` / `.gitignore` のみ（HTML/CSS/JS/JSON/画像は変更なし）

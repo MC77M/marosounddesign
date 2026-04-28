@@ -41,7 +41,7 @@
 
 ---
 
-## 現在の状態（2026-04-28 時点）
+## 現在の状態（2026-04-29 時点）
 
 - XSS対策済み（innerHTML 禁止 → DOM API に統一）
 - モーダル閉じ処理統一済み
@@ -51,6 +51,10 @@
 - works フィルター軽量化済み
 - 日本語画像パス NFC 正規化済み
 - 画像パス NFC 自動チェック導入済み（`tools/check_image_paths.py`）
+- README.md を現状構成に更新済み（2026-04-29）
+- .gitignore に `data/raw/` `data/work/` `data/output/tmp/` `data/output/mappings/` 追加済み（2026-04-29）
+- `_archive/2026-04-19_netlify_upload/` 削除済み・本番参照なし確認済み（2026-04-29）
+- `claude.md` → `CLAUDE.md` 正規化済み・`AGENTS.md` / `CLAUDE.md` に `00_HANDOVER.md` 参照行追加（2026-04-29）
 
 ### Fix 2026-04-28（index.html スマホフッター崩れ修正・コミット 11ef71a）
 - 症状: 480px 以下で `© 2025 宮川麿. All rights reserved.` が不自然に折り返され、文字間が広く見えていた
