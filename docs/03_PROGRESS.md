@@ -16,10 +16,38 @@
 - **index.html**: `<link rel="stylesheet" href="css/style.css">` 追加、ページ固有 CSS のみ `<style>` に残す
 - **portfolio.html**: 同上
 - **works.html**: `<link rel="stylesheet" href="css/style.css">` 追加（`<style>` 内容は変更なし）
-- Status: ✅ 完了（ブラウザ検証待ち）
+- Status: ✅ 完了
 
-## Phase 4: Accuracy / Performance（未着手）
-- [ ] 日付フォーマットを `YYYY.MM.DD` に統一
-- [ ] index.html の works カウント修正
-- [ ] 不要な `fetchpriority="high"` / preload 削除
-- [ ] `applyFilter` の重複 querySelectorAll 最適化
+## Phase 4A: 日付フォーマット統一
+- **selected-works-shared.js**: 日付表記を `YYYY.MM.DD` 形式に統一
+- Status: ✅ 完了
+
+## Phase 4B: 不要 preload / fetchpriority 削除
+- **index.html** / **portfolio.html**: 不要な `fetchpriority="high"` および preload タグを削除
+- Status: ✅ 完了
+
+## Phase 4C: works フィルター軽量化
+- **works.html**: `applyFilter` 内の重複 `querySelectorAll` を最適化
+- Status: ✅ 完了
+
+## Phase 4D: index.html works カウント修正
+- **index.html**: 表示件数を実データに合わせて修正
+- Status: ✅ 完了
+
+## Phase 5: 日本語画像パス NFC 正規化
+- **works-data.json**: `jacket` / `thumbnail` パスを NFC 正規化
+- **selected-works-shared.js**: jacket パスを NFC 正規化
+- **portfolio.html**: `onclick` 引数・`img src` パスを NFC 正規化
+- Status: ✅ 完了
+
+## Phase 6: フォルダ整理
+- `_dev/` ディレクトリ作成・開発用ファイル移動
+- `_archive/` ディレクトリ作成・旧バージョンファイル移動
+- Status: ✅ 完了
+
+## Phase 7: docs 整備
+- `docs/00_HANDOVER.md` 作成（引き継ぎ）
+- `docs/01_RULES.md` 作成（作業ルール）
+- `docs/02_CHECKLIST.md` 作成（確認チェックリスト）
+- `docs/04_TROUBLESHOOTING.md` 作成（トラブル対応）
+- Status: ✅ 完了
