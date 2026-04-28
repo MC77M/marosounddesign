@@ -55,5 +55,9 @@
 ## Phase 8: SEO Phase 1A — meta / OGP / Twitter Card 追加
 - **index.html** / **works.html** / **portfolio.html** / **history.html**: `meta description` / `og:type` / `og:site_name` / `og:title` / `og:description` / `twitter:card` / `twitter:title` / `twitter:description` を追加
 - **portfolio.html**: `<title>` を "宮川麿 — MaroSoundDesign" → "Profile — MaroSoundDesign" に変更（index.html との重複解消）
-- og:image / twitter:image は OGP 用画像が存在しないため未追加
+- Status: ✅ 完了
+
+## Phase 9: SEO Phase 1B — OGP 画像追加
+- `data/raw/OGP_image.png`（1729×910）を JPEG 変換し `assets/ogp.jpg` として配置
+- **index.html** / **works.html** / **portfolio.html** / **history.html**: `og:image` / `twitter:image` を追加
 - Status: ✅ 完了
