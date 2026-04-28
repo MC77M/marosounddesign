@@ -136,7 +136,7 @@ nav{
 /* ── WORKS BODY ── */
 .works-body{position:relative;z-index:1;background:#fff;padding:0 2.5rem 6rem}
 
-.yr-block{margin-bottom:1rem}
+.yr-block{margin-bottom:1rem;content-visibility:auto;contain-intrinsic-size:0 600px}
 .yr-head{
   font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.3em;color:#ccc;
   text-transform:uppercase;padding:.5rem 0 1rem;
@@ -492,7 +492,7 @@ function renderWorks(){
         ${grouped.get(year).map(({ work, index }) => `
           <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})">
             <div class="wcard-img">
-              <img src="${safeAssetSrc(work.jacket)}" alt="${work.track}" loading="lazy" decoding="async" onerror="handleCardImageError(this)">
+              <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" loading="lazy" decoding="async" onerror="handleCardImageError(this)">
               <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
               <div class="wcard-ph"><span>♪</span><p>No Image</p></div>
             </div>

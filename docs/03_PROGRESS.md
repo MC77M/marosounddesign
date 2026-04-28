@@ -88,3 +88,14 @@
 - 11ウェイト → 5ウェイト（フォント CSS ダウンロード量約 55% 削減）
 - 表示崩れなし・Consoleエラーなし確認済み
 - Status: ✅ 完了
+
+## Phase 14: Performance Phase 1C — works.html 画像最適化
+- **works.html** L495: カード画像ソースを `work.jacket` → `work.thumbnail || work.jacket` に変更
+  - thumbnail（~20KB, 300px）を使用、jacket（~50KB, 600px）はモーダルのみ継続使用
+  - 300枚分で推定 ~9MB のダウンロード削減
+- **works.html** L139: `.yr-block` に `content-visibility:auto;contain-intrinsic-size:0 600px` を追加
+  - ビューポート外の年別ブロックのレンダリングをブラウザがスキップ
+- カード画像 thumbnail 使用確認済み・モーダル jacket フルサイズ確認済み
+- フィルター（J-POP: 281件表示 / ALL: 300件）・モーダル正常確認済み
+- Consoleエラーなし・Network 404 なし確認済み
+- Status: ✅ 完了
