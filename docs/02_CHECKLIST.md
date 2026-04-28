@@ -54,3 +54,13 @@
 
 ### コンソール
 - [ ] Console エラーなし
+
+---
+
+## SEO 確認（本番デプロイ後）
+
+- [ ] https://marosounddesign.com/sitemap.xml が 200 OK・XML 正常
+- [ ] https://marosounddesign.com/robots.txt が 200 OK・Sitemap 参照あり
+- [ ] https://marosounddesign.com/assets/ogp.jpg が表示される
+- [ ] Google Search Console でサイトマップ送信済み
+- [ ] googlea0a2b71118ae6d61.html を削除していない（所有権維持に必須）

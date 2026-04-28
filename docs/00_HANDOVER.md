@@ -17,8 +17,17 @@
 |---|---|
 | index.html | トップページ |
 | works.html | 楽曲一覧（300件、フィルター付き） |
-| portfolio.html | Selected Works（12件、モーダル付き） |
-| history.html | 経歴 |
+| portfolio.html | プロフィール・Selected Works（title: "Profile — MaroSoundDesign"） |
+| history.html | 2019年以前の作品アーカイブ |
+
+## SEO 関連ファイル
+
+| ファイル | 説明 |
+|---|---|
+| assets/ogp.jpg | OGP 画像（1200×630） |
+| sitemap.xml | 全4ページ登録済み |
+| robots.txt | 全クローラー許可・sitemap 参照 |
+| googlea0a2b71118ae6d61.html | Google Search Console 認証ファイル（削除禁止）|
 
 ---
 
@@ -41,6 +50,12 @@
 - 不要 preload / fetchpriority 削除済み
 - works フィルター軽量化済み
 - 日本語画像パス NFC 正規化済み
+- **SEO Phase 1 完了**（2026-04-28）
+  - meta description / OGP / Twitter Card 追加済み（全4ページ）
+  - portfolio.html title 重複解消（"Profile — MaroSoundDesign"）
+  - OGP 画像配置済み（assets/ogp.jpg / 1200×630）
+  - sitemap.xml / robots.txt 追加済み
+  - Google Search Console 所有権確認済み・サイトマップ送信済み
 
 ---
 
