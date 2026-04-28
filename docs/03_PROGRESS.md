@@ -61,3 +61,14 @@
 - `data/raw/OGP_image.png`（1729×910）を JPEG 変換し `assets/ogp.jpg` として配置
 - **index.html** / **works.html** / **portfolio.html** / **history.html**: `og:image` / `twitter:image` を追加
 - Status: ✅ 完了
+
+## Phase 10: SEO Phase 1C — sitemap.xml / robots.txt 追加
+- `sitemap.xml`: 全4ページの URL / lastmod / changefreq / priority を記載
+- `robots.txt`: `User-agent: *` / `Allow: /` / `Sitemap:` を設定
+- Status: ✅ 完了
+
+## Phase 11: SEO Phase 1D — JSON-LD 構造化データ追加
+- **index.html**: `Person` + `WebSite` スキーマを `</head>` 直前に挿入
+- **portfolio.html**: `Person` スキーマを `</head>` 直前に挿入
+- sameAs: `https://x.com/MaroSoundDesign` / `https://marosounddesign.com/portfolio.html`（Wikipedia・Uta-net は URL確認後に追加予定）
+- Status: ✅ 完了（sameAs 追記待ち）
