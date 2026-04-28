@@ -57,6 +57,14 @@
 - Selected Works の Lienel 画像 404 修正: index.html 296-297 行の "じ" が NFD 形式（し+゛）。NFC に正規化（6 バイトのみ）
 - 再発防止: `tools/check_image_paths.py` 追加。push 前に NFD / 実ファイル無し / Git 未追跡 / NFD-NFC 重複を一括検出
 
+### Perf 2026-04-28（works.html モーダル jacket 表示改善・コミット 99175c0 / 28005dd / e837243）
+- **背景**: 一覧は thumbnail（~20KB）、モーダルは jacket（高解像度）。タップ後モーダルが先に開いて jacket が遅れて差し込まれる体感があった
+- **対応 3 段（works.html のみ、CSS / モーダル HTML / フィルター / 年別 lazy fill すべて変更なし）**:
+  1. **hover/touchstart 先読み**: `preloadJacket(idx)` を追加し、`.wcard` に `onmouseenter` / `ontouchstart` を付与。`Set` で重複抑止
+  2. **初期表示年の idle preload**: `preloadInitialYearJackets()` を `renderWorks()` 末尾で呼び出し。`requestIdleCallback`（未対応時 `setTimeout 800ms`）で `years[0]` の jacket のみ低優先で取得（全件 preload はしない）
+  3. **openModal 内 250ms 待機**: `waitForJacket(src, 250)` を追加し `openModal` 冒頭で `await`。キャッシュ済みなら即解決、未読込時のみ最大 250ms 待ってから開く（画像なしモーダル先行表示の体感解消）
+- **状態**: 改善余地あり（実機 PSI 未再計測 / 一括 preload や CDN 配信最適化は未着手）。次回は実機での体感確認後に判断
+
 ### Feature/Hotfix 2026-04-28（追加分・コミット 61b9db7 / 97c6d64 / c8086d7 / 68a0522）
 - **スマホモーダル下スワイプ閉じ機能追加**（3 ページ対応）
   - 新規 `js/modal-swipe.js`（touchstart/move/end、閾値 80px、上方向無視、`.modal-handle` または `scrollTop===0` 開始限定 → モーダル内スクロール非干渉、`window.closeModal` 呼び出し fallback あり）
