@@ -98,8 +98,10 @@
 .contact-btn{display:inline-block;text-align:center;font-size:.72rem;padding:.9rem 2.4rem}
 @media(max-width:900px){
   #about.sec{padding:2rem 1.4rem}
-  .about-grid{grid-template-columns:minmax(240px,280px) minmax(0,1fr);gap:2.5rem}
   .contact-btn{margin-top:-1rem}
+}
+@media(min-width:781px) and (max-width:900px){
+  .about-grid{grid-template-columns:minmax(240px,280px) minmax(0,1fr);gap:2.5rem}
 }
 @media(max-width:480px){footer{flex-direction:column;align-items:flex-start;gap:.6rem}.ft-copy{text-align:left}}
 @media(max-width:540px){.rw-more{font-size:.68rem;letter-spacing:.1em}}

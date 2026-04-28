@@ -1,5 +1,12 @@
 # Refactoring Progress
 
+## Hotfix 2026-04-28: index.html スマホ表示崩れ修正
+- 症状: スマホ幅 (≤390px) で About/Profile セクションの本文が右端に細く押し出され縦書き状態
+- 原因: index.html inline `<style>` の `@media(max-width:900px)` が `.about-grid` を 2 カラム固定し、style.css 側 780px 単カラム化ルールを上書き
+- 修正: `.about-grid` の 2 カラム指定を `@media (min-width:781px) and (max-width:900px)` に限定（index.html のみ、最小差分）
+- 確認: 375/390/414px で単カラム化、横スクロールなし、コンソールエラーなし
+- Status: ✅ 完了
+
 ## Phase 1: Security — innerHTML → DOM API
 - **works.html**: jacket/credits/year の innerHTML を createElement+textContent+setAttribute に置換
 - **portfolio.html**: jacket/credits の innerHTML を同様に置換
