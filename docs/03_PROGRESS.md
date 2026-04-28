@@ -1,5 +1,17 @@
 # Refactoring Progress
 
+## Perf 2026-04-28 (8): works.html モーダル jacket 画像の hover/touchstart 先読み
+- 目的: 一覧 thumbnail → モーダル jacket 表示時の遅延を解消
+- 修正: `works.html` のみ
+  - `safeAssetSrc` 直下に `preloadedJackets` Set と `preloadJacket(idx)` を追加（`new Image()` で非同期取得、重複抑止）
+  - wcard テンプレートに `onmouseenter="preloadJacket(${index})"` `ontouchstart="preloadJacket(${index})"` を追加
+- 不変項: CSS / openModal / フィルター / 年別 lazy fill / thumbnail 化 / モーダルデザイン すべて変更なし
+- 確認:
+  - hover/touchstart で jacket リソース（例: SAKURA GRADUATION jacket.webp）が Network に出現 ✅
+  - Console エラーなし ✅
+  - jacket 関連 Network 404 なし ✅
+- Status: ✅ 完了
+
 ## Hotfix 2026-04-28 (7): スマホ版ヘッダーロゴ位置を index/portfolio に揃える（works.html）
 - 症状: スマホ表示で works.html のロゴが index/portfolio より右下にズレる（375/390/414px で再現）
 - 原因: works.html インライン `<style>` に `nav{padding:1.2rem 2.5rem}` があり、外部 `css/style.css` の `@media(max-width:900px){nav{padding:1rem 1.4rem}}` を CSS 読み込み順で上書き。works.html だけ ≤600px 用の `nav{padding:1rem 1.2rem}` で別値になっていた

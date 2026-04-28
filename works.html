@@ -437,6 +437,17 @@ function safeAssetSrc(path){
   return encodeURI(path).replace(/'/g, '%27');
 }
 
+const preloadedJackets = new Set();
+function preloadJacket(idx){
+  const w = WORKS[idx];
+  if (!w || !w.jacket) return;
+  if (preloadedJackets.has(idx)) return;
+  preloadedJackets.add(idx);
+  const img = new Image();
+  img.decoding = 'async';
+  img.src = safeAssetSrc(w.jacket);
+}
+
 function thumbnailSrc(work){
   return work.thumbnail || work.jacket;
 }
@@ -521,7 +532,7 @@ function fillYear(year){
   if (!grid) return;
   const entries = grouped.get(year) || [];
   grid.innerHTML = entries.map(({ work, index }) => `
-    <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})">
+    <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})" onmouseenter="preloadJacket(${index})" ontouchstart="preloadJacket(${index})">
       <div class="wcard-img">
         <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" loading="lazy" decoding="async" onerror="handleCardImageError(this)">
         <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
