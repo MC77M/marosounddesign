@@ -11,36 +11,16 @@
   position: relative;
   z-index: 1;
   background: #fff;
-  padding: 10rem 2.5rem 3rem;
+  padding: 8rem 2.5rem 3rem;
 }
 .ct-inner {
   max-width: 1080px;
   margin: 0 auto;
 }
-.ct-title-wrap {
-  position: relative;
-  display: block;
-}
-.ct-hero-echo {
-  position: absolute;
-  left: -4px;
-  top: 50%;
-  transform: translateY(-44%);
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
-  letter-spacing: -.04em;
-  line-height: .92;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(0,0,0,.06);
-  pointer-events: none;
-  z-index: -1;
-  white-space: nowrap;
-}
 .ct-hero-title {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  font-size: clamp(2.4rem, 6vw, 4rem);
   letter-spacing: -.04em;
   line-height: .92;
   margin: 0;
@@ -76,7 +56,7 @@
   display: flex;
   align-items: center;
   gap: 1.1rem;
-  margin-top: 4.5rem;
+  margin-top: 6rem;
   margin-bottom: 1.75rem;
   font-family: 'DM Mono', monospace;
   font-size: .6rem;
@@ -648,13 +628,12 @@
     gap: 2rem;
   }
   .ct-side { position: static }
+  .ct-section-label { margin-top: 4.5rem }
   .ct-submit-row { flex-wrap: wrap }
   .ct-submit-meta { margin-left: 0; order: 3; width: 100% }
 }
 
 @media (max-width: 540px) {
-  .ct-hero-title { font-size: clamp(2rem, 12vw, 2.8rem) }
-  .ct-hero-echo { font-size: clamp(2rem, 12vw, 2.8rem) }
   .ct-side-title { font-size: 1.75rem }
   .ct-section-label { font-size: .55rem }
   .ct-label-jp { font-size: .65rem }

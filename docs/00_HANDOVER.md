@@ -59,13 +59,20 @@
 - `_archive/2026-04-19_netlify_upload/` 削除済み・本番参照なし確認済み（2026-04-29）
 - `claude.md` → `CLAUDE.md` 正規化済み・`AGENTS.md` / `CLAUDE.md` に `00_HANDOVER.md` 参照行追加（2026-04-29）
 
-### Feature 2026-05-04（contact.html 新規追加・未push）
+### Feature + Style 2026-05-04（contact.html 新規追加 + UI調整・未push）
 - `_AddContacForm/Contact Form.html`（React製プロトタイプ）をバニラHTML/CSS/JSに変換し `contact.html` を新規作成
 - 追加: `contact.html` / `css/contact.css` / `js/contact.js`
 - 変更: `sitemap.xml`（5ページ化）/ `docs/00_HANDOVER.md`
 - 送信: Netlify Forms（honeypot spam対策込み）・AJAX送信・成功画面はページ内SuccessOrb表示
 - Budget / Deadline は任意項目。必須は name / email / category / message / privacy
 - 既存ページ（index/works/portfolio/history）・style.css・既存JS は一切変更なし
+- UI調整済み（装飾 + フォントバランス）:
+  - ボタンサイズ・shadow・チップ shadow を既存 `.btn` / `.tag` と統一
+  - OK表示を CSS で非表示化（エラー時のみ赤表示）、パルスドットを紫系に変更
+  - 成功 Orb・receipt・overlay を控えめに縮小
+  - Contact ロゴを works page-title 級に縮小、input/label/chip のフォントサイズを既存サイトと統一
+  - side title weight 900→800（既存 sec-title と統一）
+  - Back ボタンテキスト簡略化（「Back · 戻る」→「Back」）
 - **デプロイ後タスク**: ContactフォームはNetlify Formsを使用。デプロイ後、Netlify管理画面で通知先メールアドレス設定が必要。
 - **次回着手候補**: 既存ナビリンク（#contact / Google Forms）→ contact.html への差し替え、Netlifyデプロイ後の実送信テスト
 

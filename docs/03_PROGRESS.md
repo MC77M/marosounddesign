@@ -52,6 +52,23 @@
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み、console エラーなし、Netlify Forms属性維持
 - Status: ローカル実装完了・未push
 
+## Style 2026-05-04: Contact hero→form 間の余白調整
+- 目的: PC表示でheroとフォームセクションの間が詰まって見える問題を解消
+- 修正: `css/contact.css` `.ct-section-label` margin-top `4.5rem` → `6rem`、モバイル(≤900px)では `4.5rem` を維持
+- 不変項: contact.html / works.html / css/style.css / js/contact.js すべて変更なし
+- 確認: PC/モバイル表示確認済み
+- Status: ローカル実装完了・未push
+
+## Style 2026-05-04: Contact ヘッダーを Works ページヘッダーに統一
+- 目的: Contact ページ上部の後付け感を減らし、Works と同じトーンに揃える
+- 修正:
+  - `css/contact.css`: `.ct-hero` padding-top `10rem` → `8rem`、`.ct-hero-title` font-size `clamp(2.8rem,6.5vw,4.8rem)` → `clamp(2.4rem,6vw,4rem)`、`.ct-title-wrap` / `.ct-hero-echo` 削除、モバイル独自サイズ指定削除
+  - `contact.html`: `ct-hero-echo` span 削除、`ct-title-wrap` div 削除
+- 維持: Contact見出しグラデーション・サブラベル・説明文・フォーム構造・Netlify Forms設定
+- 不変項: works.html / css/style.css / js/contact.js / 既存ページ すべて変更なし
+- 確認: PC(1280px)/モバイル(375px) 表示確認済み
+- Status: ローカル実装完了・未push
+
 ## Copy 2026-05-04: Contact フォーム下部の英語併記削除・返信目安控えめ化
 - 目的: フォーム下部の実用エリアを軽くし、英語装飾を削減
 - 修正:
