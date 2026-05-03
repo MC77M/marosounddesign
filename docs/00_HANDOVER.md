@@ -19,13 +19,14 @@
 | works.html | 楽曲一覧（300件、フィルター付き） |
 | portfolio.html | プロフィール・Selected Works（title: "Profile — MaroSoundDesign"） |
 | history.html | 2019年以前の作品アーカイブ |
+| contact.html | お問い合わせフォーム（Netlify Forms送信） |
 
 ## SEO 関連ファイル
 
 | ファイル | 説明 |
 |---|---|
 | assets/ogp.jpg | OGP 画像（1200×630） |
-| sitemap.xml | 全4ページ登録済み |
+| sitemap.xml | 全5ページ登録済み |
 | robots.txt | 全クローラー許可・sitemap 参照 |
 | googlea0a2b71118ae6d61.html | Google Search Console 認証ファイル（削除禁止）|
 
@@ -38,10 +39,12 @@
 | works-data.json | works.html の全楽曲データ（raw 142KB / brotli 13.7KB） |
 | history-data.json | history.html の経歴データ |
 | selected-works-shared.js | portfolio.html のモーダル処理・データ |
+| js/contact.js | contact.html のフォーム制御・バリデーション・送信 |
+| css/contact.css | contact.html 専用スタイル（ct- プレフィックス） |
 
 ---
 
-## 現在の状態（2026-04-29 時点）
+## 現在の状態（2026-05-04 時点）
 
 - XSS対策済み（innerHTML 禁止 → DOM API に統一）
 - モーダル閉じ処理統一済み
@@ -55,6 +58,15 @@
 - .gitignore に `data/raw/` `data/work/` `data/output/tmp/` `data/output/mappings/` 追加済み（2026-04-29）
 - `_archive/2026-04-19_netlify_upload/` 削除済み・本番参照なし確認済み（2026-04-29）
 - `claude.md` → `CLAUDE.md` 正規化済み・`AGENTS.md` / `CLAUDE.md` に `00_HANDOVER.md` 参照行追加（2026-04-29）
+
+### Feature 2026-05-04（contact.html 新規追加・未push）
+- `_AddContacForm/Contact Form.html`（React製プロトタイプ）をバニラHTML/CSS/JSに変換し `contact.html` を新規作成
+- 追加: `contact.html` / `css/contact.css` / `js/contact.js`
+- 変更: `sitemap.xml`（5ページ化）/ `docs/00_HANDOVER.md`
+- 送信: Netlify Forms（honeypot spam対策込み）・AJAX送信・成功画面はページ内SuccessOrb表示
+- Budget / Deadline は任意項目。必須は name / email / category / message / privacy
+- 既存ページ（index/works/portfolio/history）・style.css・既存JS は一切変更なし
+- **次回着手候補**: 既存ナビリンク（#contact / Google Forms）→ contact.html への差し替え、Netlifyデプロイ後の実送信テスト
 
 ### Fix 2026-04-28（index.html スマホフッター崩れ修正・コミット 11ef71a）
 - 症状: 480px 以下で `© 2025 宮川麿. All rights reserved.` が不自然に折り返され、文字間が広く見えていた

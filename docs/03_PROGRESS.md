@@ -1,5 +1,26 @@
 # Refactoring Progress
 
+## Feature 2026-05-04: Contact Form ページ新規追加
+- 目的: Google Forms外部遷移を廃止し、サイト内完結のお問い合わせフォームを設置
+- ソース: `_AddContacForm/Contact Form.html`（React+Babel製プロトタイプ）をバニラHTML/CSS/JSに変換
+- 追加ファイル:
+  - `contact.html` — Contactページ本体（既存ナビ/フッター使用）
+  - `css/contact.css` — Contact専用スタイル（ct-プレフィックス、既存変数マッピング）
+  - `js/contact.js` — フォーム制御・バリデーション・Netlify Forms送信
+- 変更ファイル:
+  - `sitemap.xml` — contact.html エントリ追加（priority 0.7）
+  - `docs/00_HANDOVER.md` — 主要ページ表・ファイル表に追記
+- 不変項: index.html / works.html / portfolio.html / history.html / css/style.css / 既存JS すべて変更なし
+- 設計方針:
+  - フォント: Inter に統一（Figtree不使用）
+  - カラー: 既存 --pink/--purple/--blue にマッピング
+  - CSSクラス: ct- プレフィックスで衝突回避
+  - Budget/Deadline: 任意項目（必須は name/email/category/message/privacy）
+  - 送信: Netlify Forms（honeypot spam対策込み）
+  - 成功画面: SuccessOrb（ページ内表示、遷移なし）
+  - セキュリティ: innerHTML不使用、textContent/DOM APIのみ
+- Status: ローカル実装完了・プレビュー検証済み・未push
+
 ## Chore 2026-04-29 (15): claude.md → CLAUDE.md 正規化・HANDOVER.md参照行追加
 - 目的: git 追跡名を Claude Code の正式ファイル名 `CLAUDE.md` に統一
 - 修正: `AGENTS.md` / `CLAUDE.md`（旧 `claude.md`）のみ（内容変更なし・rename のみ）
