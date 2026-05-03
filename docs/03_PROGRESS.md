@@ -19,7 +19,10 @@
   - 送信: Netlify Forms（honeypot spam対策込み）
   - 成功画面: SuccessOrb（ページ内表示、遷移なし）
   - セキュリティ: innerHTML不使用、textContent/DOM APIのみ
-- Status: ローカル実装完了・プレビュー検証済み・未push
+- デプロイ後タスク:
+  - Netlify管理画面 → Forms → contact → Notifications で通知先メールアドレスを設定する
+  - プライバシーポリシーページの作成（現在 `href="#"` のダミーリンク）
+- Status: ローカル実装完了・実ブラウザ検証済み（1440px/900px/375px）・未push
 
 ## Chore 2026-04-29 (15): claude.md → CLAUDE.md 正規化・HANDOVER.md参照行追加
 - 目的: git 追跡名を Claude Code の正式ファイル名 `CLAUDE.md` に統一
