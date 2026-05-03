@@ -28,8 +28,8 @@
 - 目的: Contact ページの後付け感を減らし、既存 index/works/portfolio/history と同じトーンに寄せる
 - 修正: `css/contact.css` のみ
 - 装飾調整:
-  - 送信ボタン: padding `.85rem 2rem`、default shadow 削除、hover を既存 `.btn-fill:hover` と統一
-  - Back ボタン: padding `.65rem 1.6rem`（SEND より控えめに）
+  - 送信ボタン: padding `.75rem 2rem`、default shadow 削除、hover を既存 `.btn-fill:hover` と統一
+  - Back ボタン: padding `.6rem 1.5rem`（SEND より控えめに）、テキスト「Back · 戻る」→「Back」に簡略化
   - チップ active shadow: `0 8px 20px` → `0 4px 12px`（既存 `.tag:hover` と同等に）
   - OK 表示: CSS で `display:none`（エラー時のみ赤表示、左サイドの進捗は維持）
   - パルスドット: 緑 → 紫系 `var(--purple)` に変更（サイトパレットに統一）
@@ -47,8 +47,18 @@
   - 英字ラベル / kicker / section-label: `.65rem` → `.6rem`（既存 eyebrow と統一）
   - チップ: `.65rem` → `.6rem`（既存 `.tag` と統一）
   - mobile input/textarea/select: `1rem` → `.88rem`
-- 不変項: contact.html / js/contact.js / css/style.css / 既存ページ / Netlify Forms設定 すべて変更なし
+- 変更ファイル: `css/contact.css` / `contact.html`（Back ボタンテキストのみ）
+- 不変項: js/contact.js / css/style.css / 既存ページ / Netlify Forms設定 すべて変更なし
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み、console エラーなし、Netlify Forms属性維持
+- Status: ローカル実装完了・未push
+
+## Copy 2026-05-04: Contact フォーム下部の英語併記削除・返信目安控えめ化
+- 目的: フォーム下部の実用エリアを軽くし、英語装飾を削減
+- 修正:
+  - `contact.html`: プライバシー同意文の英語併記削除、返信目安の英語併記削除、ボタン文言を SEND INQUIRY に復元
+  - `css/contact.css`: `.ct-submit-meta` を font-size `.55rem` / letter-spacing `.15em` / text-transform `none` / font-weight `400` に変更
+- 不変項: SEND INQUIRY / BACK ボタン文言・js/contact.js・Netlify Forms設定・既存ページ すべて変更なし
+- 確認: PC(1280px)/モバイル(375px) 表示確認済み
 - Status: ローカル実装完了・未push
 
 ## Chore 2026-04-29 (15): claude.md → CLAUDE.md 正規化・HANDOVER.md参照行追加
