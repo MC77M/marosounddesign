@@ -152,7 +152,7 @@
             <div class="ct-label-row">
               <span class="ct-label">
                 <span class="ct-label-en">Budget</span>
-                <span class="ct-label-jp">ご予算</span>
+                <span class="ct-label-jp">ご予算感</span>
               </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
@@ -161,11 +161,11 @@
             </div>
             <div class="ct-select-wrap">
               <select name="budget">
-                <option value="">— 未定・相談したい —</option>
-                <option value="〜¥300,000">〜¥300,000</option>
-                <option value="¥300,000 – ¥800,000">¥300,000 – ¥800,000</option>
-                <option value="¥800,000 – ¥2,000,000">¥800,000 – ¥2,000,000</option>
-                <option value="¥2,000,000 以上">¥2,000,000 以上</option>
+                <option value="">— 選択してください —</option>
+                <option value="5万円未満">5万円未満</option>
+                <option value="5〜15万円">5〜15万円</option>
+                <option value="15万円以上">15万円以上</option>
+                <option value="内容によって相談したい">内容によって相談したい</option>
               </select>
             </div>
             <div class="ct-underline"></div>
@@ -182,7 +182,15 @@
                 <span class="ct-status-text"></span>
               </span>
             </div>
-            <input type="date" name="deadline">
+            <div class="ct-select-wrap">
+              <select name="deadline">
+                <option value="">— 選択してください —</option>
+                <option value="なるべく早め">なるべく早め</option>
+                <option value="1ヶ月以内">1ヶ月以内</option>
+                <option value="2〜3ヶ月以内">2〜3ヶ月以内</option>
+                <option value="未定・相談したい">未定・相談したい</option>
+              </select>
+            </div>
             <div class="ct-underline"></div>
           </div>
 
@@ -190,7 +198,7 @@
             <div class="ct-label-row">
               <span class="ct-label">
                 <span class="ct-label-en">Message</span>
-                <span class="ct-label-jp">お問い合わせ内容</span>
+                <span class="ct-label-jp">ご相談内容</span>
                 <span class="ct-label-req">*REQUIRED</span>
               </span>
               <span class="ct-status" hidden>
@@ -198,7 +206,7 @@
                 <span class="ct-status-text"></span>
               </span>
             </div>
-            <textarea name="message" rows="4" placeholder="楽曲の概要、雰囲気、リファレンスURLなど、どんな粒度でもお気軽に。"></textarea>
+            <textarea name="message" rows="4" placeholder="楽曲の用途、希望する作業内容、参考音源、スケジュール感などをご記入ください。"></textarea>
             <div class="ct-underline"></div>
           </div>
 
