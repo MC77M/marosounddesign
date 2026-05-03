@@ -24,6 +24,33 @@
   - プライバシーポリシーページの作成（現在 `href="#"` のダミーリンク）
 - Status: ローカル実装完了・実ブラウザ検証済み（1440px/900px/375px）・未push
 
+## Style 2026-05-04: Contact ページ UI バランス調整（既存サイト統一）
+- 目的: Contact ページの後付け感を減らし、既存 index/works/portfolio/history と同じトーンに寄せる
+- 修正: `css/contact.css` のみ
+- 装飾調整:
+  - 送信ボタン: padding `.85rem 2rem`、default shadow 削除、hover を既存 `.btn-fill:hover` と統一
+  - Back ボタン: padding `.65rem 1.6rem`（SEND より控えめに）
+  - チップ active shadow: `0 8px 20px` → `0 4px 12px`（既存 `.tag:hover` と同等に）
+  - OK 表示: CSS で `display:none`（エラー時のみ赤表示、左サイドの進捗は維持）
+  - パルスドット: 緑 → 紫系 `var(--purple)` に変更（サイトパレットに統一）
+  - 成功 Orb: 140px → 88px、shadow 縮小、回転 8s → 12s、チェックマーク 3.5rem → 2rem
+  - receipt ボックス: border-radius 18px → 12px、shadow を既存カードと統一
+  - sending overlay: spinner 72px → 48px、blur 12px → 8px
+- フォントバランス調整:
+  - Contact ロゴ: `clamp(3.5rem,8vw,6.5rem)` → `clamp(2.8rem,6.5vw,4.8rem)`（works page-title 級に）
+  - mobile ロゴ: `clamp(2.25rem,12vw,3.5rem)` → `clamp(2rem,12vw,2.8rem)`
+  - input/select: `1.05rem` → `.92rem`（既存本文 `.92rem` と統一）
+  - textarea: `1rem` → `.88rem` / date: `.94rem` → `.88rem`
+  - side title: weight `900` → `800`（既存 sec-title と統一）
+  - SEND ボタン: `.65rem` → `.68rem`（既存 `.btn` と統一）
+  - BACK ボタン: `.65rem`（SEND `.68rem` との段差維持）
+  - 英字ラベル / kicker / section-label: `.65rem` → `.6rem`（既存 eyebrow と統一）
+  - チップ: `.65rem` → `.6rem`（既存 `.tag` と統一）
+  - mobile input/textarea/select: `1rem` → `.88rem`
+- 不変項: contact.html / js/contact.js / css/style.css / 既存ページ / Netlify Forms設定 すべて変更なし
+- 確認: PC(1280px)/モバイル(375px) 表示確認済み、console エラーなし、Netlify Forms属性維持
+- Status: ローカル実装完了・未push
+
 ## Chore 2026-04-29 (15): claude.md → CLAUDE.md 正規化・HANDOVER.md参照行追加
 - 目的: git 追跡名を Claude Code の正式ファイル名 `CLAUDE.md` に統一
 - 修正: `AGENTS.md` / `CLAUDE.md`（旧 `claude.md`）のみ（内容変更なし・rename のみ）
