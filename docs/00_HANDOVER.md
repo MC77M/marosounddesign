@@ -66,6 +66,7 @@
 - 送信: Netlify Forms（honeypot spam対策込み）・AJAX送信・成功画面はページ内SuccessOrb表示
 - Budget / Deadline は任意項目。必須は name / email / category / message / privacy
 - 既存ページ（index/works/portfolio/history）・style.css・既存JS は一切変更なし
+- **デプロイ後タスク**: ContactフォームはNetlify Formsを使用。デプロイ後、Netlify管理画面で通知先メールアドレス設定が必要。
 - **次回着手候補**: 既存ナビリンク（#contact / Google Forms）→ contact.html への差し替え、Netlifyデプロイ後の実送信テスト
 
 ### Fix 2026-04-28（index.html スマホフッター崩れ修正・コミット 11ef71a）
