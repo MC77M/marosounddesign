@@ -114,7 +114,7 @@
     if (k === 'category' && valid) {
       txt.textContent = formData.category.length + ' selected';
     } else {
-      txt.textContent = valid ? 'OK' : '要確認';
+      txt.textContent = valid ? 'OK' : '未入力です';
     }
   }
 
