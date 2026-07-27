@@ -1,5 +1,13 @@
 # Refactoring Progress
 
+## Ops 2026-07-28: Contact / Netlify Forms 本番運用確認
+- 対応: Form detection有効化、`contact`フォーム認識、メール通知設定、旧Contact導線を`contact.html`へ統一
+- 通知表示: 項目名を短い日本語表記へ変更、`All`→`すべて / 全般`、Privacy同意→`同意済み`
+- キャッシュ対策: `js/contact.js?v=20260728`へ更新
+- 本番確認: 送信成功、成功表示、submission追加、通知メール受信、Privacy値`同意済み`、Consoleエラーなし
+- 残作業: テストsubmission 3件は未削除
+- Status: ✅ 完了・本番反映済み
+
 ## Feature 2026-05-04: Privacy Policy ページ新規追加
 - 目的: contact.html のプライバシーポリシーリンク先を作成
 - 追加ファイル:

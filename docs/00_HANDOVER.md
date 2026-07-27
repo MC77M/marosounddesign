@@ -61,7 +61,7 @@
 - `claude.md` → `CLAUDE.md` 正規化済み・`AGENTS.md` / `CLAUDE.md` に `00_HANDOVER.md` 参照行追加（2026-04-29）
 - `js/contact.js` のAJAX送信にhoneypotを追加・`innerHTML`をDOM APIへ置換・Privacy同意をネイティブcheckbox化・必須項目に`required`と明示的な`label`を追加済み（2026-07-28）
 - Netlify Formsの通知・submission用項目名を短い日本語表記にし、All・Privacy同意の送信値を日本語化済み（2026-07-28）
-- Privacy同意の旧送信値キャッシュ対策として `js/contact.js?v=20260728` に更新済み（2026-07-28）
+- Privacy同意の旧送信値キャッシュ対策として `js/contact.js?v=20260728` に更新し、本番submission・通知メールで `同意済み` を確認済み（2026-07-28）
 - `index.html` / `portfolio.html` の旧Contact・Google Forms導線を `contact.html` に統一済み（2026-07-28）
 - `works-data.json` に2026年5月〜7月公開の8作品と本画像・サムネイルを追加済み（2026-07-28）
 
@@ -92,9 +92,9 @@
   - Contact ロゴを works page-title 級に縮小、input/label/chip のフォントサイズを既存サイトと統一
   - side title weight 900→800（既存 sec-title と統一）
   - Back ボタンテキスト簡略化（「Back · 戻る」→「Back」）
-- **デプロイ後タスク**: ContactフォームはNetlify Formsを使用。デプロイ後、Netlify管理画面で通知先メールアドレス設定が必要。
+- **Netlify Forms運用確認済み**: Form detection有効、`contact`認識、通知先設定、実送信・通知メール受信まで正常（2026-07-28）
 - privacy.html 作成済み（施行日 2026-05-04、contact.html からリンク接続済み）
-- **次回着手候補**: 既存ナビリンク（#contact / Google Forms）→ contact.html への差し替え、Netlifyデプロイ後の実送信テスト
+- **残作業**: Netlify上のテストsubmission 3件は未削除（必要な場合のみ管理画面から削除）
 
 ### Fix 2026-04-28（index.html スマホフッター崩れ修正・コミット 11ef71a）
 - 症状: 480px 以下で `© 2025 宮川麿. All rights reserved.` が不自然に折り返され、文字間が広く見えていた
