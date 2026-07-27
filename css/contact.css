@@ -344,8 +344,24 @@
   font-size: .81rem;
   line-height: 1.8;
   color: var(--sub);
-  cursor: pointer;
   user-select: none;
+}
+.ct-privacy-control {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.ct-privacy-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
 }
 .ct-privacy-box {
   width: 22px;
@@ -353,16 +369,20 @@
   border-radius: 6px;
   border: 1.5px solid rgba(0,0,0,.12);
   background: #fff;
-  flex-shrink: 0;
-  margin-top: 1px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: all .25s;
 }
-.ct-privacy.on .ct-privacy-box {
+.ct-privacy-box svg { display: none }
+.ct-privacy-input:checked + .ct-privacy-box {
   background: var(--grad);
   border-color: transparent;
+}
+.ct-privacy-input:checked + .ct-privacy-box svg { display: block }
+.ct-privacy-input:focus-visible + .ct-privacy-box {
+  outline: 2px solid var(--purple);
+  outline-offset: 3px;
 }
 .ct-privacy a {
   color: var(--text);

@@ -32,7 +32,23 @@
     { k: 'privacy',  label: 'Consent' }
   ];
 
-  var TICK_SVG = '<svg width="9" height="9" viewBox="0 0 10 10"><path d="M1.5 5.5L4 8L8.5 2.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function createTickSvg() {
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('width', '9');
+    svg.setAttribute('height', '9');
+    svg.setAttribute('viewBox', '0 0 10 10');
+
+    var path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', 'M1.5 5.5L4 8L8.5 2.5');
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', '#fff');
+    path.setAttribute('stroke-width', '1.6');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(path);
+    return svg;
+  }
 
   function isFilled(k) {
     var v = formData[k];
@@ -81,10 +97,9 @@
       var filled = isFilled(item.k);
       el.classList.toggle('on', filled);
       var tick = el.querySelector('.ct-prog-tick');
+      tick.textContent = '';
       if (filled) {
-        tick.innerHTML = TICK_SVG;
-      } else {
-        tick.textContent = '';
+        tick.appendChild(createTickSvg());
       }
     });
   }
@@ -189,15 +204,11 @@
   function setupPrivacy() {
     var el = document.getElementById('ct-privacy');
     if (!el) return;
-    var svg = el.querySelector('svg');
-    var hiddenInput = document.querySelector('input[name="privacy"]');
+    var input = el.querySelector('input[type="checkbox"]');
+    if (!input) return;
 
-    el.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') return;
-      formData.privacy = !formData.privacy;
-      el.classList.toggle('on', formData.privacy);
-      if (svg) svg.style.display = formData.privacy ? '' : 'none';
-      if (hiddenInput) hiddenInput.value = formData.privacy ? 'agreed' : '';
+    input.addEventListener('change', function () {
+      formData.privacy = input.checked;
       touched.privacy = true;
       updateProgress();
       updateSubmitButton();
@@ -220,6 +231,7 @@
 
       var fd = new URLSearchParams();
       fd.append('form-name', 'contact');
+      fd.append('bot-field', form.elements['bot-field'].value);
       fd.append('name', formData.name.trim());
       fd.append('company', formData.company.trim());
       fd.append('email', formData.email.trim());
