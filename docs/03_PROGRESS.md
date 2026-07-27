@@ -6,6 +6,7 @@
   - `privacy.html` — プライバシーポリシー本体（style.css 流用 + `<style>` 内ページ固有CSS、pv- プレフィックス）
 - 変更ファイル:
   - `contact.html` — プライバシーポリシーリンクを `href="privacy.html" target="_blank" rel="noopener noreferrer"` に変更
+  - `sitemap.xml` — privacy.html エントリ追加（priority 0.3）
 - 内容: 個人情報の取り扱い / 収集する情報 / 利用目的 / 第三者への提供 / 安全管理 / お問い合わせ / 改定について（全7項目）
 - 収集情報: お名前 / メールアドレス / 会社名・所属（任意） / ご相談の種類 / ご予算感（任意） / 希望納期（任意） / お問い合わせ内容
 - 施行日: 2026-05-04
