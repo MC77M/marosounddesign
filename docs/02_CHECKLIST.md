@@ -21,6 +21,8 @@
 - [ ] works.html
 - [ ] portfolio.html
 - [ ] history.html
+- [ ] contact.html
+- [ ] privacy.html
 
 ### レスポンシブ
 - [ ] PC 表示
@@ -39,7 +41,7 @@
 ## Netlify 本番確認
 
 ### ページ
-- [ ] 4ページ表示確認
+- [ ] 6ページ表示確認
 
 ### データ件数
 - [ ] 534 Songs（works.html）

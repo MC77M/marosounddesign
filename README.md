@@ -20,7 +20,7 @@
 | `assets/ogp.jpg` | OGP 画像（1200×630） |
 | `images/` | 公開用画像（WebP 600×600px） |
 | `netlify.toml` | Netlify 配信設定 |
-| `sitemap.xml` | 全4ページ登録済み |
+| `sitemap.xml` | 全6ページ登録済み |
 | `robots.txt` | 全クローラー許可・sitemap 参照 |
 | `googlea0a2b71118ae6d61.html` | Google Search Console 認証（**削除禁止**） |
 

@@ -20,13 +20,14 @@
 | portfolio.html | プロフィール・Selected Works（title: "Profile — MaroSoundDesign"） |
 | history.html | 2019年以前の作品アーカイブ |
 | contact.html | お問い合わせフォーム（Netlify Forms送信） |
+| privacy.html | プライバシーポリシー（contact.html から target="_blank" でリンク） |
 
 ## SEO 関連ファイル
 
 | ファイル | 説明 |
 |---|---|
 | assets/ogp.jpg | OGP 画像（1200×630） |
-| sitemap.xml | 全5ページ登録済み |
+| sitemap.xml | 全6ページ登録済み |
 | robots.txt | 全クローラー許可・sitemap 参照 |
 | googlea0a2b71118ae6d61.html | Google Search Console 認証ファイル（削除禁止）|
 
@@ -64,6 +65,7 @@
 ### Feature 2026-05-04（privacy.html 新規追加・未push）
 - `privacy.html` 新規作成（個人情報取り扱い7項目、施行日 2026-05-04）
 - `contact.html` のプライバシーポリシーリンクを `href="privacy.html" target="_blank" rel="noopener noreferrer"` に接続
+- `sitemap.xml` に privacy.html 追加（priority 0.3）
 - CSS: style.css 流用 + `<style>` 内に最小限のページ固有スタイル（pv- プレフィックス）
 - JS不要・専用CSSファイル不要
 - 既存ページ・js/contact.js・Netlify Forms設定は変更なし
