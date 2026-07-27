@@ -239,7 +239,7 @@
       fd.append('budget', formData.budget);
       fd.append('deadline', formData.deadline);
       fd.append('message', formData.message.trim());
-      fd.append('privacy', 'agreed');
+      fd.append('privacy', '同意済み');
 
       fetch('/', {
         method: 'POST',

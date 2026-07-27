@@ -75,11 +75,11 @@
 
           <div class="ct-field" data-key="name">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-name">
+              <span class="ct-label">
                 <span class="ct-label-en">Name</span>
-                <span class="ct-label-jp">お名前</span>
+                <label class="ct-label-jp" for="ct-name">お名前</label>
                 <span class="ct-label-req">*REQUIRED</span>
-              </label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -91,10 +91,10 @@
 
           <div class="ct-field" data-key="company">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-company">
+              <span class="ct-label">
                 <span class="ct-label-en">Company / Affiliation</span>
-                <span class="ct-label-jp">会社名・所属</span>
-              </label>
+                <label class="ct-label-jp" for="ct-company">会社名・所属</label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -106,11 +106,11 @@
 
           <div class="ct-field" data-key="email">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-email">
+              <span class="ct-label">
                 <span class="ct-label-en">Email</span>
-                <span class="ct-label-jp">メールアドレス</span>
+                <label class="ct-label-jp" for="ct-email">メールアドレス</label>
                 <span class="ct-label-req">*REQUIRED</span>
-              </label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -122,11 +122,11 @@
 
           <div class="ct-field" data-key="category">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-category">
+              <span class="ct-label">
                 <span class="ct-label-en">Project</span>
-                <span class="ct-label-jp">ご相談の種類</span>
+                <label class="ct-label-jp" for="ct-category">ご相談の種類</label>
                 <span class="ct-label-req">*REQUIRED</span>
-              </label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -138,7 +138,7 @@
               <button type="button" class="ct-chip" data-value="Arrangement">Arrangement<span class="ct-chip-jp">編曲</span></button>
               <button type="button" class="ct-chip" data-value="Direction">Direction<span class="ct-chip-jp">ディレクション</span></button>
               <button type="button" class="ct-chip" data-value="Mix / Mastering">Mix / Mastering<span class="ct-chip-jp">MIX・MASTERING</span></button>
-              <button type="button" class="ct-chip" data-value="All">All<span class="ct-chip-jp">ワンストップ</span></button>
+              <button type="button" class="ct-chip" data-value="すべて / 全般">All<span class="ct-chip-jp">ワンストップ</span></button>
             </div>
             <input type="hidden" id="ct-category" name="category" value="" required>
             <div class="ct-underline"></div>
@@ -146,10 +146,10 @@
 
           <div class="ct-field" data-key="budget">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-budget">
+              <span class="ct-label">
                 <span class="ct-label-en">Budget</span>
-                <span class="ct-label-jp">ご予算感</span>
-              </label>
+                <label class="ct-label-jp" for="ct-budget">ご予算感</label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -169,10 +169,10 @@
 
           <div class="ct-field" data-key="deadline">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-deadline">
+              <span class="ct-label">
                 <span class="ct-label-en">Deadline</span>
-                <span class="ct-label-jp">希望納期</span>
-              </label>
+                <label class="ct-label-jp" for="ct-deadline">希望納期</label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -192,11 +192,11 @@
 
           <div class="ct-field" data-key="message">
             <div class="ct-label-row">
-              <label class="ct-label" for="ct-message">
+              <span class="ct-label">
                 <span class="ct-label-en">Message</span>
-                <span class="ct-label-jp">ご相談内容</span>
+                <label class="ct-label-jp" for="ct-message">ご相談内容</label>
                 <span class="ct-label-req">*REQUIRED</span>
-              </label>
+              </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
@@ -208,7 +208,7 @@
 
           <div class="ct-privacy" id="ct-privacy">
             <span class="ct-privacy-control">
-              <input class="ct-privacy-input" type="checkbox" id="ct-privacy-input" name="privacy" value="agreed" aria-labelledby="ct-privacy-label" required>
+              <input class="ct-privacy-input" type="checkbox" id="ct-privacy-input" name="privacy" value="同意済み" aria-labelledby="ct-privacy-label" required>
               <span class="ct-privacy-box" aria-hidden="true">
                 <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6.5L5 9.5L10 3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>

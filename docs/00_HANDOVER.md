@@ -60,6 +60,7 @@
 - `_archive/2026-04-19_netlify_upload/` 削除済み・本番参照なし確認済み（2026-04-29）
 - `claude.md` → `CLAUDE.md` 正規化済み・`AGENTS.md` / `CLAUDE.md` に `00_HANDOVER.md` 参照行追加（2026-04-29）
 - `js/contact.js` のAJAX送信にhoneypotを追加・`innerHTML`をDOM APIへ置換・Privacy同意をネイティブcheckbox化・必須項目に`required`と明示的な`label`を追加済み（2026-07-28）
+- Netlify Formsの通知・submission用項目名を短い日本語表記にし、All・Privacy同意の送信値を日本語化済み（2026-07-28）
 - `works-data.json` に2026年5月〜7月公開の8作品と本画像・サムネイルを追加済み（2026-07-28）
 
 ### Feature 2026-05-04（privacy.html 新規追加・未push）
