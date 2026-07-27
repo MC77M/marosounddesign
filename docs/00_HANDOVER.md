@@ -61,6 +61,18 @@
 - `js/contact.js` のAJAX送信にhoneypotを追加・`innerHTML`をDOM APIへ置換・Privacy同意をネイティブcheckbox化・必須項目に`required`と明示的な`label`を追加済み（2026-07-28）
 - `works-data.json` に2026年5月〜7月公開の8作品と本画像・サムネイルを追加済み（2026-07-28）
 
+### Feature 2026-05-04（privacy.html 新規追加・未push）
+- `privacy.html` 新規作成（個人情報取り扱い7項目、施行日 2026-05-04）
+- `contact.html` のプライバシーポリシーリンクを `href="privacy.html" target="_blank" rel="noopener noreferrer"` に接続
+- CSS: style.css 流用 + `<style>` 内に最小限のページ固有スタイル（pv- プレフィックス）
+- JS不要・専用CSSファイル不要
+- 既存ページ・js/contact.js・Netlify Forms設定は変更なし
+
+### Style 2026-05-04（contact.html モバイルレイアウト微調整・未push）
+- hero-sub に `flex-wrap: wrap` 追加、「Mixing & Mastering」に `nowrap` クラス追加（モバイルで自然な改行位置に）
+- モバイル(≤900px) `.ct-section-label` margin-top `4.5rem` → `3.25rem`（hero→form間の余白を縮小）
+- PC表示は変更なし
+
 ### Feature + Style 2026-05-04（contact.html 新規追加 + UI調整・未push）
 - `_AddContacForm/Contact Form.html`（React製プロトタイプ）をバニラHTML/CSS/JSに変換し `contact.html` を新規作成
 - 追加: `contact.html` / `css/contact.css` / `js/contact.js`
@@ -76,6 +88,7 @@
   - side title weight 900→800（既存 sec-title と統一）
   - Back ボタンテキスト簡略化（「Back · 戻る」→「Back」）
 - **デプロイ後タスク**: ContactフォームはNetlify Formsを使用。デプロイ後、Netlify管理画面で通知先メールアドレス設定が必要。
+- privacy.html 作成済み（施行日 2026-05-04、contact.html からリンク接続済み）
 - **次回着手候補**: 既存ナビリンク（#contact / Google Forms）→ contact.html への差し替え、Netlifyデプロイ後の実送信テスト
 
 ### Fix 2026-04-28（index.html スマホフッター崩れ修正・コミット 11ef71a）

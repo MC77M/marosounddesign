@@ -1,5 +1,28 @@
 # Refactoring Progress
 
+## Feature 2026-05-04: Privacy Policy ページ新規追加
+- 目的: contact.html のプライバシーポリシーリンク先を作成
+- 追加ファイル:
+  - `privacy.html` — プライバシーポリシー本体（style.css 流用 + `<style>` 内ページ固有CSS、pv- プレフィックス）
+- 変更ファイル:
+  - `contact.html` — プライバシーポリシーリンクを `href="privacy.html" target="_blank" rel="noopener noreferrer"` に変更
+- 内容: 個人情報の取り扱い / 収集する情報 / 利用目的 / 第三者への提供 / 安全管理 / お問い合わせ / 改定について（全7項目）
+- 収集情報: お名前 / メールアドレス / 会社名・所属（任意） / ご相談の種類 / ご予算感（任意） / 希望納期（任意） / お問い合わせ内容
+- 施行日: 2026-05-04
+- 不変項: js/contact.js / css/contact.css / css/style.css / 既存ページ / Netlify Forms設定 すべて変更なし
+- 確認: PC(1280px)/モバイル(375px) 表示確認済み、リンク接続確認済み
+- Status: ローカル実装完了・未push
+
+## Style 2026-05-04: Contact モバイルレイアウト微調整
+- 目的: モバイルでの hero-sub 改行位置と hero→form 間の余白を改善
+- 修正:
+  - `css/contact.css`: hero-sub に `flex-wrap: wrap` 追加、`.nowrap` ルール追加
+  - `contact.html`: 「Mixing & Mastering」span に `class="nowrap"` 追加
+  - `css/contact.css`: モバイル(≤900px) `.ct-section-label` margin-top `4.5rem` → `3.25rem`
+- 不変項: PC表示 / js/contact.js / Netlify Forms設定 すべて変更なし
+- 確認: PC(1280px)/モバイル(375px) 表示確認済み
+- Status: ローカル実装完了・未push
+
 ## Feature 2026-05-04: Contact Form ページ新規追加
 - 目的: Google Forms外部遷移を廃止し、サイト内完結のお問い合わせフォームを設置
 - ソース: `_AddContacForm/Contact Form.html`（React+Babel製プロトタイプ）をバニラHTML/CSS/JSに変換
@@ -21,7 +44,7 @@
   - セキュリティ: innerHTML不使用、textContent/DOM APIのみ
 - デプロイ後タスク:
   - Netlify管理画面 → Forms → contact → Notifications で通知先メールアドレスを設定する
-  - プライバシーポリシーページの作成（現在 `href="#"` のダミーリンク）
+  - ~~プライバシーポリシーページの作成~~ → 完了（privacy.html として作成済み）
 - Status: ローカル実装完了・実ブラウザ検証済み（1440px/900px/375px）・未push
 
 ## Style 2026-05-04: Contact ページ UI バランス調整（既存サイト統一）
