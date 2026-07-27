@@ -5198,5 +5198,133 @@
     "tieupDetail": "月曜日〜日曜日 放送",
     "note": "IDOL-TAISO / Nagoya Dream Records",
     "thumbnail": "images/thumbs/_hash_SAKURA GRADUATION_IDOL-TAISO.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_さのもりの_LUSTRE.webp",
+    "track": "LUSTRE",
+    "artist": "さのもりの",
+    "date": "2026.05.17",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "LUSTRE / さのもりの",
+    "thumbnail": "images/thumbs/_hash_さのもりの_LUSTRE.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_君のメインヒロイン_愛込めしょこらって.webp",
+    "track": "愛込めしょこらって",
+    "artist": "君のメインヒロイン",
+    "date": "2026.05.18",
+    "credits": [
+      {
+        "role": "Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "愛込めしょこらって / 君のメインヒロイン",
+    "thumbnail": "images/thumbs/_hash_君のメインヒロイン_愛込めしょこらって.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_君のメインヒロイン_恋のMajesty.webp",
+    "track": "恋のMajesty",
+    "artist": "君のメインヒロイン",
+    "date": "2026.05.19",
+    "credits": [
+      {
+        "role": "Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "恋のMajesty / 君のメインヒロイン",
+    "thumbnail": "images/thumbs/_hash_君のメインヒロイン_恋のMajesty.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_Lollipop♡CHU_かわいい警報発令CHU♡.webp",
+    "track": "かわいい警報発令CHU♡",
+    "artist": "Lollipop♡CHU",
+    "date": "2026.06.02",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "かわいい警報発令CHU♡ / Lollipop♡CHU",
+    "thumbnail": "images/thumbs/_hash_Lollipop♡CHU_かわいい警報発令CHU♡.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_ポラライト_言い訳サマー.webp",
+    "track": "言い訳サマー",
+    "artist": "ポラライト",
+    "date": "2026.06.05",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "言い訳サマー / ポラライト",
+    "thumbnail": "images/thumbs/_hash_ポラライト_言い訳サマー.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_Loulouchouchou_泡沫プリンセス.webp",
+    "track": "泡沫プリンセス",
+    "artist": "Loulouchouchou",
+    "date": "2026.06.18",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "泡沫プリンセス / Loulouchouchou",
+    "thumbnail": "images/thumbs/_hash_Loulouchouchou_泡沫プリンセス.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_Not Found_Join Us.webp",
+    "track": "Join Us",
+    "artist": "Not Found",
+    "date": "2026.07.20",
+    "credits": [
+      {
+        "role": "共作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "Join Us / Not Found",
+    "thumbnail": "images/thumbs/_hash_Not Found_Join Us.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_Loulouchouchou_未送信の恋.webp",
+    "track": "未送信の恋",
+    "artist": "Loulouchouchou",
+    "date": "2026.07.23",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "未送信の恋 / Loulouchouchou",
+    "thumbnail": "images/thumbs/_hash_Loulouchouchou_未送信の恋.webp"
   }
 ]
