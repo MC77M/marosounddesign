@@ -1,5 +1,7 @@
 # Change Log
 
+- 2026-07-29: Selected Works の `_hash_nme_himitsu.webp` を600×600px維持・quality 77で79,568bytesへ再圧縮
+
 ## 2026-07-28
 
 - `works-data.json` に2026年5月〜7月公開の8作品を追加

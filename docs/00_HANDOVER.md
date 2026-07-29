@@ -66,6 +66,7 @@
 - `works-data.json` に2026年5月〜7月公開の8作品と本画像・サムネイルを追加済み（2026-07-28）
 - Soft 404対策として `netlify.toml` のSPA用200フォールバックを削除済み（2026-07-29）
 - ブランドグラデーションと白いMの `favicon.svg` / `favicon.ico` を追加し、全6ページへ指定済み（2026-07-29）
+- Selected Works の `_hash_nme_himitsu.webp` を600×600px維持・quality 77で79,568bytesへ再圧縮済み（2026-07-29）
 
 ### Feature 2026-05-04（privacy.html 新規追加・未push）
 - `privacy.html` 新規作成（個人情報取り扱い7項目、施行日 2026-05-04）
