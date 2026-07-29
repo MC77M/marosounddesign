@@ -304,8 +304,9 @@ nav{
 </div>
 
 <!-- MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modal">
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)" aria-hidden="true" inert>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTrack" aria-describedby="modalArtist" tabindex="-1">
+    <button type="button" class="modal-close" id="modalClose" aria-label="閉じる" onclick="closeModal()"><span aria-hidden="true">×</span></button>
     <div class="modal-handle"></div>
     <div class="modal-inner">
       <div class="modal-top">
@@ -559,7 +560,7 @@ function fillYear(year){
   const entries = grouped.get(year) || [];
   const isInitialYear = year === years[0];
   grid.innerHTML = entries.map(({ work, index }, i) => `
-    <div class="wcard" data-cats="${workCats(work).join(',')}" onclick="openModal(${index})" onmouseenter="preloadJacket(${index})" ontouchstart="preloadJacket(${index})">
+    <div class="wcard" role="button" tabindex="0" data-cats="${workCats(work).join(',')}" onclick="openModal(${index}, this)" onkeydown="handleWorkCardKey(event, ${index})" onmouseenter="preloadJacket(${index})" ontouchstart="preloadJacket(${index})">
       <div class="wcard-img">
         <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" width="600" height="600" loading="eager" decoding="async"${isInitialYear && i < 3 ? ' fetchpriority="high"' : ''} onerror="handleCardImageError(this)">
         <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
@@ -611,7 +612,15 @@ function renderWorks(){
   preloadInitialYearJackets();
 }
 
-async function openModal(idx){
+let lastModalTrigger = null;
+
+function handleWorkCardKey(event, idx){
+  if(event.repeat || (event.key !== 'Enter' && event.key !== ' ')) return;
+  event.preventDefault();
+  openModal(idx, event.currentTarget);
+}
+
+async function openModal(idx, trigger){
   await WORKS_READY;
   const w = WORKS[idx]; if(!w) return;
   if (w.jacket) await waitForJacket(w.jacket, 250);
@@ -674,13 +683,25 @@ async function openModal(idx){
   const nEl = document.getElementById('modalNote');
   if(w.note){nEl.textContent=w.note;nEl.style.display='block';}
   else{nEl.style.display='none';}
-  document.getElementById('modalOverlay').classList.add('open');
+  const overlay = document.getElementById('modalOverlay');
+  lastModalTrigger = trigger instanceof HTMLElement ? trigger : document.activeElement;
+  overlay.removeAttribute('inert');
+  overlay.setAttribute('aria-hidden', 'false');
+  overlay.classList.add('open');
   document.body.style.overflow='hidden';
+  document.getElementById('modalClose').focus({ preventScroll: true });
 }
 function closeModal(e){
   if(e && e.target.closest('#modal')) return;
-  document.getElementById('modalOverlay').classList.remove('open');
+  const overlay = document.getElementById('modalOverlay');
+  if(!overlay.classList.contains('open')) return;
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  overlay.setAttribute('inert', '');
   document.body.style.overflow='';
+  const trigger = lastModalTrigger;
+  lastModalTrigger = null;
+  if(trigger && trigger.isConnected) trigger.focus({ preventScroll: true });
 }
 
 function handleCardImageError(img){
@@ -689,8 +710,7 @@ function handleCardImageError(img){
 }
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){
-    document.getElementById('modalOverlay').classList.remove('open');
-    document.body.style.overflow='';
+    closeModal();
   }
 });
 
