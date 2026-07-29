@@ -134,38 +134,6 @@
     ]
   },
   {
-    "sortKey": "あいあい",
-    "artist": "ai*ai",
-    "track": "すれ違いLOVESTORY",
-    "trackSortKey": "すれちがいらぶすとーりー",
-    "credits": [
-      {
-        "role": "作曲",
-        "name": "宮川麿"
-      },
-      {
-        "role": "編曲",
-        "name": "宮川麿"
-      }
-    ]
-  },
-  {
-    "sortKey": "あいあい",
-    "artist": "ai*ai",
-    "track": "めちゃらぶchuchuchu",
-    "trackSortKey": "めちゃらぶちゅちゅちゅ",
-    "credits": [
-      {
-        "role": "作曲",
-        "name": "宮川麿"
-      },
-      {
-        "role": "編曲",
-        "name": "宮川麿"
-      }
-    ]
-  },
-  {
     "sortKey": "ここな",
     "artist": "cocona",
     "track": "君とハピネス",

@@ -5326,5 +5326,35 @@
     ],
     "note": "未送信の恋 / Loulouchouchou",
     "thumbnail": "images/thumbs/_hash_Loulouchouchou_未送信の恋.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_aiai_めちゃらぶchuchuchu.webp",
+    "track": "めちゃらぶchuchuchu",
+    "artist": "ai*ai",
+    "date": "2026.04.25",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "thumbnail": "images/thumbs/_hash_aiai_めちゃらぶchuchuchu.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_aiai_SHOOTING STAR.webp",
+    "track": "めちゃらぶchuchuchu",
+    "artist": "ai*ai",
+    "date": "2022.07.23",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "thumbnail": "images/thumbs/_hash_aiai_SHOOTING STAR.webp"
   }
 ]
