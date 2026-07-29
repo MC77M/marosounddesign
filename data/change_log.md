@@ -1,5 +1,6 @@
 # Change Log
 
+- 2026-07-29: 参照中の容量超過本画像10件を600×600px維持・80,000bytes以下へ再圧縮
 - 2026-07-29: Selected Works の `_hash_nme_himitsu.webp` を600×600px維持・quality 77で79,568bytesへ再圧縮
 
 ## 2026-07-28
