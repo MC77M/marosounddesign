@@ -543,6 +543,7 @@
   background: #fff;
   padding: 0 2.5rem 5rem;
 }
+.ct-success:focus { outline: none }
 .ct-succ-inner {
   max-width: 1080px;
   margin: 0 auto;

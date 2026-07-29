@@ -126,21 +126,21 @@
             <div class="ct-label-row">
               <span class="ct-label">
                 <span class="ct-label-en">Project</span>
-                <label class="ct-label-jp" for="ct-category">ご相談の種類</label>
-                <span class="ct-label-req">*REQUIRED</span>
+                <label class="ct-label-jp" id="ct-category-label" for="ct-category">ご相談の種類</label>
+                <span class="ct-label-req" id="ct-category-required">*REQUIRED</span>
               </span>
               <span class="ct-status" hidden>
                 <span class="ct-status-ic"></span>
                 <span class="ct-status-text"></span>
               </span>
             </div>
-            <div class="ct-chips">
-              <button type="button" class="ct-chip" data-value="Lyrics">Lyrics<span class="ct-chip-jp">作詞</span></button>
-              <button type="button" class="ct-chip" data-value="Composition">Composition<span class="ct-chip-jp">作曲</span></button>
-              <button type="button" class="ct-chip" data-value="Arrangement">Arrangement<span class="ct-chip-jp">編曲</span></button>
-              <button type="button" class="ct-chip" data-value="Direction">Direction<span class="ct-chip-jp">ディレクション</span></button>
-              <button type="button" class="ct-chip" data-value="Mix / Mastering">Mix / Mastering<span class="ct-chip-jp">MIX・MASTERING</span></button>
-              <button type="button" class="ct-chip" data-value="すべて / 全般">All<span class="ct-chip-jp">ワンストップ</span></button>
+            <div class="ct-chips" role="group" aria-labelledby="ct-category-label" aria-describedby="ct-category-required">
+              <button type="button" class="ct-chip" data-value="Lyrics" aria-pressed="false">Lyrics<span class="ct-chip-jp">作詞</span></button>
+              <button type="button" class="ct-chip" data-value="Composition" aria-pressed="false">Composition<span class="ct-chip-jp">作曲</span></button>
+              <button type="button" class="ct-chip" data-value="Arrangement" aria-pressed="false">Arrangement<span class="ct-chip-jp">編曲</span></button>
+              <button type="button" class="ct-chip" data-value="Direction" aria-pressed="false">Direction<span class="ct-chip-jp">ディレクション</span></button>
+              <button type="button" class="ct-chip" data-value="Mix / Mastering" aria-pressed="false">Mix / Mastering<span class="ct-chip-jp">MIX・MASTERING</span></button>
+              <button type="button" class="ct-chip" data-value="すべて / 全般" aria-pressed="false">All<span class="ct-chip-jp">ワンストップ</span></button>
             </div>
             <input type="hidden" id="ct-category" name="category" value="" required>
             <div class="ct-underline"></div>
@@ -229,7 +229,7 @@
             <span class="ct-submit-meta"><span class="ct-submit-dot"></span>1〜2営業日以内に返信します</span>
           </div>
 
-          <div class="ct-error" id="ct-error" hidden></div>
+          <div class="ct-error" id="ct-error" role="alert" hidden></div>
         </form>
       </div>
     </div>
@@ -241,7 +241,7 @@
   </div>
 </section>
 
-<section class="ct-success" id="ct-success" hidden>
+<section class="ct-success" id="ct-success" aria-labelledby="ct-success-title" aria-live="polite" aria-atomic="true" tabindex="-1" hidden>
   <div class="ct-succ-inner">
     <div class="ct-orb"></div>
     <p class="eyebrow" style="justify-content:center">
@@ -249,13 +249,13 @@
       <span class="eyebrow-text">Sent</span>
       <span style="font-weight:400;color:var(--sub);letter-spacing:.15em">送信完了</span>
     </p>
-    <h2 class="ct-succ-title"><span class="ct-grad">Thank you.</span></h2>
+    <h2 class="ct-succ-title" id="ct-success-title"><span class="ct-grad">Thank you.</span></h2>
     <p class="ct-succ-jp">メッセージを受け取りました。1〜2営業日以内にご返信します。</p>
     <div class="ct-rcpt" id="ct-rcpt"></div>
   </div>
 </section>
 
-<div class="ct-sending-overlay" id="ct-sending">
+<div class="ct-sending-overlay" id="ct-sending" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
   <div class="ct-sorb"></div>
   <div class="ct-sending-txt">Sending · 送信中</div>
 </div>
@@ -265,6 +265,6 @@
   <span class="ft-copy">&copy; 2025 宮川麿. All rights reserved.</span>
 </footer>
 
-<script src="js/contact.js?v=20260728"></script>
+<script src="js/contact.js?v=20260729"></script>
 </body>
 </html>

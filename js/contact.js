@@ -179,6 +179,12 @@
     var chips = document.querySelectorAll('.ct-chip');
     var hiddenInput = document.querySelector('input[name="category"]');
     chips.forEach(function (chip) {
+      chip.addEventListener('keydown', function (event) {
+        if (event.repeat || (event.key !== 'Enter' && event.key !== ' ')) return;
+        event.preventDefault();
+        chip.click();
+      });
+
       chip.addEventListener('click', function () {
         var val = chip.getAttribute('data-value');
         var idx = formData.category.indexOf(val);
@@ -187,7 +193,9 @@
         } else {
           formData.category.push(val);
         }
-        chip.classList.toggle('on', formData.category.indexOf(val) >= 0);
+        var selected = formData.category.indexOf(val) >= 0;
+        chip.classList.toggle('on', selected);
+        chip.setAttribute('aria-pressed', selected ? 'true' : 'false');
         if (hiddenInput) hiddenInput.value = formData.category.join(', ');
         touched.category = true;
         updateFieldStatus('category');
@@ -227,7 +235,11 @@
       var overlay = document.getElementById('ct-sending');
       var errorEl = document.getElementById('ct-error');
       if (errorEl) errorEl.hidden = true;
-      if (overlay) overlay.classList.add('on');
+      form.setAttribute('aria-busy', 'true');
+      if (overlay) {
+        overlay.setAttribute('aria-hidden', 'false');
+        overlay.classList.add('on');
+      }
 
       var fd = new URLSearchParams();
       fd.append('form-name', 'contact');
@@ -248,11 +260,19 @@
       })
       .then(function (res) {
         if (!res.ok) throw new Error('送信に失敗しました');
-        if (overlay) overlay.classList.remove('on');
+        form.setAttribute('aria-busy', 'false');
+        if (overlay) {
+          overlay.classList.remove('on');
+          overlay.setAttribute('aria-hidden', 'true');
+        }
         showSuccess();
       })
       .catch(function (err) {
-        if (overlay) overlay.classList.remove('on');
+        form.setAttribute('aria-busy', 'false');
+        if (overlay) {
+          overlay.classList.remove('on');
+          overlay.setAttribute('aria-hidden', 'true');
+        }
         if (errorEl) {
           errorEl.textContent = err.message || '通信エラーが発生しました。時間をおいて再度お試しください。';
           errorEl.hidden = false;
@@ -273,6 +293,7 @@
 
     buildReceipt();
 
+    if (successSection) successSection.focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
