@@ -319,10 +319,27 @@ function mergeCredits(credits) {
 
 function formatCredits(credits) {
   const merged = mergeCredits(credits);
-  const roles = merged.map((credit, index) => `
-    <span><strong>${credit.role}</strong></span>${index < merged.length - 1 ? '<span class="history-credit-divider">/</span>' : ''}
-  `).join('');
-  return `<span class="history-credit-label">Credit /</span>${roles}`;
+  const fragment = document.createDocumentFragment();
+  const label = document.createElement('span');
+  label.className = 'history-credit-label';
+  label.textContent = 'Credit /';
+  fragment.appendChild(label);
+
+  merged.forEach((credit, index) => {
+    const item = document.createElement('span');
+    const strong = document.createElement('strong');
+    strong.textContent = credit.role;
+    item.appendChild(strong);
+    fragment.appendChild(item);
+
+    if (index < merged.length - 1) {
+      const divider = document.createElement('span');
+      divider.className = 'history-credit-divider';
+      divider.textContent = '/';
+      fragment.appendChild(divider);
+    }
+  });
+  return fragment;
 }
 
 function sortHistory(items) {
@@ -508,7 +525,7 @@ fetch(`history-data.json?v=${DATA_VERSION}`)
 
         const credit = document.createElement('p');
         credit.className = 'history-credit';
-        credit.textContent = formatCredits(item.credits || []);
+        credit.appendChild(formatCredits(item.credits || []));
         row.appendChild(credit);
         section.appendChild(row);
       });
