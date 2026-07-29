@@ -5371,5 +5371,50 @@
       }
     ],
     "thumbnail": "images/thumbs/_hash_星名美怜_Sparkle.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_あの日見たラッキースター_推し活×CHU毒.webp",
+    "track": "推し活×CHU毒",
+    "artist": "あの日見たラッキースター",
+    "date": "2026.07.24",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "thumbnail": "images/thumbs/_hash_あの日見たラッキースター_推し活×CHU毒.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_あの日見たラッキースター_Reスタート！！.webp",
+    "track": "Re:スタート！！",
+    "artist": "あの日見たラッキースター",
+    "date": "2026.07.24",
+    "credits": [
+      {
+        "role": "Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "thumbnail": "images/thumbs/_hash_あの日見たラッキースター_Reスタート！！.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_あの日見たラッキースター_ハピラキ！.webp",
+    "track": "ハピラキ！",
+    "artist": "あの日見たラッキースター",
+    "date": "2026.07.24",
+    "credits": [
+      {
+        "role": "Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "thumbnail": "images/thumbs/_hash_あの日見たラッキースター_ハピラキ！.webp"
   }
 ]
