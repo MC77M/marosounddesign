@@ -364,7 +364,7 @@ function openModal(idx, trigger){
 
   // jacket
   const jEl = document.getElementById('modalJacket');
-  jEl.innerHTML = '';
+  jEl.replaceChildren();
   if (w.jacket) {
     const img = document.createElement('img');
     img.setAttribute('src', w.jacket);
@@ -387,7 +387,7 @@ function openModal(idx, trigger){
 
   // credits
   const cEl = document.getElementById('modalCredits');
-  cEl.innerHTML = '';
+  cEl.replaceChildren();
   (w.credits || []).forEach(c => {
     const div = document.createElement('div');
     div.className = 'credit-row';

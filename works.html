@@ -351,7 +351,11 @@ const WORKS_READY = fetch(`works-data.json?v=${DATA_VERSION}`)
     console.error(error);
     WORKS = [];
     if (WORKS_LIST) {
-      WORKS_LIST.innerHTML = '<p style="color:#999;font-size:.9rem;">作品データの読み込みに失敗しました。</p>';
+      const message = document.createElement('p');
+      message.style.color = '#999';
+      message.style.fontSize = '.9rem';
+      message.textContent = '作品データの読み込みに失敗しました。';
+      WORKS_LIST.replaceChildren(message);
     }
   });
 
@@ -426,14 +430,18 @@ function tieupRows(work){
   return rows;
 }
 
-function renderCardTieup(work){
+function createCardTieup(work){
   const rows = tieupRows(work);
-  if (primaryCat(work) !== 'anime_tieup' || rows.length === 0) return '';
-  return `
-    <div class="wcard-tieup">
-      ${rows.map(row => `<p class="wcard-tieup-line">${row.value}</p>`).join('')}
-    </div>
-  `;
+  if (primaryCat(work) !== 'anime_tieup' || rows.length === 0) return null;
+  const tieup = document.createElement('div');
+  tieup.className = 'wcard-tieup';
+  rows.forEach(row => {
+    const line = document.createElement('p');
+    line.className = 'wcard-tieup-line';
+    line.textContent = row.value;
+    tieup.appendChild(line);
+  });
+  return tieup;
 }
 
 function safeAssetSrc(path){
@@ -532,19 +540,47 @@ function buildGrouped(){
 }
 
 function renderSkeletons(){
-  WORKS_LIST.innerHTML = years.map((year, yearIndex) => `
-    <div class="yr-block ${revealClass(yearIndex)}" id="yr${year}" data-year="${year}">
-      <p class="yr-head">${year}</p>
-      <div class="works-grid"></div>
-      ${year === '2020' ? `
-        <div class="archive-callout">
-          <p class="archive-copy"><strong>2019年以前のWorks</strong></p>
-          <a href="history.html" class="archive-link">View Archive</a>
-        </div>
-      ` : ''}
-      <a class="top-btn" href="#">↑ Top</a>
-    </div>
-  `).join('');
+  const fragment = document.createDocumentFragment();
+  years.forEach((year, yearIndex) => {
+    const block = document.createElement('div');
+    block.className = `yr-block ${revealClass(yearIndex)}`;
+    block.id = `yr${year}`;
+    block.dataset.year = year;
+
+    const heading = document.createElement('p');
+    heading.className = 'yr-head';
+    heading.textContent = year;
+    block.appendChild(heading);
+
+    const grid = document.createElement('div');
+    grid.className = 'works-grid';
+    block.appendChild(grid);
+
+    if (year === '2020') {
+      const callout = document.createElement('div');
+      callout.className = 'archive-callout';
+      const copy = document.createElement('p');
+      copy.className = 'archive-copy';
+      const strong = document.createElement('strong');
+      strong.textContent = '2019年以前のWorks';
+      copy.appendChild(strong);
+      const archiveLink = document.createElement('a');
+      archiveLink.href = 'history.html';
+      archiveLink.className = 'archive-link';
+      archiveLink.textContent = 'View Archive';
+      callout.appendChild(copy);
+      callout.appendChild(archiveLink);
+      block.appendChild(callout);
+    }
+
+    const topLink = document.createElement('a');
+    topLink.className = 'top-btn';
+    topLink.href = '#';
+    topLink.textContent = '↑ Top';
+    block.appendChild(topLink);
+    fragment.appendChild(block);
+  });
+  WORKS_LIST.replaceChildren(fragment);
   document.querySelectorAll('.yr-block.reveal').forEach(el => io.observe(el));
   years.slice(1).forEach(y => pendingYears.add(y));
 }
@@ -559,21 +595,67 @@ function fillYear(year){
   if (!grid) return;
   const entries = grouped.get(year) || [];
   const isInitialYear = year === years[0];
-  grid.innerHTML = entries.map(({ work, index }, i) => `
-    <div class="wcard" role="button" tabindex="0" data-cats="${workCats(work).join(',')}" onclick="openModal(${index}, this)" onkeydown="handleWorkCardKey(event, ${index})" onmouseenter="preloadJacket(${index})" ontouchstart="preloadJacket(${index})">
-      <div class="wcard-img">
-        <img src="${safeAssetSrc(work.thumbnail || work.jacket)}" alt="${work.track}" width="600" height="600" loading="eager" decoding="async"${isInitialYear && i < 3 ? ' fetchpriority="high"' : ''} onerror="handleCardImageError(this)">
-        <span class="wcard-badge ${BADGE_CLASS[primaryCat(work)] || 'ba'}">${BADGE_LABEL[primaryCat(work)] || primaryCat(work)}</span>
-        <div class="wcard-ph"><span>♪</span><p>No Image</p></div>
-      </div>
-      <div>
-        <p class="wcard-title">${cardArtistLabel(work)}</p>
-        <p class="wcard-client">${work.track}</p>
-        <p class="wcard-role">${cardRole(work.credits)}</p>
-        ${renderCardTieup(work)}
-      </div>
-    </div>
-  `).join('');
+  const fragment = document.createDocumentFragment();
+  entries.forEach(({ work, index }, i) => {
+    const card = document.createElement('div');
+    card.className = 'wcard';
+    card.setAttribute('role', 'button');
+    card.tabIndex = 0;
+    card.dataset.cats = workCats(work).join(',');
+    card.addEventListener('click', () => openModal(index, card));
+    card.addEventListener('keydown', event => handleWorkCardKey(event, index));
+    card.addEventListener('mouseenter', () => preloadJacket(index));
+    card.addEventListener('touchstart', () => preloadJacket(index));
+
+    const imageWrap = document.createElement('div');
+    imageWrap.className = 'wcard-img';
+    const img = document.createElement('img');
+    img.setAttribute('src', safeAssetSrc(thumbnailSrc(work)));
+    img.alt = work.track;
+    img.width = 600;
+    img.height = 600;
+    img.loading = 'eager';
+    img.decoding = 'async';
+    if (isInitialYear && i < 3) img.fetchPriority = 'high';
+    img.addEventListener('error', () => handleCardImageError(img));
+    imageWrap.appendChild(img);
+
+    const badge = document.createElement('span');
+    const cat = primaryCat(work);
+    badge.className = `wcard-badge ${BADGE_CLASS[cat] || 'ba'}`;
+    badge.textContent = BADGE_LABEL[cat] || cat;
+    imageWrap.appendChild(badge);
+
+    const placeholder = document.createElement('div');
+    placeholder.className = 'wcard-ph';
+    const icon = document.createElement('span');
+    icon.textContent = '♪';
+    const noImage = document.createElement('p');
+    noImage.textContent = 'No Image';
+    placeholder.appendChild(icon);
+    placeholder.appendChild(noImage);
+    imageWrap.appendChild(placeholder);
+    card.appendChild(imageWrap);
+
+    const details = document.createElement('div');
+    const artist = document.createElement('p');
+    artist.className = 'wcard-title';
+    artist.textContent = cardArtistLabel(work);
+    const track = document.createElement('p');
+    track.className = 'wcard-client';
+    track.textContent = work.track;
+    const role = document.createElement('p');
+    role.className = 'wcard-role';
+    role.textContent = cardRole(work.credits);
+    details.appendChild(artist);
+    details.appendChild(track);
+    details.appendChild(role);
+    const tieup = createCardTieup(work);
+    if (tieup) details.appendChild(tieup);
+    card.appendChild(details);
+    fragment.appendChild(card);
+  });
+  grid.replaceChildren(fragment);
   if (currentFilter !== ALL_FILTER) {
     grid.querySelectorAll('.wcard').forEach(c => {
       const cats = (c.dataset.cats || '').split(',').filter(Boolean);
@@ -626,7 +708,7 @@ async function openModal(idx, trigger){
   if (w.jacket) await waitForJacket(w.jacket, 250);
   const cat = primaryCat(w);
   const jEl = document.getElementById('modalJacket');
-  jEl.innerHTML = '';
+  jEl.replaceChildren();
   if (w.jacket) {
     const img = document.createElement('img');
     img.setAttribute('src', w.jacket);
@@ -645,8 +727,8 @@ async function openModal(idx, trigger){
   document.getElementById('modalDate').textContent   = w.date;
   const tEl = document.getElementById('modalTieup');
   const tieup = tieupRows(w);
+  tEl.replaceChildren();
   if (cat === 'anime_tieup' && tieup.length) {
-    tEl.innerHTML = '';
     const head = document.createElement('p');
     head.className = 'modal-section-title modal-tieup-head';
     head.textContent = 'Tie-up';
@@ -662,11 +744,10 @@ async function openModal(idx, trigger){
     });
     tEl.style.display = 'block';
   } else {
-    tEl.innerHTML = '';
     tEl.style.display = 'none';
   }
   const cEl = document.getElementById('modalCredits');
-  cEl.innerHTML = '';
+  cEl.replaceChildren();
   mergeCredits(w.credits).forEach(c => {
     const div = document.createElement('div');
     div.className = 'credit-row';

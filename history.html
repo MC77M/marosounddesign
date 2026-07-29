@@ -423,10 +423,16 @@ function slugifyGroupLabel(label) {
 }
 
 function renderIndex(groups) {
-  historyIndex.innerHTML = groups.map(group => {
+  const fragment = document.createDocumentFragment();
+  groups.forEach(group => {
     const isKana = /行$/.test(group.label);
-    return `<a class="history-index-link${isKana ? ' is-kana' : ''}" href="#${slugifyGroupLabel(group.label)}">${group.label}</a>`;
-  }).join('');
+    const link = document.createElement('a');
+    link.className = `history-index-link${isKana ? ' is-kana' : ''}`;
+    link.href = `#${slugifyGroupLabel(group.label)}`;
+    link.textContent = group.label;
+    fragment.appendChild(link);
+  });
+  historyIndex.replaceChildren(fragment);
 }
 
 const io = new IntersectionObserver(
@@ -447,39 +453,76 @@ fetch(`history-data.json?v=${DATA_VERSION}`)
     const sorted = sortHistory(items);
 
     if (!sorted.length) {
-      historyList.innerHTML = '<p class="loading">表示できる作品履歴がまだありません。</p>';
+      const message = document.createElement('p');
+      message.className = 'loading';
+      message.textContent = '表示できる作品履歴がまだありません。';
+      historyList.replaceChildren(message);
       return;
     }
 
     const groups = groupItems(sorted);
     renderIndex(groups);
-    historyList.innerHTML = groups.map(group => `
-      <section class="history-box" id="${slugifyGroupLabel(group.label)}">
-        <div class="history-group">
-          <p class="history-group-label">${group.label}</p>
-        </div>
-        <div class="history-head">
-          <p class="history-label">${group.label === 'キャラクターソング' ? 'Album' : 'Artist'}</p>
-          <p class="history-label">Track</p>
-          <p class="history-label">Credit</p>
-        </div>
-        ${group.items.map(item => `
-          <div class="history-row">
-            <p class="history-mobile-title">${item.artist} / ${item.track}</p>
-            <div class="history-main">
-              <p class="history-artist">${item.artist}</p>
-              <p class="history-track">${item.track}</p>
-            </div>
-            <p class="history-credit">${formatCredits(item.credits || [])}</p>
-          </div>
-        `).join('')}
-      </section>
-    `).join('');
+    const fragment = document.createDocumentFragment();
+    groups.forEach(group => {
+      const section = document.createElement('section');
+      section.className = 'history-box';
+      section.id = slugifyGroupLabel(group.label);
+
+      const groupHead = document.createElement('div');
+      groupHead.className = 'history-group';
+      const groupLabel = document.createElement('p');
+      groupLabel.className = 'history-group-label';
+      groupLabel.textContent = group.label;
+      groupHead.appendChild(groupLabel);
+      section.appendChild(groupHead);
+
+      const columns = document.createElement('div');
+      columns.className = 'history-head';
+      [group.label === 'キャラクターソング' ? 'Album' : 'Artist', 'Track', 'Credit'].forEach(label => {
+        const column = document.createElement('p');
+        column.className = 'history-label';
+        column.textContent = label;
+        columns.appendChild(column);
+      });
+      section.appendChild(columns);
+
+      group.items.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'history-row';
+        const mobileTitle = document.createElement('p');
+        mobileTitle.className = 'history-mobile-title';
+        mobileTitle.textContent = `${item.artist} / ${item.track}`;
+        row.appendChild(mobileTitle);
+
+        const main = document.createElement('div');
+        main.className = 'history-main';
+        const artist = document.createElement('p');
+        artist.className = 'history-artist';
+        artist.textContent = item.artist;
+        const track = document.createElement('p');
+        track.className = 'history-track';
+        track.textContent = item.track;
+        main.appendChild(artist);
+        main.appendChild(track);
+        row.appendChild(main);
+
+        const credit = document.createElement('p');
+        credit.className = 'history-credit';
+        credit.textContent = formatCredits(item.credits || []);
+        row.appendChild(credit);
+        section.appendChild(row);
+      });
+      fragment.appendChild(section);
+    });
+    historyList.replaceChildren(fragment);
   })
   .catch(error => {
     console.error(error);
-    historyIndex.innerHTML = '';
-    historyList.innerHTML = '<p class="error">作品履歴の読み込みに失敗しました。</p>';
+    historyIndex.replaceChildren();
+    const message = document.createElement('p');
+    message.className = 'error';
+    message.textContent = '作品履歴の読み込みに失敗しました。';
+    historyList.replaceChildren(message);
   });
 </script>
 </body>
