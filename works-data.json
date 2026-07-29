@@ -5356,5 +5356,20 @@
       }
     ],
     "thumbnail": "images/thumbs/_hash_aiai_SHOOTING STAR.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_星名美怜_Sparkle.webp",
+    "track": "Sparkle",
+    "artist": "星名美怜",
+    "date": "2026.07.01",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "thumbnail": "images/thumbs/_hash_星名美怜_Sparkle.webp"
   }
 ]

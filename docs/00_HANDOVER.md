@@ -16,7 +16,7 @@
 | ファイル | 説明 |
 |---|---|
 | index.html | トップページ |
-| works.html | 楽曲一覧（310件、フィルター付き） |
+| works.html | 楽曲一覧（311件、フィルター付き） |
 | portfolio.html | プロフィール・Selected Works（title: "Profile — MaroSoundDesign"） |
 | history.html | 2019年以前の作品アーカイブ |
 | contact.html | お問い合わせフォーム（Netlify Forms送信） |
@@ -76,6 +76,7 @@
 - Contactフォームの相談種類・送信状態・成功／エラー通知を支援技術へ伝えるARIA対応済み（2026-07-29）
 - 公開ページの残存`innerHTML` 16箇所をDOM APIへ置換し、Works／Historyのデータを文字列として描画するよう統一済み（2026-07-29）
 - HistoryのCredit欄をDOM要素で再構成し、HTMLタグが文字表示される回帰を修正済み（2026-07-29）
+- 星名美怜「Sparkle」をWorksへ追加済み（合計543 Songs、2026-07-29）
 - ai*ai「めちゃらぶchuchuchu」2件をWorksへ追加し、History指定2件を移行済み（合計542 Songs維持、2026-07-29）
 
 ### Feature 2026-05-04（privacy.html 新規追加・未push）
