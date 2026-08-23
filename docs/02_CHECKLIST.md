@@ -44,8 +44,9 @@
 - [ ] 6ページ表示確認
 
 ### データ件数
-- [ ] 534 Songs（works.html）
-- [ ] works 300件
+- [ ] 合計546 Songs
+- [ ] works 314件
+- [ ] history 232件
 - [ ] portfolio 12件
 
 ### 画像
