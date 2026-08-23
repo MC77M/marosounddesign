@@ -78,6 +78,7 @@
 - HistoryのCredit欄をDOM要素で再構成し、HTMLタグが文字表示される回帰を修正済み（2026-07-29）
 - あの日見たラッキースター3作品をWorksへ追加済み（合計546 Songs、2026-07-29）
 - Selected Works個別ラベル・Worksフィルター選択状態・Contact相談種類の必須状態をARIAへ反映済み（2026-08-24）
+- 全6ページのGoogle Fonts URL内の`&`をHTMLエスケープ済み（2026-08-24）
 - 星名美怜「Sparkle」をWorksへ追加済み（合計543 Songs、2026-07-29）
 - ai*ai「めちゃらぶchuchuchu」2件をWorksへ追加し、History指定2件を移行済み（合計542 Songs維持、2026-07-29）
 
