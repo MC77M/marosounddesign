@@ -277,11 +277,11 @@ nav{
     </p>
     <h1 class="page-title reveal"><em>Works</em></h1>
     <div class="fbar reveal">
-      <button class="fbtn active" onclick="fw('all',this)">All</button>
-      <button class="fbtn" onclick="fw('jpop',this)">J-POP</button>
-      <button class="fbtn" onclick="fw('anime',this)">CHARACTER SONG</button>
-      <button class="fbtn" onclick="fw('anime_tieup',this)">アニメ/タイアップ</button>
-      <button class="fbtn" onclick="fw('game',this)">GAME</button>
+      <button class="fbtn active" aria-pressed="true" onclick="fw('all',this)">All</button>
+      <button class="fbtn" aria-pressed="false" onclick="fw('jpop',this)">J-POP</button>
+      <button class="fbtn" aria-pressed="false" onclick="fw('anime',this)">CHARACTER SONG</button>
+      <button class="fbtn" aria-pressed="false" onclick="fw('anime_tieup',this)">アニメ/タイアップ</button>
+      <button class="fbtn" aria-pressed="false" onclick="fw('game',this)">GAME</button>
     </div>
     <div class="ybar reveal">
       <a class="ybtn" href="#yr2026">2026</a>
@@ -798,8 +798,12 @@ document.addEventListener('keydown',e=>{
 // Filter
 function fw(cat,btn){
   currentFilter = cat;
-  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.fbtn').forEach(b=>{
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
   btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
   if (cat !== ALL_FILTER && pendingYears.size > 0) {
     if (ioFill) { ioFill.disconnect(); ioFill = null; }
     [...pendingYears].forEach(year => fillYear(year));
