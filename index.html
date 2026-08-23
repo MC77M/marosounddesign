@@ -107,6 +107,19 @@
 }
 @media(max-width:480px){footer{flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:1.6rem 1rem;text-align:center}.ft-brand{text-align:center}.ft-copy{text-align:center;letter-spacing:.04em;white-space:nowrap;font-size:.6rem;line-height:1.4}}
 @media(max-width:540px){.rw-more{font-size:.68rem;letter-spacing:.1em}}
+@keyframes heroRevealFast{from{opacity:.72;transform:translateY(8px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes heroFadeFast{from{opacity:.72}to{opacity:1}}
+.hero-tag{opacity:1;animation:heroRevealFast .32s 0s cubic-bezier(.22,1,.36,1) both}
+.hero-name .line1{opacity:1;animation:heroRevealFast .4s .02s cubic-bezier(.22,1,.36,1) both}
+.hero-name .line2{opacity:1;animation:heroRevealFast .42s .05s cubic-bezier(.22,1,.36,1) both}
+.hero-sub{opacity:1;animation:heroRevealFast .32s .08s cubic-bezier(.22,1,.36,1) both}
+.hero-role{opacity:1;animation:heroRevealFast .32s .12s cubic-bezier(.22,1,.36,1) both}
+.hero-btns{opacity:1;animation:heroRevealFast .32s .16s cubic-bezier(.22,1,.36,1) both}
+.scroll-hint{opacity:1;animation:heroFadeFast .25s .2s ease-out both}
+@media(prefers-reduced-motion:reduce){
+  .hero-tag,.hero-name .line1,.hero-name .line2,.hero-sub,.hero-role,.hero-btns{animation:none;opacity:1;transform:none;filter:none}
+  .scroll-hint,.hero-tag i,.scroll-line{animation:none;opacity:1}
+}
 </style>
 <script type="application/ld+json">
 {
