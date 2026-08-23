@@ -473,16 +473,6 @@ function waitForJacket(src, timeoutMs){
   });
 }
 
-function preloadInitialYearJackets(){
-  const year = years[0];
-  if (!year) return;
-  const entries = grouped.get(year) || [];
-  const schedule = window.requestIdleCallback || (cb => setTimeout(cb, 800));
-  schedule(() => {
-    entries.forEach(({ index }) => preloadJacket(index));
-  });
-}
-
 function thumbnailSrc(work){
   return work.thumbnail || work.jacket;
 }
@@ -604,7 +594,8 @@ function fillYear(year){
     card.dataset.cats = workCats(work).join(',');
     card.addEventListener('click', () => openModal(index, card));
     card.addEventListener('keydown', event => handleWorkCardKey(event, index));
-    card.addEventListener('mouseenter', () => preloadJacket(index));
+    card.addEventListener('pointerenter', () => preloadJacket(index));
+    card.addEventListener('focus', () => preloadJacket(index));
     card.addEventListener('touchstart', () => preloadJacket(index));
 
     const imageWrap = document.createElement('div');
@@ -614,7 +605,7 @@ function fillYear(year){
     img.alt = work.track;
     img.width = 600;
     img.height = 600;
-    img.loading = 'eager';
+    img.loading = isInitialYear && i < 8 ? 'eager' : 'lazy';
     img.decoding = 'async';
     if (isInitialYear && i < 3) img.fetchPriority = 'high';
     img.addEventListener('error', () => handleCardImageError(img));
@@ -691,7 +682,6 @@ function renderWorks(){
   fillYear(years[0]);
   initFillObserver();
   applyFilter(currentFilter);
-  preloadInitialYearJackets();
 }
 
 let lastModalTrigger = null;
