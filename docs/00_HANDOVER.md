@@ -45,7 +45,7 @@
 
 ---
 
-## 現在の状態（2026-05-04 時点）
+## 現在の状態（2026-08-24 確認）
 
 - XSS対策済み（innerHTML 禁止 → DOM API に統一）
 - モーダル閉じ処理統一済み
@@ -80,7 +80,7 @@
 - 星名美怜「Sparkle」をWorksへ追加済み（合計543 Songs、2026-07-29）
 - ai*ai「めちゃらぶchuchuchu」2件をWorksへ追加し、History指定2件を移行済み（合計542 Songs維持、2026-07-29）
 
-### Feature 2026-05-04（privacy.html 新規追加・未push）
+### Feature 2026-05-04（privacy.html 新規追加・本番反映済み）
 - `privacy.html` 新規作成（個人情報取り扱い7項目、施行日 2026-05-04）
 - `contact.html` のプライバシーポリシーリンクを `href="privacy.html" target="_blank" rel="noopener noreferrer"` に接続
 - `sitemap.xml` に privacy.html 追加（priority 0.3）
@@ -88,12 +88,12 @@
 - JS不要・専用CSSファイル不要
 - 既存ページ・js/contact.js・Netlify Forms設定は変更なし
 
-### Style 2026-05-04（contact.html モバイルレイアウト微調整・未push）
+### Style 2026-05-04（contact.html モバイルレイアウト微調整・本番反映済み）
 - hero-sub に `flex-wrap: wrap` 追加、「Mixing & Mastering」に `nowrap` クラス追加（モバイルで自然な改行位置に）
 - モバイル(≤900px) `.ct-section-label` margin-top `4.5rem` → `3.25rem`（hero→form間の余白を縮小）
 - PC表示は変更なし
 
-### Feature + Style 2026-05-04（contact.html 新規追加 + UI調整・未push）
+### Feature + Style 2026-05-04（contact.html 新規追加 + UI調整・本番反映済み）
 - `_AddContacForm/Contact Form.html`（React製プロトタイプ）をバニラHTML/CSS/JSに変換し `contact.html` を新規作成
 - 追加: `contact.html` / `css/contact.css` / `js/contact.js`
 - 変更: `sitemap.xml`（5ページ化）/ `docs/00_HANDOVER.md`
