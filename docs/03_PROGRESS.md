@@ -1,5 +1,11 @@
 # Refactoring Progress
 
+## Docs 2026-08-24: 現在状態へ同期
+- ページ構成: 6ページ
+- データ件数: Works 314件 / History 232件 / 合計546 Songs / Selected Works 12件
+- 最新Works: ai*ai 2件、星名美怜「Sparkle」、あの日見たラッキースター3件まで反映済み
+- Status: ✅ 本番反映済み
+
 ## Ops 2026-07-28: Contact / Netlify Forms 本番運用確認
 - 対応: Form detection有効化、`contact`フォーム認識、メール通知設定、旧Contact導線を`contact.html`へ統一
 - 通知表示: 項目名を短い日本語表記へ変更、`All`→`すべて / 全般`、Privacy同意→`同意済み`
@@ -20,7 +26,7 @@
 - 施行日: 2026-05-04
 - 不変項: js/contact.js / css/contact.css / css/style.css / 既存ページ / Netlify Forms設定 すべて変更なし
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み、リンク接続確認済み
-- Status: ローカル実装完了・未push
+- Status: ✅ 完了・本番反映済み
 
 ## Style 2026-05-04: Contact モバイルレイアウト微調整
 - 目的: モバイルでの hero-sub 改行位置と hero→form 間の余白を改善
@@ -30,7 +36,7 @@
   - `css/contact.css`: モバイル(≤900px) `.ct-section-label` margin-top `4.5rem` → `3.25rem`
 - 不変項: PC表示 / js/contact.js / Netlify Forms設定 すべて変更なし
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み
-- Status: ローカル実装完了・未push
+- Status: ✅ 完了・本番反映済み
 
 ## Feature 2026-05-04: Contact Form ページ新規追加
 - 目的: Google Forms外部遷移を廃止し、サイト内完結のお問い合わせフォームを設置
@@ -54,7 +60,7 @@
 - デプロイ後タスク:
   - Netlify管理画面 → Forms → contact → Notifications で通知先メールアドレスを設定する
   - ~~プライバシーポリシーページの作成~~ → 完了（privacy.html として作成済み）
-- Status: ローカル実装完了・実ブラウザ検証済み（1440px/900px/375px）・未push
+- Status: ✅ 完了・本番反映済み（実ブラウザ検証済み: 1440px/900px/375px）
 
 ## Style 2026-05-04: Contact ページ UI バランス調整（既存サイト統一）
 - 目的: Contact ページの後付け感を減らし、既存 index/works/portfolio/history と同じトーンに寄せる
@@ -82,14 +88,14 @@
 - 変更ファイル: `css/contact.css` / `contact.html`（Back ボタンテキストのみ）
 - 不変項: js/contact.js / css/style.css / 既存ページ / Netlify Forms設定 すべて変更なし
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み、console エラーなし、Netlify Forms属性維持
-- Status: ローカル実装完了・未push
+- Status: ✅ 完了・本番反映済み
 
 ## Style 2026-05-04: Contact hero→form 間の余白調整
 - 目的: PC表示でheroとフォームセクションの間が詰まって見える問題を解消
 - 修正: `css/contact.css` `.ct-section-label` margin-top `4.5rem` → `6rem`、モバイル(≤900px)では `4.5rem` を維持
 - 不変項: contact.html / works.html / css/style.css / js/contact.js すべて変更なし
 - 確認: PC/モバイル表示確認済み
-- Status: ローカル実装完了・未push
+- Status: ✅ 完了・本番反映済み
 
 ## Style 2026-05-04: Contact ヘッダーを Works ページヘッダーに統一
 - 目的: Contact ページ上部の後付け感を減らし、Works と同じトーンに揃える
@@ -99,7 +105,7 @@
 - 維持: Contact見出しグラデーション・サブラベル・説明文・フォーム構造・Netlify Forms設定
 - 不変項: works.html / css/style.css / js/contact.js / 既存ページ すべて変更なし
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み
-- Status: ローカル実装完了・未push
+- Status: ✅ 完了・本番反映済み
 
 ## Copy 2026-05-04: Contact フォーム下部の英語併記削除・返信目安控えめ化
 - 目的: フォーム下部の実用エリアを軽くし、英語装飾を削減
@@ -108,13 +114,13 @@
   - `css/contact.css`: `.ct-submit-meta` を font-size `.55rem` / letter-spacing `.15em` / text-transform `none` / font-weight `400` に変更
 - 不変項: SEND INQUIRY / BACK ボタン文言・js/contact.js・Netlify Forms設定・既存ページ すべて変更なし
 - 確認: PC(1280px)/モバイル(375px) 表示確認済み
-- Status: ローカル実装完了・未push
+- Status: ✅ 完了・本番反映済み
 
 ## Chore 2026-04-29 (15): claude.md → CLAUDE.md 正規化・HANDOVER.md参照行追加
 - 目的: git 追跡名を Claude Code の正式ファイル名 `CLAUDE.md` に統一
 - 修正: `AGENTS.md` / `CLAUDE.md`（旧 `claude.md`）のみ（内容変更なし・rename のみ）
   - `git mv claude.md CLAUDE.md`（macOS case-insensitive 問題を git レベルで解消）
-  - `AGENTS.md` / `CLAUDE.md` 両方に未コミット差分「最初に/docs/00_HANDOVER.mdを確認する」を追加
+  - `AGENTS.md` / `CLAUDE.md` 両方に「最初に/docs/00_HANDOVER.mdを確認する」を追加
 - 不変項: HTML / CSS / JS / JSON / 画像 / その他すべて変更なし
 - 確認:
   - `git ls-files | grep -i claude` → `CLAUDE.md` のみ（`claude.md` 消滅） ✅
