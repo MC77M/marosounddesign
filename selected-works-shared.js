@@ -24,7 +24,7 @@ const WORKS = [
     note: 'M-2 / VICL-37704',
   },
   {
-    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_portfolio_012.webp',
+    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_さとみ_Never End.webp',
     track: 'Never End',
     artist: 'さとみ(すとぷり)',
     date: '2023.09.13',
@@ -376,7 +376,7 @@ const WORKS = [
     note: 'M-6・M-7 / STPR-9017',
   },
   {
-    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_works_025.webp',
+    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_雨宮天_君を通して_600.webp',
     track: '君を通して',
     artist: '雨宮天',
     date: '2020.09.27',
@@ -408,7 +408,7 @@ const WORKS = [
     note: 'NEW KAWAII / フルーツバスケット / KAWAII LAB.',
   },
   {
-    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_Lienel_じれったいKISS.webp',
+    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_Lienel_じれったいKISS_600.webp',
     track: 'じれったいKISS',
     artist: 'Lienel',
     date: '2025.01',
@@ -442,7 +442,6 @@ const WORKS = [
   },
 ];
 const SELECTED_WORK_JACKET_MAP = {
-  'images/_hash_portfolio_003.webp': 'images/_hash_portfolio_012.webp',
   'images/_hash_portfolio_006.webp': 'images/_hash_portfolio_015.webp',
   'images/_hash_portfolio_009.webp': 'images/_hash_portfolio_018.webp',
 };
