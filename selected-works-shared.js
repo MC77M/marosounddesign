@@ -387,7 +387,7 @@ const WORKS = [
     note: 'M-1',
   },
   {
-    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_works_032.webp',
+    cat: 'jpop', icon: '🎤', jacket: 'images/_hash_works_032_600.webp',
     track: 'トキメキ・シンパシー',
     artist: '麻倉もも「Agapanthus」',
     date: '2020.04.08',
