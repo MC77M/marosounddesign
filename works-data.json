@@ -5472,5 +5472,85 @@
       }
     ],
     "thumbnail": "images/thumbs/_hash_あの日見たラッキースター_ハピラキ！.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_君のメインヒロイン_メロきゅん.webp",
+    "track": "メロきゅん",
+    "artist": "君のメインヒロイン",
+    "date": "2026.08.03",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "メロきゅん / 君のメインヒロイン",
+    "thumbnail": "images/thumbs/_hash_君のメインヒロイン_メロきゅん.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_ROOKEYROOKEYS_キミだけショッピングモール (サビver.).webp",
+    "track": "キミだけショッピングモール (サビver.)",
+    "artist": "ROOKEY♡ROOKEYS",
+    "date": "2026.08.12",
+    "credits": [
+      {
+        "role": "作曲・編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "キミだけショッピングモール (サビver.) / ROOKEY♡ROOKEYS",
+    "thumbnail": "images/thumbs/_hash_ROOKEYROOKEYS_キミだけショッピングモール (サビver.).webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_StarLight_公式ロゴ.webp",
+    "track": "流星ラプソディ",
+    "artist": "StarLight(上海)",
+    "date": "2025.12.20",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "流星ラプソディ / StarLight(上海)",
+    "thumbnail": "images/thumbs/_hash_StarLight_公式ロゴ.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_StarLight_公式ロゴ.webp",
+    "track": "前向きパーリナイ☆",
+    "artist": "StarLight(上海)",
+    "date": "2026.01.27",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "前向きパーリナイ☆ / StarLight(上海)",
+    "thumbnail": "images/thumbs/_hash_StarLight_公式ロゴ.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_StarLight_公式ロゴ.webp",
+    "track": "恋愛自販機",
+    "artist": "StarLight(上海)",
+    "date": "2026.05.24",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "恋愛自販機 / StarLight(上海)",
+    "thumbnail": "images/thumbs/_hash_StarLight_公式ロゴ.webp"
   }
 ]

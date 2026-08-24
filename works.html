@@ -404,6 +404,7 @@ function cardTitle(artist){
 
 function cardArtistLabel(work){
   if (work.cat === 'game' && work.note) return work.note;
+  if (work.artist === 'StarLight(上海)') return work.artist;
   if (/(FRUITS ZIPPER)\)/.test(work.artist)) return work.artist;
   return cardTitle(work.artist);
 }
