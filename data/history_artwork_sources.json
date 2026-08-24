@@ -689,6 +689,2430 @@
       "sourceSha256": "c202f8baf4720df6c2bef53aea819ee6a4460dd0b5dd839c6ead23789496f81d",
       "quality": 82,
       "thumbnailBytes": 2352
+    },
+    "a:sha256:768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e": {
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/home-band-arrange/1484778128",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/d3/d9/de/d3d9de98-4719-828e-6aef-9067ee716982/KSQD-006_1.jpg/1417x1417bb.jpg",
+      "sourceFileName": "artwork-768cdaf53a776634.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1417,
+      "sourceHeight": 1417,
+      "sourceBytes": 900810,
+      "sourceSha256": "768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e",
+      "quality": 82,
+      "thumbnailBytes": 3676
+    },
+    "a:sha256:728d9a1c2952cb28d8ca96dcb5a55ea427d5c6a8930d2717c8d59462b4373cb5": {
+      "thumbnail": "images/history-thumbs/_hash_a_728d9a1c2952cb28d8ca96dcb5a55ea427d5c6a8930d2717c8d59462b4373cb5.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/life-goes-on/1447476295",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8b/46/7b/8b467b6c-ba87-a92d-e2c9-f8e2d929cd07/PA00017026_0_57833_jacket.jpg/1400x1400bb.jpg",
+      "sourceFileName": "artwork-728d9a1c2952cb28.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1400,
+      "sourceHeight": 1400,
+      "sourceBytes": 158790,
+      "sourceSha256": "728d9a1c2952cb28d8ca96dcb5a55ea427d5c6a8930d2717c8d59462b4373cb5",
+      "quality": 82,
+      "thumbnailBytes": 1512
+    },
+    "a:sha256:33357026d8bc8d91de6a5e492157e460ce88c4b7810ab411ed8470a6633258e4": {
+      "thumbnail": "images/history-thumbs/_hash_a_33357026d8bc8d91de6a5e492157e460ce88c4b7810ab411ed8470a6633258e4.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/tell-me-why/1414099111",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/17/25/05/1725050e-88b3-9085-1801-f335b8b626c9/KSQD_004_1.jpg/1654x1654bb.jpg",
+      "sourceFileName": "artwork-33357026d8bc8d91.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1654,
+      "sourceHeight": 1654,
+      "sourceBytes": 1034535,
+      "sourceSha256": "33357026d8bc8d91de6a5e492157e460ce88c4b7810ab411ed8470a6633258e4",
+      "quality": 82,
+      "thumbnailBytes": 1654
+    },
+    "a:sha256:ead7b3fa84a42ffeaad95846ec54c330b404d0d497921d7be143aa0aeb55fad4": {
+      "thumbnail": "images/history-thumbs/_hash_a_ead7b3fa84a42ffeaad95846ec54c330b404d0d497921d7be143aa0aeb55fad4.webp",
+      "sourcePageUrl": "https://books.rakuten.co.jp/rb/13164098/",
+      "sourceImageUrl": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0450/4582450850450.jpg?_ex=600x600",
+      "sourceFileName": "artwork-ead7b3fa84a42ffe.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 300,
+      "sourceHeight": 300,
+      "sourceBytes": 20076,
+      "sourceSha256": "ead7b3fa84a42ffeaad95846ec54c330b404d0d497921d7be143aa0aeb55fad4",
+      "quality": 82,
+      "thumbnailBytes": 1926
+    },
+    "a:sha256:9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef": {
+      "thumbnail": "images/history-thumbs/_hash_a_9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/never-die/1094210451",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/be/1a/7b/be1a7bbd-c51e-37f5-f51d-4ef929e8dc04/GANJINiSM_1.jpg/1709x1688bb.jpg",
+      "sourceFileName": "artwork-9a6cead4b70654eb.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1709,
+      "sourceHeight": 1688,
+      "sourceBytes": 355277,
+      "sourceSha256": "9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef",
+      "quality": 82,
+      "thumbnailBytes": 2042
+    },
+    "a:sha256:bca561a8733f88ae2b4678713cc3486252061a1674fc18fb8375788f50d0fc51": {
+      "thumbnail": "images/history-thumbs/_hash_a_bca561a8733f88ae2b4678713cc3486252061a1674fc18fb8375788f50d0fc51.webp",
+      "sourcePageUrl": "https://www.oricon.co.jp/prof/593018/products/1147381/1/",
+      "sourceImageUrl": "https://images-fe.ssl-images-amazon.com/images/I/51dICaLfP0L.jpg",
+      "sourceFileName": "artwork-bca561a8733f88ae.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 495,
+      "sourceHeight": 500,
+      "sourceBytes": 47416,
+      "sourceSha256": "bca561a8733f88ae2b4678713cc3486252061a1674fc18fb8375788f50d0fc51",
+      "quality": 82,
+      "thumbnailBytes": 2474
+    },
+    "a:sha256:b87c45ff1407d5d1d4e0d0c4ae03ce2da5cf3d53bbc13b61e1d832995b455db0": {
+      "thumbnail": "images/history-thumbs/_hash_a_b87c45ff1407d5d1d4e0d0c4ae03ce2da5cf3d53bbc13b61e1d832995b455db0.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/love-the-way-you-are/1442500364",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/28/29/bf/2829bf47-e385-adb0-7e72-c29f2acf25f6/jaket_p1.jpg/1500x1500bb.jpg",
+      "sourceFileName": "artwork-b87c45ff1407d5d1.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1500,
+      "sourceHeight": 1500,
+      "sourceBytes": 538962,
+      "sourceSha256": "b87c45ff1407d5d1d4e0d0c4ae03ce2da5cf3d53bbc13b61e1d832995b455db0",
+      "quality": 82,
+      "thumbnailBytes": 3000
+    },
+    "a:sha256:d4c2f5b70ac7c29a09f52f482b3fa0f3fb5129fa10d8731dd5ef47402525d2f7": {
+      "thumbnail": "images/history-thumbs/_hash_a_d4c2f5b70ac7c29a09f52f482b3fa0f3fb5129fa10d8731dd5ef47402525d2f7.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/a-s-p-a/1497567780",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ff/43/76/ff437675-2363-751b-70a3-08c6ec1ca65e/672985031555.png/3000x3000bb.png",
+      "sourceFileName": "artwork-d4c2f5b70ac7c29a.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 524106,
+      "sourceSha256": "d4c2f5b70ac7c29a09f52f482b3fa0f3fb5129fa10d8731dd5ef47402525d2f7",
+      "quality": 82,
+      "thumbnailBytes": 1290
+    },
+    "a:sha256:d56abdd191bc12cfd2100de9e0e4d17c8780888b5d8c92b0faaca7feca8ff9f9": {
+      "thumbnail": "images/history-thumbs/_hash_a_d56abdd191bc12cfd2100de9e0e4d17c8780888b5d8c92b0faaca7feca8ff9f9.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/birthday/1497542778",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/99/b7/d0/99b7d07c-247c-98c8-bc5f-75d53f81491a/672985031548.png/3000x3000bb.png",
+      "sourceFileName": "artwork-d56abdd191bc12cf.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 562628,
+      "sourceSha256": "d56abdd191bc12cfd2100de9e0e4d17c8780888b5d8c92b0faaca7feca8ff9f9",
+      "quality": 82,
+      "thumbnailBytes": 1374
+    },
+    "a:sha256:78225238f2c224ada5c24f516511674e0ed4c4aeafec4bdc6e449cbff3923e37": {
+      "thumbnail": "images/history-thumbs/_hash_a_78225238f2c224ada5c24f516511674e0ed4c4aeafec4bdc6e449cbff3923e37.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/dancing-tonight/1497388214",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/d5/5d/30/d55d30c8-909b-310f-df05-84f117d2c095/672985031562.png/3000x3000bb.png",
+      "sourceFileName": "artwork-78225238f2c224ad.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 587953,
+      "sourceSha256": "78225238f2c224ada5c24f516511674e0ed4c4aeafec4bdc6e449cbff3923e37",
+      "quality": 82,
+      "thumbnailBytes": 1428
+    },
+    "a:sha256:4d5ff4f73375afcc18863faae2f3c615dc5c0a8c7c671839f9c1c6fb5b59d884": {
+      "thumbnail": "images/history-thumbs/_hash_a_4d5ff4f73375afcc18863faae2f3c615dc5c0a8c7c671839f9c1c6fb5b59d884.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/fly-off/1497571218",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/8a/0e/af/8a0eaf9c-ad87-f3c4-bfef-2b806b3b6ed4/672985031883.png/3000x3000bb.png",
+      "sourceFileName": "artwork-4d5ff4f73375afcc.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 514877,
+      "sourceSha256": "4d5ff4f73375afcc18863faae2f3c615dc5c0a8c7c671839f9c1c6fb5b59d884",
+      "quality": 82,
+      "thumbnailBytes": 1242
+    },
+    "a:sha256:26fdae3062b14b6f11ceef9927735f969a029e03b18abbd152680843a986f5a6": {
+      "thumbnail": "images/history-thumbs/_hash_a_26fdae3062b14b6f11ceef9927735f969a029e03b18abbd152680843a986f5a6.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/hands-up/1528380238",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/99/30/ab/9930abce-536e-ff3e-73c0-b6ff52f3245f/672985474598.png/3000x3000bb.png",
+      "sourceFileName": "artwork-26fdae3062b14b6f.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 472857,
+      "sourceSha256": "26fdae3062b14b6f11ceef9927735f969a029e03b18abbd152680843a986f5a6",
+      "quality": 82,
+      "thumbnailBytes": 1672
+    },
+    "a:sha256:3749aba96101488bc2c562c26ef85236bdc05975d38f2c9345149aa05b122534": {
+      "thumbnail": "images/history-thumbs/_hash_a_3749aba96101488bc2c562c26ef85236bdc05975d38f2c9345149aa05b122534.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E6%81%8B%E3%81%99%E3%82%8B%E9%AD%94%E6%B3%95/1514673582",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/37/ea/a2/37eaa2a0-c6a9-025b-2ec3-cecc9658b4b9/672985297074.png/3000x3000bb.png",
+      "sourceFileName": "artwork-3749aba96101488b.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 599255,
+      "sourceSha256": "3749aba96101488bc2c562c26ef85236bdc05975d38f2c9345149aa05b122534",
+      "quality": 82,
+      "thumbnailBytes": 1404
+    },
+    "a:sha256:b5f02209a8953342cfb90c93b2d257e0312f8655d3eb183d335cdc851e5466f6": {
+      "thumbnail": "images/history-thumbs/_hash_a_b5f02209a8953342cfb90c93b2d257e0312f8655d3eb183d335cdc851e5466f6.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E8%AA%93%E3%81%84/1528380919",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/96/e7/60/96e7606b-3536-12a9-31f5-57f4e9b076fb/672985474611.png/3000x3000bb.png",
+      "sourceFileName": "artwork-b5f02209a8953342.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 474556,
+      "sourceSha256": "b5f02209a8953342cfb90c93b2d257e0312f8655d3eb183d335cdc851e5466f6",
+      "quality": 82,
+      "thumbnailBytes": 1726
+    },
+    "a:sha256:43141eca8ef342390429fc52a78d4cc1503d4dc8a560f943b112eaf33aa4cbbe": {
+      "thumbnail": "images/history-thumbs/_hash_a_43141eca8ef342390429fc52a78d4cc1503d4dc8a560f943b112eaf33aa4cbbe.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF-%E3%83%90%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%B3/1344168282",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a4/9c/b1/a49cb10e-dcc4-5fbf-52a7-9f957cea5a30/4562248031070_cover.jpg/1600x1600bb.jpg",
+      "sourceFileName": "artwork-43141eca8ef34239.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1600,
+      "sourceHeight": 1600,
+      "sourceBytes": 649837,
+      "sourceSha256": "43141eca8ef342390429fc52a78d4cc1503d4dc8a560f943b112eaf33aa4cbbe",
+      "quality": 82,
+      "thumbnailBytes": 3410
+    },
+    "a:sha256:8501f3a1892c4e4de4b61a3c6ab7a8e65143bda730d93f83c111c2b2b3e37ad5": {
+      "thumbnail": "images/history-thumbs/_hash_a_8501f3a1892c4e4de4b61a3c6ab7a8e65143bda730d93f83c111c2b2b3e37ad5.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E5%B9%BD%E9%9C%8A%E3%81%9F%E3%81%A1%E3%81%AE%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88%E3%82%B7%E3%82%A2%E3%82%BF%E3%83%BC/1783963371",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5b/be/23/5bbe2397-4274-51f2-7f01-f82410a258ae/4571640561047_cover.png/3000x3000bb.png",
+      "sourceFileName": "artwork-8501f3a1892c4e4d.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 457718,
+      "sourceSha256": "8501f3a1892c4e4de4b61a3c6ab7a8e65143bda730d93f83c111c2b2b3e37ad5",
+      "quality": 82,
+      "thumbnailBytes": 796
+    },
+    "a:sha256:41caef8d0a901358b6c6c3520da7913e2d53265c890f3581059b984ca5d16fe7": {
+      "thumbnail": "images/history-thumbs/_hash_a_41caef8d0a901358b6c6c3520da7913e2d53265c890f3581059b984ca5d16fe7.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E7%A7%81%E3%81%AE%E5%B1%85%E3%81%AA%E3%81%84%E4%B8%96%E7%95%8C%E3%81%A7%E5%90%9B%E3%81%AF%E6%98%8E%E6%97%A5%E3%82%92%E8%BF%8E%E3%81%88%E3%82%89%E3%82%8C%E3%82%8B/1807745040",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ba/52/f3/ba52f358-6ea1-c067-7c5e-c6df09bbc8c3/198704460210_Cover.jpg/1400x1400bb.jpg",
+      "sourceFileName": "artwork-41caef8d0a901358.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1400,
+      "sourceHeight": 1400,
+      "sourceBytes": 472041,
+      "sourceSha256": "41caef8d0a901358b6c6c3520da7913e2d53265c890f3581059b984ca5d16fe7",
+      "quality": 82,
+      "thumbnailBytes": 4504
+    },
+    "a:sha256:e43130b5940ef6a56da4eae16cfab087a904aa911acb7d06f563489de030bb3a": {
+      "thumbnail": "images/history-thumbs/_hash_a_e43130b5940ef6a56da4eae16cfab087a904aa911acb7d06f563489de030bb3a.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/arigato-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3/1198578641",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/84/54/d7/8454d776-e6e7-9564-f829-0bd2be921db8/4538182672969_cov.jpg/3000x3000bb.jpg",
+      "sourceFileName": "artwork-e43130b5940ef6a5.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 1982506,
+      "sourceSha256": "e43130b5940ef6a56da4eae16cfab087a904aa911acb7d06f563489de030bb3a",
+      "quality": 82,
+      "thumbnailBytes": 1608
+    },
+    "a:sha256:67214cd523ae149ac189a2bd5ad2a6f87596f5ce7fdb66a8f4eac00a7105863d": {
+      "thumbnail": "images/history-thumbs/_hash_a_67214cd523ae149ac189a2bd5ad2a6f87596f5ce7fdb66a8f4eac00a7105863d.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/arcadia-cat/1459953880",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/b3/f5/39/b3f539eb-4158-3b87-c615-6fcc4a959107/11932500.jpg/3000x3000bb.jpg",
+      "sourceFileName": "artwork-67214cd523ae149a.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 2173162,
+      "sourceSha256": "67214cd523ae149ac189a2bd5ad2a6f87596f5ce7fdb66a8f4eac00a7105863d",
+      "quality": 82,
+      "thumbnailBytes": 4276
+    },
+    "a:sha256:af70e9ab227458e93bc0e8b9bd8edd42c2de2b886258709ed31e781570e6e777": {
+      "thumbnail": "images/history-thumbs/_hash_a_af70e9ab227458e93bc0e8b9bd8edd42c2de2b886258709ed31e781570e6e777.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/tokyo-monster/1326057383",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/b1/8a/fa/b18afa46-0f58-e97a-8a6c-e8ef4ea6cf1e/11621500.jpg/1406x1400bb.jpg",
+      "sourceFileName": "artwork-af70e9ab227458e9.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1406,
+      "sourceHeight": 1400,
+      "sourceBytes": 522506,
+      "sourceSha256": "af70e9ab227458e93bc0e8b9bd8edd42c2de2b886258709ed31e781570e6e777",
+      "quality": 82,
+      "thumbnailBytes": 4928
+    },
+    "a:sha256:a77d248cdc13f7ea88c3e4d4b1a385720ee0ea39e209b78df08bbdc91dbd4106": {
+      "thumbnail": "images/history-thumbs/_hash_a_a77d248cdc13f7ea88c3e4d4b1a385720ee0ea39e209b78df08bbdc91dbd4106.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/hapiness-to-you/1176895870",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music19/v4/e5/50/b1/e550b1cc-5400-ea10-c87d-a4f146db374c/11413200.jpg/1420x1400bb.jpg",
+      "sourceFileName": "artwork-a77d248cdc13f7ea.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1420,
+      "sourceHeight": 1400,
+      "sourceBytes": 772452,
+      "sourceSha256": "a77d248cdc13f7ea88c3e4d4b1a385720ee0ea39e209b78df08bbdc91dbd4106",
+      "quality": 82,
+      "thumbnailBytes": 5238
+    },
+    "a:sha256:84784e02c66cc3d177512fa69077a52332808b418bb261fba777662b72f61b66": {
+      "thumbnail": "images/history-thumbs/_hash_a_84784e02c66cc3d177512fa69077a52332808b418bb261fba777662b72f61b66.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E3%82%BC%E3%83%B3%E3%83%96%E3%83%87%E3%82%A4%E3%82%AD%E3%83%86%E3%83%AB/1520198841",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/9c/0e/3f/9c0e3fc5-9146-a97d-a2ec-bd47a00678cc/859755939901_cover.jpg/3000x3000bb.jpg",
+      "sourceFileName": "artwork-84784e02c66cc3d1.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 1433469,
+      "sourceSha256": "84784e02c66cc3d177512fa69077a52332808b418bb261fba777662b72f61b66",
+      "quality": 82,
+      "thumbnailBytes": 2916
+    },
+    "a:sha256:dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d": {
+      "thumbnail": "images/history-thumbs/_hash_a_dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d.webp",
+      "sourcePageUrl": "https://www.oricon.co.jp/prof/673172/products/1337272/1/",
+      "sourceImageUrl": "https://images-fe.ssl-images-amazon.com/images/I/61WX9Ca6s6L.jpg",
+      "sourceFileName": "artwork-dab0f29ac9b62eca.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 498,
+      "sourceHeight": 500,
+      "sourceBytes": 69129,
+      "sourceSha256": "dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d",
+      "quality": 82,
+      "thumbnailBytes": 3272
+    },
+    "a:sha256:d47b35a979afee603f0afaed7ca59277d8ae7e359750f29b0ca6e5e6d09aa40b": {
+      "thumbnail": "images/history-thumbs/_hash_a_d47b35a979afee603f0afaed7ca59277d8ae7e359750f29b0ca6e5e6d09aa40b.webp",
+      "sourcePageUrl": "https://marosounddesign.com/works",
+      "sourceImageUrl": "https://marosounddesign.com/images/_hash_LEVEL7_気まぐれロジック.webp",
+      "sourceFileName": "artwork-d47b35a979afee60.webp",
+      "sourceFormat": "WEBP",
+      "sourceWidth": 300,
+      "sourceHeight": 300,
+      "sourceBytes": 17046,
+      "sourceSha256": "d47b35a979afee603f0afaed7ca59277d8ae7e359750f29b0ca6e5e6d09aa40b",
+      "quality": 82,
+      "thumbnailBytes": 2872
+    },
+    "a:sha256:1b44315847a38f96baf07e040688aa9484706c8f4f44c98f587b5b3af6e809b8": {
+      "thumbnail": "images/history-thumbs/_hash_a_1b44315847a38f96baf07e040688aa9484706c8f4f44c98f587b5b3af6e809b8.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E5%9B%9A%E3%82%8F%E3%82%8C%E3%81%AEmirage/1449115629",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b8/26/d8/b826d898-c763-f328-2f10-24aece07c86f/POCS-1743_DVD.jpg/1743x1729bb.jpg",
+      "sourceFileName": "artwork-1b44315847a38f96.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 1743,
+      "sourceHeight": 1729,
+      "sourceBytes": 819633,
+      "sourceSha256": "1b44315847a38f96baf07e040688aa9484706c8f4f44c98f587b5b3af6e809b8",
+      "quality": 82,
+      "thumbnailBytes": 4032
+    },
+    "a:sha256:a279d3b20b3bd143a69cfe87e81f785fa97e6514655f8e280f99090aab1c83de": {
+      "thumbnail": "images/history-thumbs/_hash_a_a279d3b20b3bd143a69cfe87e81f785fa97e6514655f8e280f99090aab1c83de.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/story-of/1467822762",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/5e/0a/59/5e0a59ff-1268-5375-cc4c-126c4888960a/4538182825372_cov.jpg/3000x3000bb.jpg",
+      "sourceFileName": "artwork-a279d3b20b3bd143.jpg",
+      "sourceFormat": "JPEG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 1318636,
+      "sourceSha256": "a279d3b20b3bd143a69cfe87e81f785fa97e6514655f8e280f99090aab1c83de",
+      "quality": 82,
+      "thumbnailBytes": 3318
+    },
+    "a:sha256:7f5571bb66080731ad593220905c994d3700800fdebc77e6b19588caee2b3e87": {
+      "thumbnail": "images/history-thumbs/_hash_a_7f5571bb66080731ad593220905c994d3700800fdebc77e6b19588caee2b3e87.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/day-dream/1495886273",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/24/33/f7/2433f78c-37b8-d542-374d-40eea4c837d9/672985004009.png/3000x3000bb.png",
+      "sourceFileName": "artwork-7f5571bb66080731.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 8195190,
+      "sourceSha256": "7f5571bb66080731ad593220905c994d3700800fdebc77e6b19588caee2b3e87",
+      "quality": 82,
+      "thumbnailBytes": 2858
+    },
+    "a:sha256:e286c24a2417e625125fcdc458ba216ec8fc2b4db7ab0bc74194d8824e0256e5": {
+      "thumbnail": "images/history-thumbs/_hash_a_e286c24a2417e625125fcdc458ba216ec8fc2b4db7ab0bc74194d8824e0256e5.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E3%82%B9%E3%82%AD%E3%82%B9%E3%82%AD%E3%82%B9%E3%82%AD/1496240377",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/8e/6a/34/8e6a3495-b306-13fe-729c-cc769e3f1e75/672985013322.png/3000x3000bb.png",
+      "sourceFileName": "artwork-e286c24a2417e625.png",
+      "sourceFormat": "PNG",
+      "sourceWidth": 3000,
+      "sourceHeight": 3000,
+      "sourceBytes": 472342,
+      "sourceSha256": "e286c24a2417e625125fcdc458ba216ec8fc2b4db7ab0bc74194d8824e0256e5",
+      "quality": 82,
+      "thumbnailBytes": 1134
     }
-  }
+  },
+  "summary": {
+    "total": 228,
+    "foundAssignments": 146,
+    "noImageAssignments": 82,
+    "uniqueArtworks": 81
+  },
+  "assignments": [
+    {
+      "key": "\u001fAngeLip\u001f初めての気持ち",
+      "group": "あ行",
+      "artist": "AngeLip",
+      "track": "初めての気持ち",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fWithout you",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "Without you",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fアノヒビニ～Seventh Heaven～",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "アノヒビニ～Seventh Heaven～",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fDreamer～ゆるぎないハート～",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "Dreamer～ゆるぎないハート～",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001f美人 on the planet",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "美人 on the planet",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fラ・ティンパ",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "ラ・ティンパ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fキミイロプラネタリウム",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "キミイロプラネタリウム",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fスッペシャル ジェネレ～ション (カヴァー)",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "スッペシャル ジェネレ～ション (カヴァー)",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001f初恋サイダー (カヴァー)",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "初恋サイダー (カヴァー)",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fasfi\u001fまっさらブルージーンズ (カヴァー)",
+      "group": "あ行",
+      "artist": "asfi",
+      "track": "まっさらブルージーンズ (カヴァー)",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fcocona\u001f君とハピネス",
+      "group": "か行",
+      "artist": "cocona",
+      "track": "君とハピネス",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fGANJIN\u001fHOME - band arrange",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "HOME - band arrange",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fGANJIN\u001fYou&I",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "You&I",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (What's going on? · 2019年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fcome with me",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "come with me",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (What's going on? · 2019年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001feverything",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "everything",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (What's going on? · 2019年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fforever - the final arrange",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "forever - the final arrange",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fGANJIN\u001flife goes on",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "life goes on",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_728d9a1c2952cb28d8ca96dcb5a55ea427d5c6a8930d2717c8d59462b4373cb5.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Life Goes On - Single · 2019年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fone - the final arrange",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "one - the final arrange",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fGANJIN\u001fsecret",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "secret",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (What's going on? · 2019年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001ftell me why",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "tell me why",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_33357026d8bc8d91de6a5e492157e460ce88c4b7810ab411ed8470a6633258e4.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (tell me why - Single · 2018年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fwhat you want",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "what you want",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_768cdaf53a7766347a7f58937aa7e90811470be82937195a34b538a0eb31e74e.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (What's going on? · 2019年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001f24/7",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "24/7",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_ead7b3fa84a42ffeaad95846ec54c330b404d0d497921d7be143aa0aeb55fad4.webp",
+      "reason": "Exact 24/7 release artwork; official retailer track evidence covers 24/7, I'am, and Let it Go -2015-."
+    },
+    {
+      "key": "\u001fGANJIN\u001fFar away",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "Far away",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fGANJIN\u001fI'am",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "I'am",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_ead7b3fa84a42ffeaad95846ec54c330b404d0d497921d7be143aa0aeb55fad4.webp",
+      "reason": "Exact 24/7 release artwork; official retailer track evidence covers 24/7, I'am, and Let it Go -2015-."
+    },
+    {
+      "key": "\u001fGANJIN\u001fLet it Go",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "Let it Go",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fGANJIN\u001fLet it Go -2015-",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "Let it Go -2015-",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_ead7b3fa84a42ffeaad95846ec54c330b404d0d497921d7be143aa0aeb55fad4.webp",
+      "reason": "Exact 24/7 release artwork; official retailer track evidence covers 24/7, I'am, and Let it Go -2015-."
+    },
+    {
+      "key": "\u001fGANJIN\u001fNEVER DIE",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "NEVER DIE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (GANJINiSM - EP · 2016年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fNeverEver",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "NeverEver",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fGANJIN\u001fforever",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "forever",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (GANJINiSM - EP · 2016年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fgoodbye",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "goodbye",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_bca561a8733f88ae2b4678713cc3486252061a1674fc18fb8375788f50d0fc51.webp",
+      "reason": "Exact goodbye release artwork; Oricon tracklist covers goodbye, Small World, and so in LOVE."
+    },
+    {
+      "key": "\u001fGANJIN\u001fone",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "one",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (GANJINiSM - EP · 2016年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fright now",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "right now",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (GANJINiSM - EP · 2016年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fsmall world",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "small world",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_bca561a8733f88ae2b4678713cc3486252061a1674fc18fb8375788f50d0fc51.webp",
+      "reason": "Exact goodbye release artwork; Oricon tracklist covers goodbye, Small World, and so in LOVE."
+    },
+    {
+      "key": "\u001fGANJIN\u001fso in LOVE",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "so in LOVE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_bca561a8733f88ae2b4678713cc3486252061a1674fc18fb8375788f50d0fc51.webp",
+      "reason": "Exact goodbye release artwork; Oricon tracklist covers goodbye, Small World, and so in LOVE."
+    },
+    {
+      "key": "\u001fGANJIN\u001fso in LOVE ～GANJINiSM Mix～",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "so in LOVE ～GANJINiSM Mix～",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_9a6cead4b70654ebda5721214c8cf1a09aa0fef87368bf2beb5d955d73f248ef.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (GANJINiSM - EP · 2016年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fLove the Way You are",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "Love the Way You are",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_b87c45ff1407d5d1d4e0d0c4ae03ce2da5cf3d53bbc13b61e1d832995b455db0.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Love the Way you are/making me crazy - Single · 2017年)."
+    },
+    {
+      "key": "\u001fGANJIN\u001fmaking me crazy",
+      "group": "か行",
+      "artist": "GANJIN",
+      "track": "making me crazy",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_b87c45ff1407d5d1d4e0d0c4ae03ce2da5cf3d53bbc13b61e1d832995b455db0.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Love the Way you are/making me crazy - Single · 2017年)."
+    },
+    {
+      "key": "\u001fH!dE\u001fメゾン",
+      "group": "は行",
+      "artist": "H!dE",
+      "track": "メゾン",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hide-stories.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fH!dE\u001fロスタイム",
+      "group": "は行",
+      "artist": "H!dE",
+      "track": "ロスタイム",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hide-stories.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fH!dE\u001f夢恋",
+      "group": "は行",
+      "artist": "H!dE",
+      "track": "夢恋",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hide-yumekoi.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fHappy Anniversary\u001f今日は私があなたの世界に落ちちゃった日",
+      "group": "は行",
+      "artist": "Happy Anniversary",
+      "track": "今日は私があなたの世界に落ちちゃった日",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_happy-kyochi.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fHappy Anniversary\u001f月曜日なんか来なきゃいいのに",
+      "group": "は行",
+      "artist": "Happy Anniversary",
+      "track": "月曜日なんか来なきゃいいのに",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_happy-monday.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fHoney Squash\u001f君が好き~side by me~",
+      "group": "は行",
+      "artist": "Honey Squash",
+      "track": "君が好き~side by me~",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fM!LK\u001fMilky Snow",
+      "group": "ま行",
+      "artist": "M!LK",
+      "track": "Milky Snow",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_milk-milky-snow.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001fM!LK\u001f約束",
+      "group": "ま行",
+      "artist": "M!LK",
+      "track": "約束",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_milk-osama-no-gyunyu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001fNina Pelea\u001fBreak Down",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "Break Down",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNina Pelea\u001fNINA PELEA",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "NINA PELEA",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_nina-type-b.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fNina Pelea\u001fSHIROTAE",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "SHIROTAE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_nina-type-b.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fNina Pelea\u001f嘘つきラビリンス",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "嘘つきラビリンス",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNina Pelea\u001fキミのとなり",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "キミのとなり",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_nina-type-b.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fNina Pelea\u001f恋のはじまり",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "恋のはじまり",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNina Pelea\u001f何度もキミの名前を叫ぶ",
+      "group": "な行",
+      "artist": "Nina Pelea",
+      "track": "何度もキミの名前を叫ぶ",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_nina-type-a.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001fBORDER",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "BORDER",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001fI×DOLL",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "I×DOLL",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001fMATSURI☆SAWAGI",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "MATSURI☆SAWAGI",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001fWe are the only one",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "We are the only one",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001f宛名のないLovesong",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "宛名のないLovesong",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001fネバギブギウギ♪",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "ネバギブギウギ♪",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001f永遠のハッピアワー",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "永遠のハッピアワー",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001f君とYaiYaiYai",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "君とYaiYaiYai",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fNEVA GIVE UP\u001f超Yabee!!",
+      "group": "な行",
+      "artist": "NEVA GIVE UP",
+      "track": "超Yabee!!",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fprink\u001fBELIEVE",
+      "group": "は行",
+      "artist": "prink",
+      "track": "BELIEVE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_prink-believe.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fprink\u001fMake my day",
+      "group": "は行",
+      "artist": "prink",
+      "track": "Make my day",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_prink-yasashii.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fprink\u001fp.r.i.n.k",
+      "group": "は行",
+      "artist": "prink",
+      "track": "p.r.i.n.k",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_prink-prhythm.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fサンスポアイドルリポーターSIR\u001f諦めを知らない花",
+      "group": "さ行",
+      "artist": "サンスポアイドルリポーターSIR",
+      "track": "諦めを知らない花",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fShoo(元S.E.S)\u001fI found love",
+      "group": "さ行",
+      "artist": "Shoo(元S.E.S)",
+      "track": "I found love",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fべいびーサたん\u001f小悪魔図鑑",
+      "group": "は行",
+      "artist": "べいびーサたん",
+      "track": "小悪魔図鑑",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fSEVEN4\u001fA.S.P.A",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "A.S.P.A",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_d4c2f5b70ac7c29a09f52f482b3fa0f3fb5129fa10d8731dd5ef47402525d2f7.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (A.S.P.A - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSEVEN4\u001fBirthday",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "Birthday",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_d56abdd191bc12cfd2100de9e0e4d17c8780888b5d8c92b0faaca7feca8ff9f9.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Birthday - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSEVEN4\u001fDancing Tonight",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "Dancing Tonight",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_78225238f2c224ada5c24f516511674e0ed4c4aeafec4bdc6e449cbff3923e37.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Dancing Tonight - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSEVEN4\u001fFly Off",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "Fly Off",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_4d5ff4f73375afcc18863faae2f3c615dc5c0a8c7c671839f9c1c6fb5b59d884.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Fly Off - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSEVEN4\u001fHands Up!",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "Hands Up!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_26fdae3062b14b6f11ceef9927735f969a029e03b18abbd152680843a986f5a6.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Hands Up! - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSEVEN4\u001f恋する魔法",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "恋する魔法",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_3749aba96101488bc2c562c26ef85236bdc05975d38f2c9345149aa05b122534.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (恋する魔法 - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSEVEN4\u001f誓い",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "誓い",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_b5f02209a8953342cfb90c93b2d257e0312f8655d3eb183d335cdc851e5466f6.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (誓い - Single · 2020年)."
+    },
+    {
+      "key": "\u001fSTARMARIE\u001fブラック❤バレンタイン",
+      "group": "さ行",
+      "artist": "STARMARIE",
+      "track": "ブラック❤バレンタイン",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_43141eca8ef342390429fc52a78d4cc1503d4dc8a560f943b112eaf33aa4cbbe.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fSTARMARIE\u001f幽霊たちのシークレットシアター",
+      "group": "さ行",
+      "artist": "STARMARIE",
+      "track": "幽霊たちのシークレットシアター",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_8501f3a1892c4e4de4b61a3c6ab7a8e65143bda730d93f83c111c2b2b3e37ad5.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fSTARMARIE\u001f私の居ない世界で君は明日を迎えられる?",
+      "group": "さ行",
+      "artist": "STARMARIE",
+      "track": "私の居ない世界で君は明日を迎えられる?",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_41caef8d0a901358b6c6c3520da7913e2d53265c890f3581059b984ca5d16fe7.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fSUPER★DRAGON\u001fARIGATO [ファイヤードラゴン]",
+      "group": "さ行",
+      "artist": "SUPER★DRAGON",
+      "track": "ARIGATO [ファイヤードラゴン]",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_e43130b5940ef6a56da4eae16cfab087a904aa911acb7d06f563489de030bb3a.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fTAKUYA\u001fThe One",
+      "group": "た行",
+      "artist": "TAKUYA",
+      "track": "The One",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_takuya-theone.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fUNBS\u001fARCADIA CAT",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "ARCADIA CAT",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_67214cd523ae149ac189a2bd5ad2a6f87596f5ce7fdb66a8f4eac00a7105863d.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fUNBS\u001fGET LOVE",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "GET LOVE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_67214cd523ae149ac189a2bd5ad2a6f87596f5ce7fdb66a8f4eac00a7105863d.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fUNBS\u001fROCK ALIVE",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "ROCK ALIVE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_67214cd523ae149ac189a2bd5ad2a6f87596f5ce7fdb66a8f4eac00a7105863d.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (ROCK ALIVE / ARCADIA CAT<TYPE-A> - Single · 2019年)."
+    },
+    {
+      "key": "\u001fUNBS\u001fTOKYO monster",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "TOKYO monster",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_af70e9ab227458e93bc0e8b9bd8edd42c2de2b886258709ed31e781570e6e777.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (love pain/new journey TYPE A - Single · 2017年)."
+    },
+    {
+      "key": "\u001fUNBS\u001fTrust in…",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "Trust in…",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fUNBS\u001fhapiness to you!",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "hapiness to you!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_a77d248cdc13f7ea88c3e4d4b1a385720ee0ea39e209b78df08bbdc91dbd4106.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Black Jet  How many kiss TYPE C - Single · 2016年)."
+    },
+    {
+      "key": "\u001fUNBS\u001flove pain",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "love pain",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_af70e9ab227458e93bc0e8b9bd8edd42c2de2b886258709ed31e781570e6e777.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fUNBS\u001fnew journey",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "new journey",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_af70e9ab227458e93bc0e8b9bd8edd42c2de2b886258709ed31e781570e6e777.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (love pain/new journey TYPE A - Single · 2017年)."
+    },
+    {
+      "key": "\u001fUNBS\u001fover the sky",
+      "group": "あ行",
+      "artist": "UNBS",
+      "track": "over the sky",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001f【eN】\u001fゼンブデイキテル",
+      "group": "あ行",
+      "artist": "【eN】",
+      "track": "ゼンブデイキテル",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_84784e02c66cc3d177512fa69077a52332808b418bb261fba777662b72f61b66.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (en rich life - EP · 2020年)."
+    },
+    {
+      "key": "\u001fアイドル諜報機関LEVEL7\u001fBREAK SHOUT",
+      "group": "あ行",
+      "artist": "アイドル諜報機関LEVEL7",
+      "track": "BREAK SHOUT",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d.webp",
+      "reason": "Exact BREAK SHOUT album artwork; Oricon tracklist covers all four assigned tracks."
+    },
+    {
+      "key": "\u001fアイドル諜報機関LEVEL7\u001fNO LUV NO LIFE",
+      "group": "あ行",
+      "artist": "アイドル諜報機関LEVEL7",
+      "track": "NO LUV NO LIFE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d.webp",
+      "reason": "Exact BREAK SHOUT album artwork; Oricon tracklist covers all four assigned tracks."
+    },
+    {
+      "key": "\u001fアイドル諜報機関LEVEL7\u001f君色Everyday",
+      "group": "あ行",
+      "artist": "アイドル諜報機関LEVEL7",
+      "track": "君色Everyday",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d.webp",
+      "reason": "Exact BREAK SHOUT album artwork; Oricon tracklist covers all four assigned tracks."
+    },
+    {
+      "key": "\u001fアイドル諜報機関LEVEL7\u001f感情Squall",
+      "group": "あ行",
+      "artist": "アイドル諜報機関LEVEL7",
+      "track": "感情Squall",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_dab0f29ac9b62eca1cb6b7cd30913dd36063c0561b60c40ef49053a5b5f3da9d.webp",
+      "reason": "Exact BREAK SHOUT album artwork; Oricon tracklist covers all four assigned tracks."
+    },
+    {
+      "key": "\u001fアイドル諜報機関LEVEL7\u001fさよならは言わない",
+      "group": "あ行",
+      "artist": "アイドル諜報機関LEVEL7",
+      "track": "さよならは言わない",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_d47b35a979afee603f0afaed7ca59277d8ae7e359750f29b0ca6e5e6d09aa40b.webp",
+      "reason": "Existing repository exact-track artwork; both tracks are on the verified Taboo Type-C release."
+    },
+    {
+      "key": "\u001fアイドル諜報機関LEVEL7\u001f気まぐれロジック",
+      "group": "あ行",
+      "artist": "アイドル諜報機関LEVEL7",
+      "track": "気まぐれロジック",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_d47b35a979afee603f0afaed7ca59277d8ae7e359750f29b0ca6e5e6d09aa40b.webp",
+      "reason": "Existing repository exact-track artwork; both tracks are on the verified Taboo Type-C release."
+    },
+    {
+      "key": "\u001fエラバレシ\u001f囚われのMirage",
+      "group": "あ行",
+      "artist": "エラバレシ",
+      "track": "囚われのMirage",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_1b44315847a38f96baf07e040688aa9484706c8f4f44c98f587b5b3af6e809b8.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fこんにちわ\\(^o^)/きらりんぼ☆ハリー!!!\u001fBlue Destiny",
+      "group": "か行",
+      "artist": "こんにちわ\\(^o^)/きらりんぼ☆ハリー!!!",
+      "track": "Blue Destiny",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fハニースパイス\u001fB.R.W",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "B.R.W",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fHappy",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "Happy",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fstill in love",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "still in love",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fsurvival",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "survival",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-new-party-1.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fあなたに夢CHU",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "あなたに夢CHU",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-new-party-2.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fおすすめのアイコトバ",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "おすすめのアイコトバ",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fズバリ☆つまり♡シテル",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "ズバリ☆つまり♡シテル",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-new-party-1.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fハニスパーティ！",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "ハニスパーティ！",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001f希望の未来",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "希望の未来",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001f恋するmermaid",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "恋するmermaid",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-new-party-1.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001f恋のカラフルマジック",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "恋のカラフルマジック",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001f恋愛Emergency",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "恋愛Emergency",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honey-party.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイスRe.\u001fHappy (2020ver.)",
+      "group": "は行",
+      "artist": "ハニースパイスRe.",
+      "track": "Happy (2020ver.)",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honeyre-honeys.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイスRe.\u001f恋のカラフルマジック (2019ver)",
+      "group": "は行",
+      "artist": "ハニースパイスRe.",
+      "track": "恋のカラフルマジック (2019ver)",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honeyre-renew.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイスRe.\u001f恋愛Emergency (2019ver)",
+      "group": "は行",
+      "artist": "ハニースパイスRe.",
+      "track": "恋愛Emergency (2019ver)",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honeyre-renew.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイスRe.\u001f恋愛Emergency (2019ver) instrumental",
+      "group": "は行",
+      "artist": "ハニースパイスRe.",
+      "track": "恋愛Emergency (2019ver) instrumental",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honeyre-renew.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fハニースパイスRe.\u001f純情ナイトフィーバー",
+      "group": "は行",
+      "artist": "ハニースパイスRe.",
+      "track": "純情ナイトフィーバー",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_honeyre-honeys.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fピュアリーモンスター\u001f超純正ピュアリーチューン",
+      "group": "は行",
+      "artist": "ピュアリーモンスター",
+      "track": "超純正ピュアリーチューン",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_purely-madaashita.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001fもえのあずき\u001fもえきゅんっ▽",
+      "group": "ま行",
+      "artist": "もえのあずき",
+      "track": "もえきゅんっ▽",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_moe-moekyun.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001fやすか\u001fMysterious Train",
+      "group": "や行",
+      "artist": "やすか",
+      "track": "Mysterious Train",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_yasuka-stars-nocturnes.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001fやすか\u001fStars and Nocturnes",
+      "group": "や行",
+      "artist": "やすか",
+      "track": "Stars and Nocturnes",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_yasuka-stars-nocturnes.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001f・POINT\u001fIs This Love",
+      "group": "は行",
+      "artist": "・POINT",
+      "track": "Is This Love",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f・POINT\u001fNo Regret",
+      "group": "は行",
+      "artist": "・POINT",
+      "track": "No Regret",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f二神たかな(旧 : なかたかな）\u001fStar, ing",
+      "group": "は行",
+      "artist": "二神たかな(旧 : なかたかな）",
+      "track": "Star, ing",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_futagami-hitoritabi.webp",
+      "reason": "Official artist store exact CD; four tracks listed"
+    },
+    {
+      "key": "\u001f二神たかな(旧 : なかたかな）\u001fひとりたび",
+      "group": "は行",
+      "artist": "二神たかな(旧 : なかたかな）",
+      "track": "ひとりたび",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_futagami-hitoritabi.webp",
+      "reason": "Official artist store exact CD; four tracks listed"
+    },
+    {
+      "key": "\u001f二神たかな(旧 : なかたかな）\u001fTo→Rain",
+      "group": "は行",
+      "artist": "二神たかな(旧 : なかたかな）",
+      "track": "To→Rain",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_futagami-hitoritabi.webp",
+      "reason": "Official artist store exact CD; four tracks listed"
+    },
+    {
+      "key": "\u001f二神たかな(旧 : なかたかな）\u001fハイケイ",
+      "group": "は行",
+      "artist": "二神たかな(旧 : なかたかな）",
+      "track": "ハイケイ",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_futagami-hitoritabi.webp",
+      "reason": "Official artist store exact CD; four tracks listed"
+    },
+    {
+      "key": "\u001f五條真由美\u001fstory of",
+      "group": "か行",
+      "artist": "五條真由美",
+      "track": "story of",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_a279d3b20b3bd143a69cfe87e81f785fa97e6514655f8e280f99090aab1c83de.webp",
+      "reason": "Exact track and artist match in Apple Music catalog."
+    },
+    {
+      "key": "\u001fSEVEN4(夏井みく）\u001fDay Dream",
+      "group": "さ行",
+      "artist": "SEVEN4(夏井みく）",
+      "track": "Day Dream",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_7f5571bb66080731ad593220905c994d3700800fdebc77e6b19588caee2b3e87.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (Day Dream - Single · 2020年)."
+    },
+    {
+      "key": "\u001fdreamy\u001fRain Heart",
+      "group": "た行",
+      "artist": "dreamy",
+      "track": "Rain Heart",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fLoveYou",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "LoveYou",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fEveryday 君が好き",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "Everyday 君が好き",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001finside my heart",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "inside my heart",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fふたり眠るまで",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "ふたり眠るまで",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fDear my tears",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "Dear my tears",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fDistance",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "Distance",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fユメノレイル",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "ユメノレイル",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fキミのとなり",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "キミのとなり",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001f群青シンドローム",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "群青シンドローム",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fDear L mana\u001fSHIROTAE",
+      "group": "た行",
+      "artist": "Dear L mana",
+      "track": "SHIROTAE",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f柊木りお\u001fFuture×Exceed",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "Future×Exceed",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hiiragi-rinne-reissue.webp",
+      "reason": "Official label digital reissue containing exact track"
+    },
+    {
+      "key": "\u001f柊木りお\u001fPlease be mine",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "Please be mine",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f柊木りお\u001fつくりわらいの影法師 ～夕闇サディスティック～",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "つくりわらいの影法師 ～夕闇サディスティック～",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hiiragi-kimagure-2013.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001f柊木りお\u001fキマグレ I love you ～ワタシを見つけて～",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "キマグレ I love you ～ワタシを見つけて～",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hiiragi-kimagure-2015-a.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001f柊木りお\u001f何でもない日バンザイ!!",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "何でもない日バンザイ!!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hiiragi-kimagure-2015-a.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001f柊木りお\u001f愛憎ディストピア",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "愛憎ディストピア",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hiiragi-banzai-c.webp",
+      "reason": "Official exact release artwork"
+    },
+    {
+      "key": "\u001f藤本あかり\u001f負けないでね",
+      "group": "は行",
+      "artist": "藤本あかり",
+      "track": "負けないでね",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_fujimoto-makenaide.webp",
+      "reason": "Universal Music official product artwork"
+    },
+    {
+      "key": "\u001f柊木りお\u001fFly high",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "Fly high",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_hiiragi-rio10-a.webp",
+      "reason": "Official re-recording release containing Fly high"
+    },
+    {
+      "key": "\u001f柊木りお\u001fでりゅーじょん",
+      "group": "は行",
+      "artist": "柊木りお",
+      "track": "でりゅーじょん",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f平成琴姫\u001f通りゃんせ～初恋胸キュンキュン～",
+      "group": "は行",
+      "artist": "平成琴姫",
+      "track": "通りゃんせ～初恋胸キュンキュン～",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fSEVEN4\u001fスキスキスキ",
+      "group": "さ行",
+      "artist": "SEVEN4",
+      "track": "スキスキスキ",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_a_e286c24a2417e625125fcdc458ba216ec8fc2b4db7ab0bc74194d8824e0256e5.webp",
+      "reason": "Exact track and artist match in Apple Music catalog (スキスキスキ - Single · 2020年)."
+    },
+    {
+      "key": "\u001fパンダみっく\u001f白黒イエスノー",
+      "group": "は行",
+      "artist": "パンダみっく",
+      "track": "白黒イエスノー",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_b_pandamic-shirokuro.webp",
+      "reason": "OTOTOY exact digital release artwork"
+    },
+    {
+      "key": "\u001fハニースパイス\u001fstory",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "story",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fハニースパイス\u001fサヨナラ恋心",
+      "group": "は行",
+      "artist": "ハニースパイス",
+      "track": "サヨナラ恋心",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fPeace Love\u001f冒険Baby",
+      "group": "は行",
+      "artist": "Peace Love",
+      "track": "冒険Baby",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fPeace Love\u001fプリティすぎるウーマン",
+      "group": "は行",
+      "artist": "Peace Love",
+      "track": "プリティすぎるウーマン",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fPeace Love\u001fパーティー★ジャンプ",
+      "group": "は行",
+      "artist": "Peace Love",
+      "track": "パーティー★ジャンプ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fピク丸asfi\u001fLOVE THANX MUSIC",
+      "group": "は行",
+      "artist": "ピク丸asfi",
+      "track": "LOVE THANX MUSIC",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f福永幸海\u001f恋はマジカルフレーバー",
+      "group": "は行",
+      "artist": "福永幸海",
+      "track": "恋はマジカルフレーバー",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f福永幸海\u001fviva my dream",
+      "group": "は行",
+      "artist": "福永幸海",
+      "track": "viva my dream",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fあにまどーる\u001fハイエナじー",
+      "group": "あ行",
+      "artist": "あにまどーる",
+      "track": "ハイエナじー",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fあにまどーる\u001fしりとりんゴリラ",
+      "group": "あ行",
+      "artist": "あにまどーる",
+      "track": "しりとりんゴリラ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fあにまどーる\u001fいえっさーぱんだ",
+      "group": "あ行",
+      "artist": "あにまどーる",
+      "track": "いえっさーぱんだ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fワンダーウィード\u001f永遠青春ガール",
+      "group": "わ行",
+      "artist": "ワンダーウィード",
+      "track": "永遠青春ガール",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact repository match; Apple Music and focused official search did not identify an unambiguous release artwork for this track."
+    },
+    {
+      "key": "\u001fワンダーウィード\u001fトドカナイヤ",
+      "group": "わ行",
+      "artist": "ワンダーウィード",
+      "track": "トドカナイヤ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact repository match; Apple Music and focused official search did not identify an unambiguous release artwork for this track."
+    },
+    {
+      "key": "\u001fワンダーウィード\u001fBANJIKYUSU PARTY",
+      "group": "わ行",
+      "artist": "ワンダーウィード",
+      "track": "BANJIKYUSU PARTY",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_wonder-banjikyusu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001fワンダーウィード\u001f好きだ、ばか。",
+      "group": "わ行",
+      "artist": "ワンダーウィード",
+      "track": "好きだ、ばか。",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_wonder-sukida-baka.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "\u001fCLOVERxCLOVER\u001fCRYING GIRL",
+      "group": "か行",
+      "artist": "CLOVERxCLOVER",
+      "track": "CRYING GIRL",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fMaria\u001fViva Revolution",
+      "group": "ま行",
+      "artist": "Maria",
+      "track": "Viva Revolution",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact repository match; two official/label candidates and a focused exact-title search did not identify this artist-release artwork unambiguously."
+    },
+    {
+      "key": "\u001fマイ・チェリーボーイズ\u001fパラダイス",
+      "group": "ま行",
+      "artist": "マイ・チェリーボーイズ",
+      "track": "パラダイス",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact repository match; two official/label candidates and a focused exact-title search did not identify release artwork unambiguously."
+    },
+    {
+      "key": "\u001fマイ・チェリーボーイズ\u001fonly you",
+      "group": "ま行",
+      "artist": "マイ・チェリーボーイズ",
+      "track": "only you",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact repository match; two official/label candidates and a focused exact-title search did not identify release artwork unambiguously."
+    },
+    {
+      "key": "\u001fマイ・チェリーボーイズ\u001fKixx me",
+      "group": "ま行",
+      "artist": "マイ・チェリーボーイズ",
+      "track": "Kixx me",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact repository match; two official/label candidates and a focused exact-title search did not identify release artwork unambiguously."
+    },
+    {
+      "key": "\u001fTheTripleClowns\u001f純情物語〜嗚呼青春〜",
+      "group": "さ行",
+      "artist": "TheTripleClowns",
+      "track": "純情物語〜嗚呼青春〜",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fTheTripleClowns\u001f君にフレフレ",
+      "group": "さ行",
+      "artist": "TheTripleClowns",
+      "track": "君にフレフレ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fTheTripleClowns\u001fドキドキレボリューション",
+      "group": "さ行",
+      "artist": "TheTripleClowns",
+      "track": "ドキドキレボリューション",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fTheTripleClowns\u001fBANG BANG PARTY",
+      "group": "さ行",
+      "artist": "TheTripleClowns",
+      "track": "BANG BANG PARTY",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fTheTripleClowns\u001f超前向きBremen",
+      "group": "さ行",
+      "artist": "TheTripleClowns",
+      "track": "超前向きBremen",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fTheTripleClowns\u001fピエロのなみだ",
+      "group": "さ行",
+      "artist": "TheTripleClowns",
+      "track": "ピエロのなみだ",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+    },
+    {
+      "key": "\u001fTOKYO SWEET PARTY\u001fハイバスカス",
+      "group": "た行",
+      "artist": "TOKYO SWEET PARTY",
+      "track": "ハイバスカス",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fTOKYO SWEET PARTY\u001fbaby愛してる",
+      "group": "た行",
+      "artist": "TOKYO SWEET PARTY",
+      "track": "baby愛してる",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fTOKYO SWEET PARTY\u001f純情ナイトフィーバー",
+      "group": "た行",
+      "artist": "TOKYO SWEET PARTY",
+      "track": "純情ナイトフィーバー",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001fTOKYO SWEET PARTY\u001fゼンブデイキテル",
+      "group": "た行",
+      "artist": "TOKYO SWEET PARTY",
+      "track": "ゼンブデイキテル",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+    },
+    {
+      "key": "\u001f横山なつみ & Coco海里\u001f永遠の約束",
+      "group": "や行",
+      "artist": "横山なつみ & Coco海里",
+      "track": "永遠の約束",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_yokoyama-eternal.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fネオロマンス♥フェスタ 金色のコルダ 〜Featuring 4 Schools〜 Waterside Harmony/Ambitious -青雲の志で-\u001fAmbitious -青雲の志で-",
+      "group": "キャラクターソング",
+      "artist": "ネオロマンス♥フェスタ 金色のコルダ 〜Featuring 4 Schools〜 Waterside Harmony/Ambitious -青雲の志で-",
+      "track": "Ambitious -青雲の志で-",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "Official event CD image located only at 250x285, below the 300px minimum; no higher-resolution identical artwork confirmed."
+    },
+    {
+      "key": "キャラクターソング\u001fネオロマンス♥フェスタ 金色のコルダ 10th Birthday ♪MUSICA♪〜金色の絆〜\u001f♪MUSICA♪〜金色の絆〜",
+      "group": "キャラクターソング",
+      "artist": "ネオロマンス♥フェスタ 金色のコルダ 10th Birthday ♪MUSICA♪〜金色の絆〜",
+      "track": "♪MUSICA♪〜金色の絆〜",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "Official event page exposes only a provisional jacket image (filename 10thBD_kari.jpg); final identical artwork could not be confirmed."
+    },
+    {
+      "key": "キャラクターソング\u001f金色のコルダ 10th Anniversary 4加地 葵&不動翔麻&不動葉介\u001f君色のCollage",
+      "group": "キャラクターソング",
+      "artist": "金色のコルダ 10th Anniversary 4加地 葵&不動翔麻&不動葉介",
+      "track": "君色のCollage",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda-10th-cd4.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fネオロマンス 20thアニバーサリー・イヴ 〜Eternal Kiss〜\u001fEternal Kiss",
+      "group": "キャラクターソング",
+      "artist": "ネオロマンス 20thアニバーサリー・イヴ 〜Eternal Kiss〜",
+      "track": "Eternal Kiss",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "Official event page exposes a provisional jacket only; no final 300px+ identical artwork confirmed."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集V 〜勇武の章〜\u001fLike the Wind",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 キャラクターソング集V 〜勇武の章〜",
+      "track": "Like the Wind",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-yubu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集V 〜勇武の章〜\u001fWILL TO FIGHT",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 キャラクターソング集V 〜勇武の章〜",
+      "track": "WILL TO FIGHT",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-yubu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集V 〜勇武の章〜\u001fLike the Wind - Instrumental",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 キャラクターソング集V 〜勇武の章〜",
+      "track": "Like the Wind - Instrumental",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-yubu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集V 〜勇武の章〜\u001fWILL TO FIGHT - Instrumental",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 キャラクターソング集V 〜勇武の章〜",
+      "track": "WILL TO FIGHT - Instrumental",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-yubu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集VI 〜叡知の章〜\u001fSOUL TO SOUL",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 キャラクターソング集VI 〜叡知の章〜",
+      "track": "SOUL TO SOUL",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-eichi.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集VI 〜叡知の章〜\u001fSOUL TO SOUL - Instrumental",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 キャラクターソング集VI 〜叡知の章〜",
+      "track": "SOUL TO SOUL - Instrumental",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-eichi.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fヴォーカル&ドラマ 戦国無双4 桜花爛漫\u001f俺的戦法",
+      "group": "キャラクターソング",
+      "artist": "ヴォーカル&ドラマ 戦国無双4 桜花爛漫",
+      "track": "俺的戦法",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_sengoku4-ouka.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f金色のコルダ3 AnotherSky\u001fIt's Magical",
+      "group": "キャラクターソング",
+      "artist": "金色のコルダ3 AnotherSky",
+      "track": "It's Magical",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda3-hakodate.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f戦国無双4 〜永遠の絆〜\u001f分水嶺",
+      "group": "キャラクターソング",
+      "artist": "戦国無双4 〜永遠の絆〜",
+      "track": "分水嶺",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_sengoku4-towa.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で6 黒キ万華鏡 (其ノ二)\u001f戀文綴り",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で6 黒キ万華鏡 (其ノ二)",
+      "track": "戀文綴り",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka6-kaleidoscope2.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 デュエットソングス 〜双璧歌曲〜\u001fTrue Power",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 デュエットソングス 〜双璧歌曲〜",
+      "track": "True Power",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-duet.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 デュエットソングス 〜双璧歌曲〜\u001fTaste of Victory",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 デュエットソングス 〜双璧歌曲〜",
+      "track": "Taste of Victory",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-duet.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双7 デュエットソングス 〜双璧歌曲〜\u001fPROMISE",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双7 デュエットソングス 〜双璧歌曲〜",
+      "track": "PROMISE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou7-duet.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fイベント限定CD「真・三國無双 声優乱舞 2015夏」\u001fFROM YOU TO US",
+      "group": "キャラクターソング",
+      "artist": "イベント限定CD「真・三國無双 声優乱舞 2015夏」",
+      "track": "FROM YOU TO US",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "Official event CD image is 284x250, below the 300px minimum; no higher-resolution identical artwork confirmed."
+    },
+    {
+      "key": "キャラクターソング\u001fイベント限定CD「真・三國無双 声優乱舞 2015夏」\u001fFROM YOU TO ME",
+      "group": "キャラクターソング",
+      "artist": "イベント限定CD「真・三國無双 声優乱舞 2015夏」",
+      "track": "FROM YOU TO ME",
+      "status": "no-image",
+      "thumbnail": null,
+      "reason": "Official event CD image is 284x250, below the 300px minimum; no higher-resolution identical artwork confirmed."
+    },
+    {
+      "key": "キャラクターソング\u001fアンジェリーク ルトゥール 〜世界を抱きしめて〜\u001fEL FUEGO",
+      "group": "キャラクターソング",
+      "artist": "アンジェリーク ルトゥール 〜世界を抱きしめて〜",
+      "track": "EL FUEGO",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_angelique-retour.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fヴォーカル集 金色のコルダ3 EverySky\u001f青春エブリディ!",
+      "group": "キャラクターソング",
+      "artist": "ヴォーカル集 金色のコルダ3 EverySky",
+      "track": "青春エブリディ!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda3-everysky.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fヴォーカル集 金色のコルダ3 EverySky\u001fTANDEM RIDE",
+      "group": "キャラクターソング",
+      "artist": "ヴォーカル集 金色のコルダ3 EverySky",
+      "track": "TANDEM RIDE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda3-everysky.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016\u001fこの美しき世界で",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016",
+      "track": "この美しき世界で",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka2-jirettai2016.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016\u001fふたりきりの陽だまりで",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016",
+      "track": "ふたりきりの陽だまりで",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka2-jirettai2016.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016\u001fはじまりのモーメント",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016",
+      "track": "はじまりのモーメント",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka2-jirettai2016.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016\u001f春待つ里",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016",
+      "track": "春待つ里",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka2-jirettai2016.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016\u001f永遠よりもそばに居ます",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016",
+      "track": "永遠よりもそばに居ます",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka2-jirettai2016.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016\u001fはじまりのモーメント - with じれっ隊ジュニア Ver.",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で2 スペシャル うしろ向きじれっ隊 2016",
+      "track": "はじまりのモーメント - with じれっ隊ジュニア Ver.",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka2-jirettai2016.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f金色のコルダ4 JOYFUL2\u001fBITTER LESSON",
+      "group": "キャラクターソング",
+      "artist": "金色のコルダ4 JOYFUL2",
+      "track": "BITTER LESSON",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda4-joyful2.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fネオロマンス・フェスタ 金色のコルダ 星奏学院祭5 特典「4校選抜キャラクターソング」\u001fSer Feliz",
+      "group": "キャラクターソング",
+      "artist": "ネオロマンス・フェスタ 金色のコルダ 星奏学院祭5 特典「4校選抜キャラクターソング」",
+      "track": "Ser Feliz",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda-seiso5.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で6 幻燈ロンド 天地ノ歯車 〜青龍・白虎〜\u001fWiLD EYES",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で6 幻燈ロンド 天地ノ歯車 〜青龍・白虎〜",
+      "track": "WiLD EYES",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka6-gears.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fネオロマンス・フェスタ 金色のコルダ (Featuring 至誠館高校Op.2)\u001f勝利は我らに!",
+      "group": "キャラクターソング",
+      "artist": "ネオロマンス・フェスタ 金色のコルダ (Featuring 至誠館高校Op.2)",
+      "track": "勝利は我らに!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda-shiseikan2.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f喪失の足音を聴く\u001f喪失の足音を聴く",
+      "group": "キャラクターソング",
+      "artist": "喪失の足音を聴く",
+      "track": "喪失の足音を聴く",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka-soushitsu.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001fヴォーカル集 遙かなる時空の中で6 幻燈ロンド 甘美ナル歌\u001f命ノ記憶",
+      "group": "キャラクターソング",
+      "artist": "ヴォーカル集 遙かなる時空の中で6 幻燈ロンド 甘美ナル歌",
+      "track": "命ノ記憶",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka6-kanbi.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で3 Ultimate 月華の宵 一\u001f約束の場所は春の月園",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で3 Ultimate 月華の宵 一",
+      "track": "約束の場所は春の月園",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka3-moon1.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で3 Ultimate 月華の宵 二\u001f青碧の決意",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で3 Ultimate 月華の宵 二",
+      "track": "青碧の決意",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka3-moon2.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f遙かなる時空の中で3 Ultimate 月華の宵 二\u001f葛藤は白き闇の果てに",
+      "group": "キャラクターソング",
+      "artist": "遙かなる時空の中で3 Ultimate 月華の宵 二",
+      "track": "葛藤は白き闇の果てに",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_haruka3-moon2.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜\u001fNever Ending Celebration",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜",
+      "track": "Never Ending Celebration",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-serioso.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜\u001fBEST STEED",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜",
+      "track": "BEST STEED",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-serioso.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜\u001fStraight Spirit",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜",
+      "track": "Straight Spirit",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-serioso.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜\u001fDie Together!",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜",
+      "track": "Die Together!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-serioso.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜\u001fSURVIVE",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅰ 〜Serioso〜",
+      "track": "SURVIVE",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-serioso.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜\u001fAnything Goes",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜",
+      "track": "Anything Goes",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-lieto.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜\u001fBURNING!!!",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜",
+      "track": "BURNING!!!",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-lieto.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜\u001fShining Star",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜",
+      "track": "Shining Star",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-lieto.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜\u001fFighting Spirit",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜",
+      "track": "Fighting Spirit",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-lieto.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜\u001fMajestic Beauty",
+      "group": "キャラクターソング",
+      "artist": "真・三國無双8 キャラクターソング集Ⅱ 〜Lieto〜",
+      "track": "Majestic Beauty",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_musou8-lieto.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    },
+    {
+      "key": "キャラクターソング\u001f金色のコルダ 15th Anniversary ヴォーカルコンプリートBOX 2013〜2017\u001fNEVER END",
+      "group": "キャラクターソング",
+      "artist": "金色のコルダ 15th Anniversary ヴォーカルコンプリートBOX 2013〜2017",
+      "track": "NEVER END",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_c_corda15-box.webp",
+      "reason": "Exact release artwork confirmed from the cited official source."
+    }
+  ]
 }

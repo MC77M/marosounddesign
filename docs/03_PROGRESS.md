@@ -1,5 +1,13 @@
 # Refactoring Progress
 
+## Feature 2026-08-25: History ジャケット対応
+- 対象: History 228件
+- 割り当て: 146作品／重複除外81画像（96×96 WebP、8,000B以下）
+- 未確認: 82作品はCSS製`NO IMAGE`を表示
+- 運用: 元画像は外部保管し、出典URL・SHA-256・割り当てを`data/history_artwork_sources.json`で管理
+- 表示: 既存の行高・文字位置を維持し、画像はlazy loading
+- Status: ✅ 実装・検証完了
+
 ## Docs 2026-08-25: 現在状態へ同期
 - ページ構成: 6ページ
 - データ件数: Works 322件 / History 228件 / 合計550 Songs / Selected Works 12件
