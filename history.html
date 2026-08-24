@@ -128,7 +128,7 @@ nav{
 }
 .history-head,.history-row{
   display:grid;
-  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1.2fr);
+  grid-template-columns:36px minmax(0,1.15fr) minmax(0,1fr) minmax(0,1.2fr);
   gap:1.5rem;
 }
 .history-head{
@@ -160,11 +160,41 @@ nav{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .history-row{
-  padding:.92rem 1.4rem;
+  padding:.45rem 1.4rem;
   border-bottom:1px solid var(--line);
-  align-items:start;
+  align-items:center;
 }
 .history-row:last-child{border-bottom:none}
+.history-thumb-slot{
+  width:36px;
+  height:36px;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:4px;
+  overflow:hidden;
+  background:#fff;
+}
+.history-thumb{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.history-thumb-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fafafa;
+}
+.history-thumb-placeholder::before{
+  content:'NO\A IMAGE';
+  white-space:pre;
+  text-align:center;
+  font-family:'DM Mono',monospace;
+  font-size:.4rem;
+  line-height:1.15;
+  letter-spacing:.08em;
+  color:#b8b8be;
+}
 .history-artist{font-size:.86rem;font-weight:400;color:#111;line-height:1.55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .history-track{
   font-size:.83rem;line-height:1.55;color:#111;font-weight:400;
@@ -218,10 +248,12 @@ nav{
 
 @media(max-width:860px){
   .history-head{display:none}
-  .history-row{grid-template-columns:1fr;gap:.5rem}
+  .history-row{grid-template-columns:40px minmax(0,1fr);column-gap:.75rem;row-gap:.5rem}
+  .history-thumb-slot{width:40px;height:40px;grid-row:1 / 3}
   .history-main{display:none}
   .history-mobile-title{
     display:block;
+    grid-column:2;
     font-size:.84rem;
     line-height:1.55;
     color:#111;
@@ -232,6 +264,7 @@ nav{
   }
   .history-credit{
     display:flex;
+    grid-column:2;
     align-items:baseline;
     gap:.45rem;
     line-height:1.5;
@@ -244,6 +277,10 @@ nav{
     text-transform:uppercase;
     color:#bbb;
   }
+}
+
+@media(min-width:601px) and (max-width:860px){
+  .history-row{padding:.917rem 1.4rem}
 }
 
 @media(max-width:600px){
@@ -495,6 +532,9 @@ fetch(`history-data.json?v=${DATA_VERSION}`)
 
       const columns = document.createElement('div');
       columns.className = 'history-head';
+      const thumbnailColumn = document.createElement('span');
+      thumbnailColumn.setAttribute('aria-hidden', 'true');
+      columns.appendChild(thumbnailColumn);
       [group.label === 'キャラクターソング' ? 'Album' : 'Artist', 'Track', 'Credit'].forEach(label => {
         const column = document.createElement('p');
         column.className = 'history-label';
@@ -506,6 +546,21 @@ fetch(`history-data.json?v=${DATA_VERSION}`)
       group.items.forEach(item => {
         const row = document.createElement('div');
         row.className = 'history-row';
+        const thumbnailSlot = document.createElement('span');
+        thumbnailSlot.className = 'history-thumb-slot';
+        if (item.thumbnail) {
+          const thumbnail = document.createElement('img');
+          thumbnail.className = 'history-thumb';
+          thumbnail.src = item.thumbnail;
+          thumbnail.alt = '';
+          thumbnail.loading = 'lazy';
+          thumbnail.decoding = 'async';
+          thumbnailSlot.appendChild(thumbnail);
+        } else {
+          thumbnailSlot.classList.add('history-thumb-placeholder');
+          thumbnailSlot.setAttribute('aria-hidden', 'true');
+        }
+        row.appendChild(thumbnailSlot);
         const mobileTitle = document.createElement('p');
         mobileTitle.className = 'history-mobile-title';
         mobileTitle.textContent = `${item.artist} / ${item.track}`;
