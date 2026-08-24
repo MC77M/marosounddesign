@@ -1,10 +1,18 @@
 # Refactoring Progress
 
-## Docs 2026-08-24: 現在状態へ同期
+## Docs 2026-08-25: 現在状態へ同期
 - ページ構成: 6ページ
-- データ件数: Works 314件 / History 232件 / 合計546 Songs / Selected Works 12件
-- 最新Works: ai*ai 2件、星名美怜「Sparkle」、あの日見たラッキースター3件まで反映済み
-- Status: ✅ 本番反映済み
+- データ件数: Works 322件 / History 228件 / 合計550 Songs / Selected Works 12件
+- 最新Works: 君のメインヒロイン・ROOKEY♡ROOKEYS・StarLight(上海)の計5件まで反映済み
+- Status: ✅ 最新データへ同期
+
+## Research 2026-08-25: 2019年以前の作品 外部情報照合
+- 対象: History 228件をWeb・X（旧Twitter）・YouTubeで検索し、アーティストと曲名の組み合わせを照合
+- 表記修正: 平成琴姫「通りゃんせ～初恋胸キュンキュン～」、SEVEN4「スキスキスキ」
+- 外部確認済み: The Triple Clowns 6曲、NEVA GIVE UP「永遠のハッピーアワー」、Maria「VIVA Revolution」、あにまどーる「いえっさーぱんだ」
+- 未確認9曲: Nina Pelea「Break Down」「恋のはじまり」、Dear L mana「Everyday 君が好き」、柊木りお「でりゅーじょん」、ハニースパイス「story」、CLOVERxCLOVER「CRYING GIRL」、マイ・チェリーボーイズ「パラダイス」「only you」「Kixx me」
+- 方針: 未確認曲も不存在とは判断せず現状維持。将来、同一作品の根拠・ジャケット画像を入手した場合にWorks掲載を再検討し、今回の削除・整理対象から除外する
+- Status: ✅ 調査完了・保留
 
 ## Ops 2026-07-28: Contact / Netlify Forms 本番運用確認
 - 対応: Form detection有効化、`contact`フォーム認識、メール通知設定、旧Contact導線を`contact.html`へ統一
