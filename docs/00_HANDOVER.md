@@ -16,7 +16,7 @@
 | ファイル | 説明 |
 |---|---|
 | index.html | トップページ |
-| works.html | 楽曲一覧（314件、フィルター付き） |
+| works.html | 楽曲一覧（317件、フィルター付き） |
 | portfolio.html | プロフィール・Selected Works（title: "Profile — MaroSoundDesign"） |
 | history.html | 2019年以前の作品アーカイブ |
 | contact.html | お問い合わせフォーム（Netlify Forms送信） |
@@ -87,6 +87,7 @@
 - WorksページからGoogle Fonts CSS未参照のInterフォントpreload 1件を削除（2026-08-24）
 - 375pxトップのフォント適用時CLSを抑えるため、モバイルのヒーロー外枠幅を確保（2026-08-24）
 - Works掲載済みのLEVEL7指定4曲を2019年以前の作品一覧から削除（2026-08-24）
+- 木苺FRUCTOSE「キミ好き！！」、drop「青春オーケストラ」、MAISY「It’s all right.」をWorksへ追加し、本画像・サムネイル・元画像を追加（後者2曲はGAME／CHARACTER SONG、2026-08-24）
 - 星名美怜「Sparkle」をWorksへ追加済み（合計543 Songs、2026-07-29）
 - ai*ai「めちゃらぶchuchuchu」2件をWorksへ追加し、History指定2件を移行済み（合計542 Songs維持、2026-07-29）
 

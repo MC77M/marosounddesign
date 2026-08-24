@@ -5138,6 +5138,46 @@
     "thumbnail": "images/thumbs/_hash_ROOKEYROOKEYS_イジワルストロベリー.webp"
   },
   {
+    "cat": "game",
+    "cats": [
+      "game",
+      "anime"
+    ],
+    "icon": "🎤",
+    "jacket": "images/_hash_drop_青春オーケストラ.webp",
+    "track": "青春オーケストラ",
+    "artist": "drop",
+    "date": "2026.01.28",
+    "credits": [
+      {
+        "role": "編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "『オンエア！』ユニットソングコレクション vol.3 -Prid’s&drop-",
+    "thumbnail": "images/thumbs/_hash_drop_青春オーケストラ.webp"
+  },
+  {
+    "cat": "game",
+    "cats": [
+      "game",
+      "anime"
+    ],
+    "icon": "🎤",
+    "jacket": "images/_hash_MAISY_It’s all right.webp",
+    "track": "It’s all right.",
+    "artist": "MAISY",
+    "date": "2026.01.28",
+    "credits": [
+      {
+        "role": "編曲・Mix",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "『オンエア！』ユニットソングコレクション vol.1 -MAISY&Hot-Blood-",
+    "thumbnail": "images/thumbs/_hash_MAISY_It’s all right.webp"
+  },
+  {
     "cat": "jpop",
     "icon": "🎤",
     "jacket": "images/_hash_さのもりの_スタックオンユ.webp",
@@ -5294,6 +5334,22 @@
     ],
     "note": "泡沫プリンセス / Loulouchouchou",
     "thumbnail": "images/thumbs/_hash_Loulouchouchou_泡沫プリンセス.webp"
+  },
+  {
+    "cat": "jpop",
+    "icon": "🎤",
+    "jacket": "images/_hash_木苺FRUCTOSE_キミ好き！！.webp",
+    "track": "キミ好き！！",
+    "artist": "木苺FRUCTOSE",
+    "date": "2026.06.28",
+    "credits": [
+      {
+        "role": "作曲・編曲",
+        "name": "宮川麿"
+      }
+    ],
+    "note": "キミ好き！！ / 木苺FRUCTOSE",
+    "thumbnail": "images/thumbs/_hash_木苺FRUCTOSE_キミ好き！！.webp"
   },
   {
     "cat": "jpop",
