@@ -140,6 +140,7 @@ nav{
 .works-body{position:relative;z-index:1;background:#fff;padding:0 2.5rem 6rem}
 
 .yr-block{margin-bottom:1rem;content-visibility:auto;contain-intrinsic-size:0 600px}
+.yr-block.is-year-nav-prepared{content-visibility:visible}
 .yr-head{
   font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.3em;color:#ccc;
   text-transform:uppercase;padding:.5rem 0 1rem;
@@ -477,6 +478,64 @@ function thumbnailSrc(work){
   return work.thumbnail || work.jacket;
 }
 
+const preloadedThumbnails = new Set();
+function preloadYearThumbnails(year, limit = 9){
+  const entries = grouped.get(year) || [];
+  entries.slice(0, limit).forEach(({ work }) => {
+    const path = thumbnailSrc(work);
+    if (!path) return;
+    const src = safeAssetSrc(path);
+    if (preloadedThumbnails.has(src)) return;
+    preloadedThumbnails.add(src);
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
+  });
+}
+
+function fillYearsThrough(targetYear){
+  const targetIndex = years.indexOf(targetYear);
+  if (targetIndex < 0) return;
+  years.slice(0, targetIndex + 1).forEach(year => {
+    const block = document.getElementById(`yr${year}`);
+    if (block) block.classList.add('is-year-nav-prepared');
+    if (pendingYears.has(year)) fillYear(year);
+    if (ioFill && block) ioFill.unobserve(block);
+  });
+}
+
+function prepareYearNow(year){
+  fillYearsThrough(year);
+  preloadYearThumbnails(year);
+}
+
+async function prepareYear(year){
+  await WORKS_READY;
+  prepareYearNow(year);
+}
+
+async function navigateToYear(event, year){
+  event.preventDefault();
+  await prepareYear(year);
+  await new Promise(resolve => requestAnimationFrame(resolve));
+  const target = document.getElementById(`yr${year}`);
+  if (!target) return;
+  const hash = `#yr${year}`;
+  if (window.location.hash !== hash) window.history.pushState(null, '', hash);
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function initYearLinks(){
+  document.querySelectorAll('.ybtn[href^="#yr"]').forEach(link => {
+    const year = link.getAttribute('href').slice(3);
+    const prepare = () => { void prepareYear(year); };
+    link.addEventListener('pointerenter', prepare);
+    link.addEventListener('focus', prepare);
+    link.addEventListener('touchstart', prepare, { passive: true });
+    link.addEventListener('click', event => { void navigateToYear(event, year); });
+  });
+}
+
 function yearFromDate(date){
   return String(date || '').slice(0, 4);
 }
@@ -487,14 +546,6 @@ function dateSortValue(date){
   const month = Number(parts[1] || 0);
   const day = Number(parts[2] || 0);
   return year * 10000 + month * 100 + day;
-}
-
-function revealClass(index){
-  const classes = ['reveal'];
-  if (index === 1) classes.push('d1');
-  if (index === 2) classes.push('d2');
-  if (index >= 3) classes.push('d3');
-  return classes.join(' ');
 }
 
 function applyFilter(cat){
@@ -531,9 +582,9 @@ function buildGrouped(){
 
 function renderSkeletons(){
   const fragment = document.createDocumentFragment();
-  years.forEach((year, yearIndex) => {
+  years.forEach(year => {
     const block = document.createElement('div');
-    block.className = `yr-block ${revealClass(yearIndex)}`;
+    block.className = 'yr-block';
     block.id = `yr${year}`;
     block.dataset.year = year;
 
@@ -571,7 +622,6 @@ function renderSkeletons(){
     fragment.appendChild(block);
   });
   WORKS_LIST.replaceChildren(fragment);
-  document.querySelectorAll('.yr-block.reveal').forEach(el => io.observe(el));
   years.slice(1).forEach(y => pendingYears.add(y));
 }
 
@@ -668,7 +718,7 @@ function initFillObserver(){
         ioFill.unobserve(entry.target);
       }
     });
-  }, { rootMargin: '1200px 0px' });
+  }, { rootMargin: '2000px 0px' });
   years.slice(1).forEach(year => {
     const block = document.getElementById(`yr${year}`);
     if (block) ioFill.observe(block);
@@ -682,7 +732,16 @@ function renderWorks(){
   fillYear(years[0]);
   initFillObserver();
   applyFilter(currentFilter);
+  const initialYear = window.location.hash.match(/^#yr(\d{4})$/)?.[1];
+  if (initialYear) {
+    prepareYearNow(initialYear);
+    requestAnimationFrame(() => {
+      document.getElementById(`yr${initialYear}`)?.scrollIntoView({ block: 'start' });
+    });
+  }
 }
+
+initYearLinks();
 
 let lastModalTrigger = null;
 
