@@ -1053,13 +1053,117 @@
       "sourceSha256": "e286c24a2417e625125fcdc458ba216ec8fc2b4db7ab0bc74194d8824e0256e5",
       "quality": 82,
       "thumbnailBytes": 1134
+    },
+    "r:neva-action": {
+      "thumbnail": "images/history-thumbs/_hash_r_neva-action.webp",
+      "sourcePageUrl": "https://tower.jp/item/4372337",
+      "sourceImageUrl": "https://cdn.tower.jp/za/o/3W/zaP5_G5835063W.JPG",
+      "sourceFileName": "2016-11-27 NEVA GIVE UP ACTION.JPG",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 500,
+      "sourceHeight": 500,
+      "sourceBytes": 249075,
+      "sourceSha256": "4cc78af3af5297e50c4c48e25eb0ef3bd9f49e2e42e437d725b0745d2023bbbf",
+      "quality": 82,
+      "thumbnailBytes": 3252
+    },
+    "r:asfi-respect-cover": {
+      "thumbnail": "images/history-thumbs/_hash_r_asfi-respect-cover.webp",
+      "sourcePageUrl": "https://books.rakuten.co.jp/rb/12262439/",
+      "sourceImageUrl": "https://shop.r10s.jp/book/cabinet/6398/4948722486398.jpg",
+      "sourceFileName": "2013-04-29 asfi りすぺくと☆カバーvol.1.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 300,
+      "sourceHeight": 300,
+      "sourceBytes": 51686,
+      "sourceSha256": "3ec9583a715062cd53c8328a07494e81f856c9cd1b572b1824d20a91c8b039b7",
+      "quality": 82,
+      "thumbnailBytes": 3994
+    },
+    "r:hiiragi-banzai-d": {
+      "thumbnail": "images/history-thumbs/_hash_r_hiiragi-banzai-d.webp",
+      "sourcePageUrl": "https://books.rakuten.co.jp/rb/13703489/",
+      "sourceImageUrl": "https://shop.r10s.jp/book/cabinet/2041/4562357502041.jpg",
+      "sourceFileName": "2016-04-06 柊木りお BANZAI! BANZAI! 通常盤D.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 500,
+      "sourceHeight": 500,
+      "sourceBytes": 115183,
+      "sourceSha256": "cdafca40c0327c945ea9708cb977cec5d5efbb9b0c9a04172757caf6361b55a8",
+      "quality": 82,
+      "thumbnailBytes": 5226
+    },
+    "r:blue-destiny": {
+      "thumbnail": "images/history-thumbs/_hash_r_blue-destiny.webp",
+      "sourcePageUrl": "https://www.universal-music.co.jp/konnichiwa-kirarinbo-harry/products/ur1as-00171/",
+      "sourceImageUrl": "https://www.universal-music.co.jp/konnichiwa-kirarinbo-harry/wp-content/uploads/sites/1304/2017/06/konkin_blue-destiny_jk_news.jpg",
+      "sourceFileName": "2014-09-02 こんにちわきらりんぼハリー Blue Destiny.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 250,
+      "sourceHeight": 250,
+      "sourceBytes": 76692,
+      "sourceSha256": "79efa202e7abe5431a671052b748750e742947acf7d5618c20848fdef711aa3e",
+      "quality": 82,
+      "thumbnailBytes": 2788
+    },
+    "r:corda-eternal-kiss": {
+      "thumbnail": "images/history-thumbs/_hash_r_corda-eternal-kiss.webp",
+      "sourcePageUrl": "https://www.suruga-ya.jp/product/detail/120068721",
+      "sourceImageUrl": "https://cdn.suruga-ya.jp/database/pics_webp/game/120068721.jpg.webp",
+      "sourceFileName": "2013-12-14 ネオロマンス20thアニバーサリー・イヴ Eternal Kiss.webp",
+      "sourceFormat": "webp",
+      "sourceWidth": 337,
+      "sourceHeight": 384,
+      "sourceBytes": 29968,
+      "sourceSha256": "938c05df8e5f4e3cf08977fbcaec3de4582dac6307ec391eddf475c69befdfe8",
+      "quality": 82,
+      "thumbnailBytes": 3986
+    },
+    "r:corda-musica": {
+      "thumbnail": "images/history-thumbs/_hash_r_corda-musica.webp",
+      "sourcePageUrl": "https://ototoy.jp/_/default/p/613706",
+      "sourceImageUrl": "https://imgs.ototoy.jp/imgs/jacket/0613/00050800.1601030002.7855_640.jpg",
+      "sourceFileName": "2013-09-07 金色のコルダ10th Birthday MUSICA.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 561,
+      "sourceHeight": 640,
+      "sourceBytes": 151575,
+      "sourceSha256": "2aec207ed7a2dd7fe36b1ee8a9e126ecb910ebaae4f702c49b397d3d115df207",
+      "quality": 82,
+      "thumbnailBytes": 4034
+    },
+    "r:corda-ambitious": {
+      "thumbnail": "images/history-thumbs/_hash_r_corda-ambitious.webp",
+      "sourcePageUrl": "https://music.apple.com/jp/album/%E3%83%8D%E3%82%AA%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9-%E3%83%95%E3%82%A7%E3%82%B9%E3%82%BF-%E9%87%91%E8%89%B2%E3%81%AE%E3%82%B3%E3%83%AB%E3%83%80-featuring-4-schools-waterside-harmony/1246176350",
+      "sourceImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/b0/a2/0d/b0a20d68-a19d-3298-3b91-59038a9dfbe0/023890_J_re2.jpg/3000x3000bb.jpg",
+      "sourceFileName": "2013-07-27 金色のコルダ Featuring 4 Schools Waterside Harmony Ambitious.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1654,
+      "sourceHeight": 1888,
+      "sourceBytes": 923897,
+      "sourceSha256": "143910979489afe72dfb05bdd7f7dc79157a0c119d6fc86ad48ecafe3c1a37a2",
+      "quality": 82,
+      "thumbnailBytes": 3918
+    },
+    "r:musou-2015-summer": {
+      "thumbnail": "images/history-thumbs/_hash_r_musou-2015-summer.webp",
+      "sourcePageUrl": "https://ototoy.jp/_/default/p/600246",
+      "sourceImageUrl": "https://imgs.ototoy.jp/imgs/jacket/0600/00050800.1598604073.6176_640.jpg",
+      "sourceFileName": "2015-08-15 真・三國無双 声優乱舞2015夏.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 640,
+      "sourceHeight": 567,
+      "sourceBytes": 155046,
+      "sourceSha256": "c1358e110aee8a6e36b1f7a00492fc070a4ba960c960f1ed382b4135c9389be2",
+      "quality": 82,
+      "thumbnailBytes": 4214
     }
   },
   "summary": {
     "total": 228,
-    "foundAssignments": 146,
-    "noImageAssignments": 82,
-    "uniqueArtworks": 81
+    "foundAssignments": 159,
+    "noImageAssignments": 69,
+    "uniqueArtworks": 89
   },
   "assignments": [
     {
@@ -1130,27 +1234,27 @@
       "group": "あ行",
       "artist": "asfi",
       "track": "スッペシャル ジェネレ～ション (カヴァー)",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_asfi-respect-cover.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fasfi\u001f初恋サイダー (カヴァー)",
       "group": "あ行",
       "artist": "asfi",
       "track": "初恋サイダー (カヴァー)",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_asfi-respect-cover.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fasfi\u001fまっさらブルージーンズ (カヴァー)",
       "group": "あ行",
       "artist": "asfi",
       "track": "まっさらブルージーンズ (カヴァー)",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_asfi-respect-cover.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fcocona\u001f君とハピネス",
@@ -1553,9 +1657,9 @@
       "group": "な行",
       "artist": "NEVA GIVE UP",
       "track": "MATSURI☆SAWAGI",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_neva-action.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fNEVA GIVE UP\u001fWe are the only one",
@@ -1571,18 +1675,18 @@
       "group": "な行",
       "artist": "NEVA GIVE UP",
       "track": "宛名のないLovesong",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_neva-action.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fNEVA GIVE UP\u001fネバギブギウギ♪",
       "group": "な行",
       "artist": "NEVA GIVE UP",
       "track": "ネバギブギウギ♪",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_neva-action.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fNEVA GIVE UP\u001f永遠のハッピアワー",
@@ -1931,9 +2035,9 @@
       "group": "か行",
       "artist": "こんにちわ\\(^o^)/きらりんぼ☆ハリー!!!",
       "track": "Blue Destiny",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_blue-destiny.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001fハニースパイス\u001fB.R.W",
@@ -2309,9 +2413,9 @@
       "group": "は行",
       "artist": "柊木りお",
       "track": "Please be mine",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_hiiragi-banzai-d.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "\u001f柊木りお\u001fつくりわらいの影法師 ～夕闇サディスティック～",
@@ -2687,18 +2791,18 @@
       "group": "キャラクターソング",
       "artist": "ネオロマンス♥フェスタ 金色のコルダ 〜Featuring 4 Schools〜 Waterside Harmony/Ambitious -青雲の志で-",
       "track": "Ambitious -青雲の志で-",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "Official event CD image located only at 250x285, below the 300px minimum; no higher-resolution identical artwork confirmed."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_corda-ambitious.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "キャラクターソング\u001fネオロマンス♥フェスタ 金色のコルダ 10th Birthday ♪MUSICA♪〜金色の絆〜\u001f♪MUSICA♪〜金色の絆〜",
       "group": "キャラクターソング",
       "artist": "ネオロマンス♥フェスタ 金色のコルダ 10th Birthday ♪MUSICA♪〜金色の絆〜",
       "track": "♪MUSICA♪〜金色の絆〜",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "Official event page exposes only a provisional jacket image (filename 10thBD_kari.jpg); final identical artwork could not be confirmed."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_corda-musica.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "キャラクターソング\u001f金色のコルダ 10th Anniversary 4加地 葵&不動翔麻&不動葉介\u001f君色のCollage",
@@ -2714,9 +2818,9 @@
       "group": "キャラクターソング",
       "artist": "ネオロマンス 20thアニバーサリー・イヴ 〜Eternal Kiss〜",
       "track": "Eternal Kiss",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "Official event page exposes a provisional jacket only; no final 300px+ identical artwork confirmed."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_corda-eternal-kiss.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "キャラクターソング\u001f真・三國無双7 キャラクターソング集V 〜勇武の章〜\u001fLike the Wind",
@@ -2840,18 +2944,18 @@
       "group": "キャラクターソング",
       "artist": "イベント限定CD「真・三國無双 声優乱舞 2015夏」",
       "track": "FROM YOU TO US",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "Official event CD image is 284x250, below the 300px minimum; no higher-resolution identical artwork confirmed."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_musou-2015-summer.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "キャラクターソング\u001fイベント限定CD「真・三國無双 声優乱舞 2015夏」\u001fFROM YOU TO ME",
       "group": "キャラクターソング",
       "artist": "イベント限定CD「真・三國無双 声優乱舞 2015夏」",
       "track": "FROM YOU TO ME",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "Official event CD image is 284x250, below the 300px minimum; no higher-resolution identical artwork confirmed."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_r_musou-2015-summer.webp",
+      "reason": "Exact release artwork confirmed from the cited retailer or official source."
     },
     {
       "key": "キャラクターソング\u001fアンジェリーク ルトゥール 〜世界を抱きしめて〜\u001fEL FUEGO",

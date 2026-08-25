@@ -498,7 +498,7 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-const DATA_VERSION = '20260825';
+const DATA_VERSION = '20260825-2';
 
 fetch(`history-data.json?v=${DATA_VERSION}`)
   .then(async response => {
