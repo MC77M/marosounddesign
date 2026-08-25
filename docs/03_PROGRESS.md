@@ -1,8 +1,8 @@
 # Refactoring Progress
 
 ## Feature 2026-08-25: History ジャケット対応
-- 対象: History 228件
-- 割り当て: 169作品／重複除外98画像（96×96 WebP、8,000B以下）
+- 対象: History 225件
+- 割り当て: 166作品／重複除外98画像（96×96 WebP、8,000B以下）
 - 未確認: 59作品はCSS製`NO IMAGE`を表示
 - 運用: 元画像は外部保管し、出典URL・SHA-256・割り当てを`data/history_artwork_sources.json`で管理
 - 表示: 既存の行高・文字位置を維持し、画像はlazy loading
@@ -10,8 +10,9 @@
 
 ## Docs 2026-08-25: 現在状態へ同期
 - ページ構成: 6ページ
-- データ件数: Works 322件 / History 228件 / 合計550 Songs / Selected Works 12件
+- データ件数: Works 322件 / History 225件 / 合計547 Songs / Selected Works 12件
 - 最新Works: 君のメインヒロイン・ROOKEY♡ROOKEYS・StarLight(上海)の計5件まで反映済み
+- History整理: キャラクターソングのInstrumental 3件を削除
 - Status: ✅ 最新データへ同期
 
 ## Research 2026-08-25: 2019年以前の作品 外部情報照合

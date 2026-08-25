@@ -1,5 +1,6 @@
 # Change Log
 
+- 2026-08-25: HistoryのキャラクターソングからInstrumental 3件を削除
 - 2026-08-25: Historyの8作品へ公式・販売ページ由来の96pxジャケット7画像を追加し、POINT表記を公式の`POiNT`へ修正
 - 2026-08-25: Shoo「I found love」・TOKYO SWEET PARTY「ハイビスカス」へ公式ジャケット2件を追加し、後者を公式表記へ修正
 - 2026-08-25: History全228件を公式照合し、96pxジャケット89件を159作品へ割り当て（未確認69作品はCSS製`NO IMAGE`）
