@@ -1183,13 +1183,104 @@
       "sourceSha256": "bc039007981843e8b388a93297b498dfc3ea381ceda69306f4799ab5081e7f69",
       "quality": 82,
       "thumbnailBytes": 2124
+    },
+    "h:pikumaruasfi-love-thanx-music": {
+      "thumbnail": "images/history-thumbs/_hash_h_pikumaruasfi-love-thanx-music.webp",
+      "sourcePageUrl": "https://www.neowing.co.jp/product/TKCA-74312",
+      "sourceImageUrl": "https://www.neowing.co.jp/pictures/l/06/20/TKCA-74312.jpg",
+      "sourceFileName": "2015-12-16 ピクまる☆asfi LOVE THANX MUSIC.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 300,
+      "sourceHeight": 300,
+      "sourceBytes": 43033,
+      "sourceSha256": "fd6f32be8e8f4d28f8035aa28e1f0807325756c0833539304c98c38e7f38e5ae",
+      "quality": 82,
+      "thumbnailBytes": 4040
+    },
+    "h:point-hajimemashite": {
+      "thumbnail": "images/history-thumbs/_hash_h_point-hajimemashite.webp",
+      "sourcePageUrl": "https://linkco.re/5Cqx4c40?lang=ja",
+      "sourceImageUrl": "https://tcj-image-production.s3.ap-northeast-1.amazonaws.com/u17829/r674115/ite674115.jpg",
+      "sourceFileName": "2020-08-13 POiNT はじめまして、POiNTです。.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 400,
+      "sourceHeight": 400,
+      "sourceBytes": 35322,
+      "sourceSha256": "d318acff13afcd5d07186c84951d927ae74abbda9cde591323ea747d4e3cb21f",
+      "quality": 82,
+      "thumbnailBytes": 1812
+    },
+    "h:dreamy-rain-heart": {
+      "thumbnail": "images/history-thumbs/_hash_h_dreamy-rain-heart.webp",
+      "sourcePageUrl": "https://tower.jp/item/3254023",
+      "sourceImageUrl": "https://cdn.tower.jp/za/o/22/4562350460522.jpg",
+      "sourceFileName": "2013-06-27 dreamy DOLLY・Rain Heart.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 400,
+      "sourceHeight": 394,
+      "sourceBytes": 133003,
+      "sourceSha256": "06f892c956fe6a0543a1f416c72b3fcc0847ccc59bbddf9ac8fb5517bcdc89de",
+      "quality": 82,
+      "thumbnailBytes": 3890
+    },
+    "h:cocona-dare": {
+      "thumbnail": "images/history-thumbs/_hash_h_cocona-dare.webp",
+      "sourcePageUrl": "https://jpop.fandom.com/wiki/Cocona*_tte,_Dare%3F",
+      "sourceImageUrl": "https://static.wikia.nocookie.net/jpop/images/9/9f/Cocodare.jpg/revision/latest?cb=20190529150245",
+      "sourceFileName": "2019-02-13 cocona_ cocona_って、だれ？.webp",
+      "sourceFormat": "webp",
+      "sourceWidth": 1000,
+      "sourceHeight": 1000,
+      "sourceBytes": 159070,
+      "sourceSha256": "60c00873620e327a957de7379004553d8ef774f80100ce15b4f6eee9bf935c47",
+      "quality": 82,
+      "thumbnailBytes": 3068
+    },
+    "h:asfi-bijin-on-the-planet": {
+      "thumbnail": "images/history-thumbs/_hash_h_asfi-bijin-on-the-planet.webp",
+      "sourcePageUrl": "http://asfi-shibuya.com/profile/48.html",
+      "sourceImageUrl": "http://asfi-shibuya.com/wp/wp-content/uploads/2014/12/unnamed.jpg",
+      "sourceFileName": "2014-10-22 asfi 美人 on the Planet.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1280,
+      "sourceHeight": 1259,
+      "sourceBytes": 639086,
+      "sourceSha256": "9b603bbc2b8ef89fe8e9182a9a4fad91c87ce388a559c94397f4f23ac0ebe593",
+      "quality": 82,
+      "thumbnailBytes": 4728
+    },
+    "h:asfi-ratimpa": {
+      "thumbnail": "images/history-thumbs/_hash_h_asfi-ratimpa.webp",
+      "sourcePageUrl": "http://asfi-shibuya.com/profile/48.html",
+      "sourceImageUrl": "http://asfi-shibuya.com/wp/wp-content/uploads/2014/09/ratimpa_jake.jpg",
+      "sourceFileName": "2014-02-21 asfi ラ・ティンパ2013 Andalucia mix.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 669,
+      "sourceHeight": 664,
+      "sourceBytes": 209252,
+      "sourceSha256": "1e5cd8d6302d24b6dc6fe309ae131dd68a32351d3f76de5216293b29e4878393",
+      "quality": 82,
+      "thumbnailBytes": 5130
+    },
+    "h:asfi-anohibini": {
+      "thumbnail": "images/history-thumbs/_hash_h_asfi-anohibini.webp",
+      "sourcePageUrl": "http://asfi-shibuya.com/profile/48.html",
+      "sourceImageUrl": "http://asfi-shibuya.com/wp/wp-content/uploads/2013/10/asfi-1Panohibini.jpg",
+      "sourceFileName": "2013-06-30 asfi アノヒビニ～Seventh Heaven～.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1638,
+      "sourceHeight": 1634,
+      "sourceBytes": 2185423,
+      "sourceSha256": "8d61dde084dc30ba18b9244ea1d06b06cf687b4cbb1dbf46c6d5cbafa17e9ae0",
+      "quality": 82,
+      "thumbnailBytes": 3588
     }
   },
   "summary": {
     "total": 228,
-    "foundAssignments": 161,
-    "noImageAssignments": 67,
-    "uniqueArtworks": 91
+    "foundAssignments": 169,
+    "noImageAssignments": 59,
+    "uniqueArtworks": 98
   },
   "assignments": [
     {
@@ -1215,9 +1306,9 @@
       "group": "あ行",
       "artist": "asfi",
       "track": "アノヒビニ～Seventh Heaven～",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_asfi-anohibini.webp",
+      "reason": "Exact release artwork confirmed on the cited official asfi discography."
     },
     {
       "key": "\u001fasfi\u001fDreamer～ゆるぎないハート～",
@@ -1233,18 +1324,18 @@
       "group": "あ行",
       "artist": "asfi",
       "track": "美人 on the planet",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_asfi-bijin-on-the-planet.webp",
+      "reason": "Exact release artwork confirmed on the cited official asfi discography."
     },
     {
       "key": "\u001fasfi\u001fラ・ティンパ",
       "group": "あ行",
       "artist": "asfi",
       "track": "ラ・ティンパ",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_asfi-ratimpa.webp",
+      "reason": "Exact release artwork confirmed on the cited official asfi discography."
     },
     {
       "key": "\u001fasfi\u001fキミイロプラネタリウム",
@@ -1287,9 +1378,9 @@
       "group": "か行",
       "artist": "cocona",
       "track": "君とハピネス",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_cocona-dare.webp",
+      "reason": "Exact album artwork and track inclusion confirmed on the cited release page."
     },
     {
       "key": "\u001fGANJIN\u001fHOME - band arrange",
@@ -2255,22 +2346,22 @@
       "reason": "Exact release artwork confirmed from the cited official source."
     },
     {
-      "key": "\u001f・POINT\u001fIs This Love",
+      "key": "\u001fPOiNT\u001fIs This Love",
       "group": "は行",
-      "artist": "・POINT",
+      "artist": "POiNT",
       "track": "Is This Love",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_point-hajimemashite.webp",
+      "reason": "Exact album artwork and track inclusion confirmed on the cited official TuneCore release page."
     },
     {
-      "key": "\u001f・POINT\u001fNo Regret",
+      "key": "\u001fPOiNT\u001fNo Regret",
       "group": "は行",
-      "artist": "・POINT",
+      "artist": "POiNT",
       "track": "No Regret",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_point-hajimemashite.webp",
+      "reason": "Exact album artwork and track inclusion confirmed on the cited official TuneCore release page."
     },
     {
       "key": "\u001f二神たかな(旧 : なかたかな）\u001fStar, ing",
@@ -2331,9 +2422,9 @@
       "group": "た行",
       "artist": "dreamy",
       "track": "Rain Heart",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_dreamy-rain-heart.webp",
+      "reason": "Exact release artwork confirmed on the cited Tower Records product page."
     },
     {
       "key": "\u001fDear L mana\u001fLoveYou",
@@ -2583,9 +2674,9 @@
       "group": "は行",
       "artist": "ピク丸asfi",
       "track": "LOVE THANX MUSIC",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_pikumaruasfi-love-thanx-music.webp",
+      "reason": "Exact release artwork confirmed on the cited Neowing product page."
     },
     {
       "key": "\u001f福永幸海\u001f恋はマジカルフレーバー",

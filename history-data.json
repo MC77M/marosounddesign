@@ -46,7 +46,8 @@
         "role": "編曲",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_asfi-anohibini.webp"
   },
   {
     "sortKey": "あすふぃ",
@@ -76,7 +77,8 @@
         "role": "編曲",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_asfi-bijin-on-the-planet.webp"
   },
   {
     "sortKey": "あすふぃ",
@@ -87,7 +89,8 @@
         "role": "編曲",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_asfi-ratimpa.webp"
   },
   {
     "sortKey": "あすふぃ",
@@ -145,7 +148,8 @@
         "role": "編曲",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_cocona-dare.webp"
   },
   {
     "sortKey": "がんじん",
@@ -1910,7 +1914,7 @@
   },
   {
     "sortKey": "ぽいんと",
-    "artist": "・POINT",
+    "artist": "POiNT",
     "track": "Is This Love",
     "credits": [
       {
@@ -1921,11 +1925,12 @@
         "role": "編曲",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_point-hajimemashite.webp"
   },
   {
     "sortKey": "ぽいんと",
-    "artist": "・POINT",
+    "artist": "POiNT",
     "track": "No Regret",
     "credits": [
       {
@@ -1936,7 +1941,8 @@
         "role": "編曲",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_point-hajimemashite.webp"
   },
   {
     "sortKey": "ふたがみたかな",
@@ -2035,7 +2041,8 @@
         "role": "Mix",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_dreamy-rain-heart.webp"
   },
   {
     "sortKey": "でぃあえるまな",
@@ -2485,7 +2492,8 @@
         "role": "Mix",
         "name": "宮川麿"
       }
-    ]
+    ],
+    "thumbnail": "images/history-thumbs/_hash_h_pikumaruasfi-love-thanx-music.webp"
   },
   {
     "sortKey": "ふくながゆきみ",
