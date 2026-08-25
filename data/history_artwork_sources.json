@@ -1157,13 +1157,39 @@
       "sourceSha256": "c1358e110aee8a6e36b1f7a00492fc070a4ba960c960f1ed382b4135c9389be2",
       "quality": 82,
       "thumbnailBytes": 4214
+    },
+    "h:shoo-i-found-love": {
+      "thumbnail": "images/history-thumbs/_hash_h_shoo-i-found-love.webp",
+      "sourcePageUrl": "https://linkco.re/HHq6E1UX?lang=ja",
+      "sourceImageUrl": "https://tcj-image-production.s3.ap-northeast-1.amazonaws.com/u22026/r692067/ite692067.jpg",
+      "sourceFileName": "Shoo I found love.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 400,
+      "sourceHeight": 400,
+      "sourceBytes": 42265,
+      "sourceSha256": "60e3e155644f1be85bb6e539cb3159adc9d61d43443735889489603f6bd2fea7",
+      "quality": 82,
+      "thumbnailBytes": 2040
+    },
+    "h:tokyo-sweet-party-hibiscus": {
+      "thumbnail": "images/history-thumbs/_hash_h_tokyo-sweet-party-hibiscus.webp",
+      "sourcePageUrl": "https://ameblo.jp/tokyosweetparty/entry-12400429898.html",
+      "sourceImageUrl": "https://stat.ameba.jp/user_images/20180830/17/tokyosweetparty/0f/7b/j/o0490049014257251531.jpg",
+      "sourceFileName": "2018-08-31 TOKYO SWEET PARTY ハイビスカス.jpg",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 490,
+      "sourceHeight": 490,
+      "sourceBytes": 44823,
+      "sourceSha256": "bc039007981843e8b388a93297b498dfc3ea381ceda69306f4799ab5081e7f69",
+      "quality": 82,
+      "thumbnailBytes": 2124
     }
   },
   "summary": {
     "total": 228,
-    "foundAssignments": 159,
-    "noImageAssignments": 69,
-    "uniqueArtworks": 89
+    "foundAssignments": 161,
+    "noImageAssignments": 67,
+    "uniqueArtworks": 91
   },
   "assignments": [
     {
@@ -1756,9 +1782,9 @@
       "group": "さ行",
       "artist": "Shoo(元S.E.S)",
       "track": "I found love",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_shoo-i-found-love.webp",
+      "reason": "Exact release artwork confirmed on the cited TuneCore release page."
     },
     {
       "key": "\u001fべいびーサたん\u001f小悪魔図鑑",
@@ -2742,13 +2768,13 @@
       "reason": "No exact artwork verified after existing-repository lookup, Apple Music artist/catalog lookup, and focused Apple Music search; no similar or inferred image used."
     },
     {
-      "key": "\u001fTOKYO SWEET PARTY\u001fハイバスカス",
+      "key": "\u001fTOKYO SWEET PARTY\u001fハイビスカス",
       "group": "た行",
       "artist": "TOKYO SWEET PARTY",
-      "track": "ハイバスカス",
-      "status": "no-image",
-      "thumbnail": null,
-      "reason": "No qualifying exact release artwork confirmed after repository scan, Apple Music catalog check, and one focused official-source web search; similar or unverified images rejected."
+      "track": "ハイビスカス",
+      "status": "found",
+      "thumbnail": "images/history-thumbs/_hash_h_tokyo-sweet-party-hibiscus.webp",
+      "reason": "Exact first-single artwork confirmed on the cited official TOKYO SWEET PARTY blog post."
     },
     {
       "key": "\u001fTOKYO SWEET PARTY\u001fbaby愛してる",
